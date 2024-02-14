@@ -1,3 +1,7 @@
 export default function Logo() {
-  return <h1>R:D</h1>;
+  return (
+    <a className="nav-logo-link" href="#">
+      <p className="nav-logo">RD</p>
+    </a>
+  );
 }

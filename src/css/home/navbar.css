@@ -1,0 +1,90 @@
+/*-------------------------------------------------*/
+/*----------------- NAVBAR STYLES -----------------*/
+/*-------------------------------------------------*/
+
+nav {
+  background-image: linear-gradient(to bottom, #00000050, transparent);
+  justify-content: space-between;
+  grid-auto-flow: column;
+  align-items: center;
+  padding: 1rem 2rem;
+  display: grid;
+}
+
+.nav-logo {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-size: 2rem;
+  color: #fff;
+}
+
+.nav-links {
+  justify-content: center;
+  grid-auto-flow: column;
+  align-items: center;
+  display: grid;
+  gap: 1.5rem;
+}
+
+.nav-utils-links {
+  justify-content: center;
+  grid-auto-flow: column;
+  align-items: center;
+  display: grid;
+  gap: 1rem;
+}
+
+.nav-link {
+  position: relative;
+}
+
+.nav-link::before {
+  transition: width 450ms, opacity 250ms;
+  background-color: #fff;
+  position: absolute;
+  bottom: -2.5px;
+  height: 1.25px;
+  margin: 0 auto;
+  content: "";
+  opacity: 0;
+  width: 0%;
+  right: 0;
+  left: 0;
+}
+
+.nav-link-text {
+  font-family: "Poppins", sans-serif;
+  transition: color 450ms;
+  color: #ffffff50;
+  font-weight: 300;
+  font-size: 1rem;
+}
+
+.nav-button {
+  background-color: #b5002a;
+  padding: 0.35rem 1.5rem;
+}
+
+.nav-button-text {
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  font-size: 1rem;
+  color: #fff;
+}
+
+/*-------------------------------------------*/
+/*--------------- TRANSITIONS ---------------*/
+/*-------------------------------------------*/
+
+.nav-link:hover::before {
+  width: 100%;
+  opacity: 1;
+}
+
+.nav-link:hover .nav-link-text {
+  color: #fff;
+}
+
+/*----------------------------------------------*/
+/*----------------- END OF CSS -----------------*/
+/*----------------------------------------------*/
