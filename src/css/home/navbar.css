@@ -6,8 +6,8 @@ nav {
   background-image: linear-gradient(to bottom, #00000050, transparent);
   justify-content: space-between;
   grid-auto-flow: column;
+  padding: 1.5rem 2rem;
   align-items: center;
-  padding: 1rem 2rem;
   display: grid;
 }
 
@@ -23,7 +23,7 @@ nav {
   grid-auto-flow: column;
   align-items: center;
   display: grid;
-  gap: 1.5rem;
+  gap: 2rem;
 }
 
 .nav-utils-links {
@@ -55,6 +55,7 @@ nav {
 .nav-link-text {
   font-family: "Poppins", sans-serif;
   transition: color 450ms;
+  letter-spacing: 0.5px;
   color: #ffffff50;
   font-weight: 300;
   font-size: 1rem;
@@ -62,7 +63,7 @@ nav {
 
 .nav-button {
   background-color: #b5002a;
-  padding: 0.35rem 1.5rem;
+  padding: 0.5rem 1.65rem;
 }
 
 .nav-button-text {

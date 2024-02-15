@@ -1,0 +1,122 @@
+/*-----------------------------------------------*/
+/*---------------- HEADER STYLES ----------------*/
+/*-----------------------------------------------*/
+
+header {
+  grid-template-columns: auto;
+  justify-content: stretch;
+  align-items: center;
+  display: grid;
+  gap: 2rem;
+}
+
+.header-domain {
+  background: -webkit-linear-gradient(45deg, red, blue);
+  -webkit-text-fill-color: transparent;
+  font-family: "Poppins", sans-serif;
+  transition: letter-spacing 450ms;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: #ffffffa0;
+  text-align: center;
+  letter-spacing: 0;
+  font-weight: 400;
+  cursor: default;
+  font-size: 8rem;
+}
+
+.header-domain:hover {
+  letter-spacing: 10px;
+}
+
+/*---------------------------------------*/
+/*------------- INFORMATION -------------*/
+/*---------------------------------------*/
+
+.header-information {
+  justify-content: center;
+  grid-auto-flow: column;
+  align-items: center;
+  padding: 4rem 0;
+  display: grid;
+  gap: 2rem;
+}
+
+.header-details {
+  grid-template-columns: auto;
+  justify-content: center;
+  align-items: center;
+  display: grid;
+  gap: 1rem;
+}
+
+/*-----------------------------------*/
+/*-------------- TITLE --------------*/
+/*-----------------------------------*/
+
+.header-title {
+  font-family: "Poppins", sans-serif;
+  line-height: 0.85;
+  cursor: default;
+}
+
+.header-title.opening {
+  font-size: 2.5rem;
+  font-weight: 200;
+  color: #808080;
+}
+
+.header-title.name {
+  font-weight: 400;
+  font-size: 3rem;
+  color: #fff;
+}
+
+.header-title.description {
+  font-size: 1.5rem;
+  font-weight: 300;
+  color: #a0a0a0;
+}
+
+/*-------------------------------------*/
+/*-------------- BUTTONS --------------*/
+/*-------------------------------------*/
+
+.header-buttons {
+  justify-content: start;
+  grid-auto-flow: column;
+  align-items: center;
+  margin-top: 1rem;
+  display: grid;
+  gap: 0.65rem;
+}
+
+.header-button {
+  border: 2px solid #fff;
+  justify-content: center;
+  padding: 0.35rem 2.5rem;
+  grid-auto-flow: column;
+  align-items: center;
+  display: grid;
+  gap: 0.45rem;
+}
+
+.header-button.solid {
+  background-color: #b5002a;
+  border-color: #b5002a;
+}
+
+.header-button-text {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.2rem;
+  font-weight: 300;
+  color: #fff;
+}
+
+.header-button-image {
+  width: 20px;
+}
+
+/*--------------------------------------------*/
+/*---------------- END OF CSS ----------------*/
+/*--------------------------------------------*/
