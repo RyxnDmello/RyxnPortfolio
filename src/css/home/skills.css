@@ -1,0 +1,124 @@
+/*---------------------------------------------*/
+/*--------------- SKILLS STYLES ---------------*/
+/*---------------------------------------------*/
+
+#skills {
+  background-color: #000025;
+  grid-template-columns: auto;
+  justify-content: stretch;
+  align-items: center;
+  padding: 2rem;
+  display: grid;
+  gap: 1rem;
+}
+
+.skills-title {
+  font-family: "Poppins", sans-serif;
+  letter-spacing: 0;
+  font-weight: 400;
+  font-size: 4rem;
+  cursor: default;
+  color: #fff;
+}
+
+.skills-title span {
+  background: -webkit-linear-gradient(45deg, red, blue);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+/*---------------------------------------------*/
+/*--------------- DOMAIN STYLES ---------------*/
+/*---------------------------------------------*/
+
+.skills-domains {
+  justify-content: space-evenly;
+  grid-auto-flow: column;
+  align-items: start;
+  display: grid;
+}
+
+.skills-domain {
+  background-color: #000000a0;
+  grid-template-columns: auto;
+  justify-content: start;
+  align-items: center;
+  border-radius: 5px;
+  overflow: hidden;
+  display: grid;
+}
+
+/*---------------------------------------*/
+/*------------ HEADER STYLES ------------*/
+/*---------------------------------------*/
+
+.skills-domain-header {
+  grid-template-columns: auto;
+  justify-content: start;
+  align-items: end;
+  padding: 0.5rem;
+  display: grid;
+  height: 60px;
+}
+
+.skills-domain:nth-of-type(1) .skills-domain-header,
+.skills-domain:nth-of-type(4) .skills-domain-header {
+  background-image: linear-gradient(45deg, #0051d3, #00a84e);
+}
+
+.skills-domain:nth-of-type(2) .skills-domain-header,
+.skills-domain:nth-of-type(5) .skills-domain-header {
+  background-image: linear-gradient(45deg, #ac002e, #7300a8);
+}
+
+.skills-domain:nth-of-type(3) .skills-domain-header {
+  background-image: linear-gradient(45deg, #00aa69, #abab00);
+}
+
+.skills-domain-header-title {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.25rem;
+  font-weight: 300;
+  line-height: 1;
+  color: #fff;
+}
+
+/*---------------------------------------*/
+/*------------ SKILLS STYLES ------------*/
+/*---------------------------------------*/
+
+.skills-domain-skills {
+  grid-template-columns: repeat(2, auto);
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  display: grid;
+  gap: 0.5rem;
+}
+
+.skills-domain-skill {
+  border: 2px solid #ffffff20;
+  justify-content: start;
+  grid-auto-flow: column;
+  align-items: center;
+  border-radius: 5px;
+  padding: 0.5rem;
+  display: grid;
+  gap: 0.5rem;
+}
+
+.skills-domain-skill-icon {
+  width: 20px;
+}
+
+.skills-domain-skill-name {
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  font-size: 1rem;
+  color: #fff;
+}
+
+/*------------------------------------------*/
+/*--------------- END OF CSS ---------------*/
+/*------------------------------------------*/

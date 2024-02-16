@@ -4,7 +4,7 @@ import Domain from "./Header/Domain";
 import Title from "./Header/Title";
 import Button from "./Header/Button";
 
-import sendIcon from "../images/buttons/send.png";
+import SendIcon from "../images/buttons/send.png";
 
 export default function Header() {
   return (
@@ -34,7 +34,7 @@ export default function Header() {
           />
 
           <div className="header-buttons">
-            <Button URL="#" text="Services" icon={sendIcon} isSolid={true} />
+            <Button URL="#" text="Services" icon={SendIcon} isSolid={true} />
             <Button URL="#" text="Download CV" />
           </div>
         </div>
