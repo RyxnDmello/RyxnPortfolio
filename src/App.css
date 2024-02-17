@@ -5,8 +5,8 @@
 @import url("./css/home/skills.css");
 
 * {
+  scroll-behavior: smooth;
   box-sizing: border-box;
-  scroll-behavior: auto;
   padding: 0;
   margin: 0;
 }
