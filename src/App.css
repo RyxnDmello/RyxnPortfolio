@@ -1,8 +1,10 @@
 @import url("./css/fonts.css");
+@import url("./css/common.css");
 
 @import url("./css/home/navbar.css");
 @import url("./css/home/header.css");
 @import url("./css/home/skills.css");
+@import url("./css/home/projects.css");
 
 * {
   scroll-behavior: smooth;

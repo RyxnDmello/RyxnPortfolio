@@ -1,9 +1,11 @@
 import { ILink } from "../../interfaces/links";
 
 export default function Link({ URL, text, isButton }: ILink) {
+  const className = isButton ? "nav-button" : "nav-link";
+
   return (
-    <a className={isButton ? "nav-button" : "nav-link"} href={URL}>
-      <p className={`${isButton ? "nav-button" : "nav-link"}-text`}>{text}</p>
+    <a className={className} href={URL}>
+      <p className={`${className}-text`}>{text}</p>
     </a>
   );
 }

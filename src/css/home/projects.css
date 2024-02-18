@@ -1,0 +1,70 @@
+/*----------------------------------------------------*/
+/*------------------ PROJECT STYLES ------------------*/
+/*----------------------------------------------------*/
+
+#projects {
+  grid-template-columns: auto;
+  justify-content: stretch;
+  padding: 2.5rem 2rem;
+  align-items: center;
+  display: grid;
+  gap: 1rem;
+}
+
+/*-----------------------------------------*/
+/*------------- HEADER STYLES -------------*/
+/*-----------------------------------------*/
+
+.projects-header {
+  justify-content: space-between;
+  grid-auto-flow: column;
+  align-items: center;
+  display: grid;
+}
+
+/*-----------------------------------------*/
+/*------------- NAVBAR STYLES -------------*/
+/*-----------------------------------------*/
+
+.projects-navbar {
+  justify-content: center;
+  grid-auto-flow: column;
+  align-items: start;
+  display: grid;
+}
+
+.projects-navbar-option {
+  transition: background-color 300ms;
+  background-color: #000025;
+  justify-content: center;
+  grid-auto-flow: column;
+  padding: 0.5rem 1.5rem;
+  align-items: center;
+  cursor: pointer;
+  display: grid;
+}
+
+.projects-navbar-option.active {
+  background-color: #ff0033;
+}
+
+.projects-navbar-option:first-of-type {
+  border-bottom-left-radius: 5px;
+  border-top-left-radius: 5px;
+}
+
+.projects-navbar-option:last-of-type {
+  border-bottom-right-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.projects-navbar-option-title {
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  font-size: 1rem;
+  color: #fff;
+}
+
+/*------------------------------------------------*/
+/*------------------ END OF CSS ------------------*/
+/*------------------------------------------------*/

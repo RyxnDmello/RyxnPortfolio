@@ -1,6 +1,6 @@
 import Logo from "./Header/Logo";
 import Link from "./Header/Link";
-import Domain from "./Header/Domain";
+import Heading from "./Header/Heading";
 import Title from "./Header/Title";
 import Button from "./Header/Button";
 
@@ -19,22 +19,18 @@ export default function Header() {
             <Link URL="#" text="Contacts" />
           </div>
 
-          <Link URL="#" text="Download CV" isButton={true} />
+          <Link URL="#" text="Download CV" isButton />
         </div>
       </nav>
 
-      <Domain title="Software Developer" />
+      <Heading title="Software Developer" />
 
       <div className="header-information">
         <div className="header-details">
-          <Title
-            opening="Hey, I Am"
-            name="Ryan Nolasco D Mello"
-            description="A Passionate Web & Mobile Developer"
-          />
+          <Title />
 
           <div className="header-buttons">
-            <Button URL="#" text="Services" icon={SendIcon} isSolid={true} />
+            <Button URL="#" text="Services" icon={SendIcon} isSolid />
             <Button URL="#" text="Download CV" />
           </div>
         </div>

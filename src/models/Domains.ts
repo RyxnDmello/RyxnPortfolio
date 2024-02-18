@@ -11,6 +11,7 @@ import node from "../images/skills/node.svg";
 import express from "../images/skills/express.svg";
 import sockets from "../images/skills/sockets.svg";
 import mongoose from "../images/skills/mongoose.svg";
+import nodemon from "../images/skills/nodemon.svg";
 import dotenv from "../images/skills/dotenv.svg";
 
 import flutter from "../images/skills/flutter.svg";
@@ -74,13 +75,17 @@ export const domains: IDomain[] = [
         icon: mongoose,
       },
       {
+        name: "Nodemon",
+        icon: nodemon,
+      },
+      {
         name: "Dotenv",
         icon: dotenv,
       },
     ],
   },
   {
-    title: "Mobile Applications",
+    title: "Mobile Development",
     skills: [
       {
         name: "Flutter",

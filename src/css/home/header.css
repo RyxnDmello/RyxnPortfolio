@@ -11,7 +11,7 @@ header {
   gap: 2rem;
 }
 
-.header-domain {
+.header-heading {
   background: -webkit-linear-gradient(45deg, red, blue);
   -webkit-text-fill-color: transparent;
   font-family: "Poppins", sans-serif;
@@ -68,7 +68,7 @@ header {
   color: #fff;
 }
 
-.header-title.description {
+.header-title.about {
   font-size: 1.5rem;
   font-weight: 300;
   color: #a0a0a0;

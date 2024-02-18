@@ -1,4 +1,4 @@
-import { ISkill } from "../../../interfaces/Domain";
+import { ISkill } from "../../../interfaces/Skill";
 
 export default function Skill({ name, icon }: ISkill) {
   return (

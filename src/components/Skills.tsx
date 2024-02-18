@@ -1,16 +1,16 @@
-import Title from "./Skills/Title";
-import Domain from "./Skills/Domain";
+import { domains } from "../models/Domains";
 
-import { domains } from "../data/Domains";
+import Title from "./Common/Title";
+import Domain from "./Skills/Domain";
 
 export default function Skills() {
   return (
     <section id="skills">
-      <Title />
+      <Title primary="Technical" secondary="Skills" />
 
       <div className="skills-domains">
-        {domains.map((domain) => (
-          <Domain title={domain.title} skills={domain.skills} />
+        {domains.map((domain, index) => (
+          <Domain key={index} title={domain.title} skills={domain.skills} />
         ))}
       </div>
     </section>

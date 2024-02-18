@@ -40,22 +40,6 @@
   right: -10rem;
 }
 
-.skills-title {
-  font-family: "Poppins", sans-serif;
-  letter-spacing: -2.5px;
-  font-weight: 400;
-  font-size: 4rem;
-  cursor: default;
-  color: #fff;
-}
-
-.skills-title span {
-  background: -webkit-linear-gradient(45deg, #ff0000, #0000ff);
-  -webkit-text-fill-color: transparent;
-  -webkit-background-clip: text;
-  background-clip: text;
-}
-
 /*---------------------------------------------*/
 /*--------------- DOMAIN STYLES ---------------*/
 /*---------------------------------------------*/
@@ -73,9 +57,17 @@
   transition: translate 400ms;
   grid-template-columns: auto;
   justify-content: stretch;
-  align-items: center;
+  align-items: start;
   border-radius: 5px;
   overflow: hidden;
+  display: grid;
+  height: 100%;
+}
+
+.skills-domain-details {
+  grid-template-columns: auto;
+  justify-content: stretch;
+  align-items: start;
   display: grid;
 }
 
