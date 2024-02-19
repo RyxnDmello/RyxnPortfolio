@@ -6,7 +6,7 @@
   grid-template-columns: auto;
   background-color: #000025;
   justify-content: stretch;
-  padding: 2.5rem 2rem;
+  padding: 3.5rem 2rem;
   align-items: center;
   position: relative;
   overflow: hidden;
@@ -51,7 +51,7 @@
   display: grid;
 }
 
-.skills-domain {
+.skills-domain-wrapper {
   box-shadow: 0 0 10px #00000080;
   background-color: #000010;
   transition: translate 400ms;
@@ -64,7 +64,7 @@
   height: 100%;
 }
 
-.skills-domain-details {
+.skills-domain {
   grid-template-columns: auto;
   justify-content: stretch;
   align-items: start;
@@ -146,8 +146,8 @@
   opacity: 1;
 }
 
-.skills-domain:hover {
-  translate: 0 -5px;
+.skills-domain-wrapper:hover {
+  translate: 0 -10px;
 }
 
 .skills-domain-skill:hover {

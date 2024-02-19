@@ -22,6 +22,7 @@ import firebase from "../images/skills/firebase.svg";
 
 import figma from "../images/skills/figma.svg";
 import dribbble from "../images/skills/dribbble.svg";
+import behance from "../images/skills/behance.svg";
 import unsplash from "../images/skills/unsplash.svg";
 import pixels from "../images/skills/pixels.svg";
 
@@ -124,6 +125,10 @@ export const domains: IDomain[] = [
       {
         name: "Dribbble",
         icon: dribbble,
+      },
+      {
+        name: "Behance",
+        icon: behance,
       },
       {
         name: "Pixels",

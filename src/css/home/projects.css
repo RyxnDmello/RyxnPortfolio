@@ -5,10 +5,10 @@
 #projects {
   grid-template-columns: auto;
   justify-content: stretch;
-  padding: 2.5rem 2rem;
   align-items: center;
+  padding: 4rem 2rem;
   display: grid;
-  gap: 1rem;
+  gap: 4rem;
 }
 
 /*-----------------------------------------*/
@@ -63,6 +63,152 @@
   font-weight: 300;
   font-size: 1rem;
   color: #fff;
+}
+
+/*-------------------------------------------*/
+/*------------- CAROUSEL STYLES -------------*/
+/*-------------------------------------------*/
+
+.projects-carousel {
+  grid-template-columns: repeat(4, auto);
+  justify-content: center;
+  align-items: stretch;
+  display: grid;
+  gap: 2rem;
+}
+
+.projects-project-wrapper {
+  box-shadow: 0 0 20px #000000a0;
+  transition: translate 400ms;
+  grid-template-columns: auto;
+  background-color: #000025;
+  justify-content: stretch;
+  align-items: start;
+  border-radius: 5px;
+  overflow: hidden;
+  display: grid;
+  width: 280px;
+}
+
+.projects-project {
+  grid-template-columns: auto;
+  justify-content: stretch;
+  align-items: center;
+  display: grid;
+  gap: 0.5rem;
+}
+
+.projects-project-divider {
+  border-bottom: 2px solid #ffffff25;
+  margin-top: 0.25rem;
+  border-radius: 40px;
+  border-right: none;
+  border-left: none;
+  border-top: none;
+}
+
+/*-------------------------------------*/
+/*----------- HEADER STYLES -----------*/
+/*-------------------------------------*/
+
+.projects-project-header {
+  padding: 0 0.5rem 0.25rem 0.5rem;
+  grid-template-columns: auto;
+  justify-content: stretch;
+  background-color: #000;
+  position: relative;
+  align-items: end;
+  overflow: hidden;
+  display: grid;
+  height: 150px;
+  z-index: 0;
+}
+
+.projects-project-title {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 400;
+  cursor: default;
+  line-height: 1;
+  color: #fff;
+}
+
+.projects-project-background {
+  transition: scale 500ms;
+  position: absolute;
+  object-fit: cover;
+  opacity: 0.8;
+  width: 100%;
+  z-index: -1;
+  top: -5rem;
+  right: 0;
+  left: 0;
+}
+
+/*--------------------------------------*/
+/*----------- DETAILS STYLES -----------*/
+/*--------------------------------------*/
+
+.projects-project-about {
+  font-family: "Poppins", sans-serif;
+  color: #ffffffa0;
+  line-height: 1.25;
+  font-weight: 300;
+  cursor: default;
+  font-size: 1rem;
+}
+
+.projects-project-details {
+  padding: 0.25rem 0.5rem 0.5rem 0.5rem;
+  grid-template-columns: auto;
+  justify-content: stretch;
+  align-items: center;
+  display: grid;
+  gap: 0.5rem;
+}
+
+/*---------------------------------------*/
+/*------------ SKILLS STYLES ------------*/
+/*---------------------------------------*/
+
+.projects-project-skills {
+  grid-template-columns: repeat(5, auto);
+  justify-content: center;
+  align-items: center;
+  padding: 0.5rem 0;
+  display: grid;
+  gap: 0.5rem;
+}
+
+.projects-project-skill {
+  transition: border-color 400ms;
+  border: 2px solid #ffffff25;
+  grid-template-columns: auto;
+  justify-content: center;
+  align-items: center;
+  border-radius: 40px;
+  padding: 0.65rem;
+  display: grid;
+}
+
+.projects-project-skill-icon {
+  width: 20px;
+}
+
+/*---------------------------------------*/
+/*------------- TRANSITIONS -------------*/
+/*---------------------------------------*/
+
+.projects-project-wrapper:hover {
+  translate: 0 -10px;
+}
+
+.projects-project-wrapper:hover .projects-project-background {
+  scale: 1.2;
+}
+
+.projects-project-skill:hover {
+  border-color: #ffffff80;
 }
 
 /*------------------------------------------------*/

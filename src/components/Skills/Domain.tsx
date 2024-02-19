@@ -5,8 +5,8 @@ import { IDomain } from "../../interfaces/Domain";
 
 export default function Domain({ title, skills }: IDomain) {
   return (
-    <div className="skills-domain">
-      <div className="skills-domain-details">
+    <div className="skills-domain-wrapper">
+      <div className="skills-domain">
         <Title title={title} />
 
         <div className="skills-domain-skills">
