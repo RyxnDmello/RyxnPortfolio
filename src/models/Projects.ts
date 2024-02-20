@@ -1,187 +1,237 @@
 import { IProject } from "../interfaces/Project";
 
-import html from "../images/skills/html.svg";
-import css from "../images/skills/css.svg";
-import javascript from "../images/skills/javascript.svg";
-import node from "../images/skills/node.svg";
-import express from "../images/skills/express.svg";
-import mongoose from "../images/skills/mongoose.svg";
-import mongodb from "../images/skills/mongodb.svg";
-import dotenv from "../images/skills/dotenv.svg";
-import nodemon from "../images/skills/nodemon.svg";
+import Codexo from "../images/projects/codexo.png";
+import TaskTonic from "../images/projects/tasktonic.png";
+import CloudSense from "../images/projects/cloudsense.png";
+import CyberVerse from "../images/projects/cyberverse.png";
 
-import codexo from "../images/projects/codexo.png";
+import HTML from "../images/skills/html.svg";
+import CSS from "../images/skills/css.svg";
+import Javascript from "../images/skills/javascript.svg";
+import Node from "../images/skills/node.svg";
+import Express from "../images/skills/express.svg";
+import Mongoose from "../images/skills/mongoose.svg";
+import MongoDB from "../images/skills/mongodb.svg";
+import Dotenv from "../images/skills/dotenv.svg";
+import Nodemon from "../images/skills/nodemon.svg";
 
-export const projects: IProject[] = [
+import GitHub from "../images/buttons/github.svg";
+import Explore from "../images/buttons/explore.svg";
+
+export const webApplications: IProject[] = [
   {
+    image: Codexo,
     title: "Codexo",
-    about: "Informative Application for IDEs, Frameworks, and Libraries.",
-    image: codexo,
+    about: "Get the latest insights on leading technologies and frameworks",
     skills: [
       {
         name: "HTML5",
-        icon: html,
+        icon: HTML,
       },
       {
-        name: "CSS3",
-        icon: css,
+        name: "CSS5",
+        icon: CSS,
       },
       {
         name: "JavaScript",
-        icon: javascript,
+        icon: Javascript,
       },
       {
         name: "Node.js",
-        icon: node,
+        icon: Node,
       },
       {
-        name: "Express.js",
-        icon: express,
+        name: "Express",
+        icon: Express,
       },
       {
         name: "Nodemon",
-        icon: nodemon,
+        icon: Nodemon,
       },
       {
         name: "Dotenv",
-        icon: dotenv,
+        icon: Dotenv,
       },
       {
         name: "Mongoose",
-        icon: mongoose,
+        icon: Mongoose,
       },
       {
-        name: "Mongoose",
-        icon: mongodb,
+        name: "MongoDB",
+        icon: MongoDB,
+      },
+    ],
+    explore: [
+      {
+        URL: "https://github.com/RyxnDmello/WebApp-NodeJs-02",
+        label: "Source Code",
+        icon: GitHub,
+      },
+      {
+        URL: "https://codexo-v76g.onrender.com",
+        icon: Explore,
       },
     ],
   },
   {
+    image: TaskTonic,
     title: "TaskTonic",
-    about: "Task Management Application.",
-    image: codexo,
+    about: "Stay organized by creating and managing your tasks efficiently",
     skills: [
       {
         name: "HTML5",
-        icon: html,
+        icon: HTML,
       },
       {
-        name: "CSS3",
-        icon: css,
+        name: "CSS5",
+        icon: CSS,
       },
       {
         name: "JavaScript",
-        icon: javascript,
+        icon: Javascript,
       },
       {
         name: "Node.js",
-        icon: node,
+        icon: Node,
       },
       {
-        name: "Express.js",
-        icon: express,
+        name: "Express",
+        icon: Express,
       },
       {
         name: "Nodemon",
-        icon: nodemon,
+        icon: Nodemon,
       },
       {
         name: "Dotenv",
-        icon: dotenv,
+        icon: Dotenv,
       },
       {
         name: "Mongoose",
-        icon: mongoose,
+        icon: Mongoose,
       },
       {
-        name: "Mongoose",
-        icon: mongodb,
+        name: "MongoDB",
+        icon: MongoDB,
+      },
+    ],
+    explore: [
+      {
+        URL: "https://github.com/RyxnDmello/WebApp-NodeJs-03",
+        label: "Source Code",
+        icon: GitHub,
+      },
+      {
+        URL: "https://codexo-v76g.onrender.com",
+        icon: Explore,
       },
     ],
   },
   {
-    title: "Codexo",
-    about: "Informative Application for IDEs, Frameworks, and Libraries.",
-    image: codexo,
+    image: CloudSense,
+    title: "CloudSense",
+    about: "Experience realtime weather forecast for your favorite cities",
     skills: [
       {
         name: "HTML5",
-        icon: html,
+        icon: HTML,
       },
       {
-        name: "CSS3",
-        icon: css,
+        name: "CSS5",
+        icon: CSS,
       },
       {
         name: "JavaScript",
-        icon: javascript,
+        icon: Javascript,
       },
       {
         name: "Node.js",
-        icon: node,
+        icon: Node,
       },
       {
-        name: "Express.js",
-        icon: express,
+        name: "Express",
+        icon: Express,
       },
       {
         name: "Nodemon",
-        icon: nodemon,
+        icon: Nodemon,
       },
       {
         name: "Dotenv",
-        icon: dotenv,
+        icon: Dotenv,
       },
       {
         name: "Mongoose",
-        icon: mongoose,
+        icon: Mongoose,
       },
       {
-        name: "Mongoose",
-        icon: mongodb,
+        name: "MongoDB",
+        icon: MongoDB,
+      },
+    ],
+    explore: [
+      {
+        URL: "https://github.com/RyxnDmello/WebApp-NodeJs-04",
+        label: "Source Code",
+        icon: GitHub,
+      },
+      {
+        URL: "https://codexo-v76g.onrender.com",
+        icon: Explore,
       },
     ],
   },
   {
-    title: "Codexo",
-    about: "Informative Application for IDEs, Frameworks, and Libraries.",
-    image: codexo,
+    image: CyberVerse,
+    title: "CyberVerse",
+    about: "Explore, customize, and buy the latest consoles and games",
     skills: [
       {
         name: "HTML5",
-        icon: html,
+        icon: HTML,
       },
       {
-        name: "CSS3",
-        icon: css,
+        name: "CSS5",
+        icon: CSS,
       },
       {
         name: "JavaScript",
-        icon: javascript,
+        icon: Javascript,
       },
       {
         name: "Node.js",
-        icon: node,
+        icon: Node,
       },
       {
-        name: "Express.js",
-        icon: express,
+        name: "Express",
+        icon: Express,
       },
       {
         name: "Nodemon",
-        icon: nodemon,
+        icon: Nodemon,
       },
       {
         name: "Dotenv",
-        icon: dotenv,
+        icon: Dotenv,
       },
       {
         name: "Mongoose",
-        icon: mongoose,
+        icon: Mongoose,
       },
       {
-        name: "Mongoose",
-        icon: mongodb,
+        name: "MongoDB",
+        icon: MongoDB,
+      },
+    ],
+    explore: [
+      {
+        URL: "https://github.com/RyxnDmello/WebApp-NodeJs-05",
+        label: "Source Code",
+        icon: GitHub,
+      },
+      {
+        URL: "https://codexo-v76g.onrender.com",
+        icon: Explore,
       },
     ],
   },

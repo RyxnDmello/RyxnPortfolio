@@ -1,3 +1,4 @@
+import { IExplore } from "./Explore";
 import { ISkill } from "./Skill";
 
 export interface IProject {
@@ -5,6 +6,7 @@ export interface IProject {
   title: string;
   about: string;
   skills: ISkill[];
+  explore: IExplore[];
 }
 
 export interface IOption {

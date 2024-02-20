@@ -99,7 +99,7 @@
 }
 
 .projects-project-divider {
-  border-bottom: 2px solid #ffffff25;
+  border-bottom: 2.25px solid #ffffff10;
   margin-top: 0.25rem;
   border-radius: 40px;
   border-right: none;
@@ -138,9 +138,9 @@
   position: absolute;
   object-fit: cover;
   opacity: 0.8;
+  height: 100%;
   width: 100%;
   z-index: -1;
-  top: -5rem;
   right: 0;
   left: 0;
 }
@@ -196,6 +196,56 @@
 }
 
 /*---------------------------------------*/
+/*------------ SKILLS STYLES ------------*/
+/*---------------------------------------*/
+
+.projects-project-buttons {
+  justify-content: space-between;
+  grid-auto-flow: column;
+  align-items: center;
+  margin-top: 0.25rem;
+  display: grid;
+}
+
+.projects-project-button {
+  justify-content: center;
+  grid-auto-flow: column;
+  align-items: center;
+  display: grid;
+  gap: 0.5rem;
+}
+
+.projects-project-button.square {
+  background-color: #050505;
+  padding: 0.45rem 1rem;
+  border-radius: 2.5px;
+}
+
+.projects-project-button.rounded {
+  transition: background-color 300ms;
+  border: 2px solid #fff;
+  border-radius: 40px;
+  padding: 0.25rem;
+}
+
+.projects-project-button.square .projects-project-button-icon {
+  width: 18px;
+}
+
+.projects-project-button.rounded .projects-project-button-icon {
+  transition: filter 300ms;
+  width: 22.5px;
+}
+
+.projects-project-button-label {
+  font-family: "Poppins", sans-serif;
+  letter-spacing: 0.25px;
+  font-weight: 300;
+  font-size: 1rem;
+  color: #fff;
+}
+
+/*---------------------------------------*/
 /*------------- TRANSITIONS -------------*/
 /*---------------------------------------*/
 
@@ -209,6 +259,14 @@
 
 .projects-project-skill:hover {
   border-color: #ffffff80;
+}
+
+.projects-project-button.rounded:hover {
+  background-color: #fff;
+}
+
+.projects-project-button.rounded:hover .projects-project-button-icon {
+  filter: invert(1);
 }
 
 /*------------------------------------------------*/

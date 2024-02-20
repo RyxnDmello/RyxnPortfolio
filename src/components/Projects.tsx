@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 import { options } from "../models/Options";
-import { projects } from "../models/Projects";
+import { webApplications } from "../models/Projects";
 
 import Title from "./Common/Title";
 import Option from "./Projects/Option";
@@ -33,7 +33,7 @@ export default function Projects() {
       </div>
 
       <div className="projects-carousel">
-        {projects.map((project) => {
+        {webApplications.map((project) => {
           return <Project {...project} />;
         })}
       </div>

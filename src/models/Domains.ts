@@ -1,30 +1,30 @@
 import { IDomain } from "../interfaces/Domain";
 
-import react from "../images/skills/react.svg";
-import typescript from "../images/skills/typescript.svg";
-import javascript from "../images/skills/javascript.svg";
-import bootstrap from "../images/skills/bootstrap.svg";
-import html from "../images/skills/html.svg";
-import css from "../images/skills/css.svg";
+import React from "../images/skills/react.svg";
+import Typescript from "../images/skills/typescript.svg";
+import Javascript from "../images/skills/javascript.svg";
+import Bootstrap from "../images/skills/bootstrap.svg";
+import HTML from "../images/skills/html.svg";
+import CSS from "../images/skills/css.svg";
 
-import node from "../images/skills/node.svg";
-import express from "../images/skills/express.svg";
-import sockets from "../images/skills/sockets.svg";
-import mongoose from "../images/skills/mongoose.svg";
-import nodemon from "../images/skills/nodemon.svg";
-import dotenv from "../images/skills/dotenv.svg";
+import Node from "../images/skills/node.svg";
+import Express from "../images/skills/express.svg";
+import Sockets from "../images/skills/sockets.svg";
+import Mongoose from "../images/skills/mongoose.svg";
+import Nodemon from "../images/skills/nodemon.svg";
+import Dotenv from "../images/skills/dotenv.svg";
 
-import flutter from "../images/skills/flutter.svg";
-import dart from "../images/skills/dart.svg";
+import Flutter from "../images/skills/flutter.svg";
+import Dart from "../images/skills/dart.svg";
 
-import mongodb from "../images/skills/mongodb.svg";
-import firebase from "../images/skills/firebase.svg";
+import MongoDB from "../images/skills/mongodb.svg";
+import Firebase from "../images/skills/firebase.svg";
 
-import figma from "../images/skills/figma.svg";
-import dribbble from "../images/skills/dribbble.svg";
-import behance from "../images/skills/behance.svg";
-import unsplash from "../images/skills/unsplash.svg";
-import pixels from "../images/skills/pixels.svg";
+import Figma from "../images/skills/figma.svg";
+import Dribbble from "../images/skills/dribbble.svg";
+import Behance from "../images/skills/behance.svg";
+import Unsplash from "../images/skills/unsplash.svg";
+import Pixels from "../images/skills/pixels.svg";
 
 export const domains: IDomain[] = [
   {
@@ -32,27 +32,27 @@ export const domains: IDomain[] = [
     skills: [
       {
         name: "React",
-        icon: react,
+        icon: React,
       },
       {
         name: "Typescript",
-        icon: typescript,
+        icon: Typescript,
       },
       {
         name: "Javascript",
-        icon: javascript,
+        icon: Javascript,
       },
       {
         name: "HTML",
-        icon: html,
+        icon: HTML,
       },
       {
         name: "CSS",
-        icon: css,
+        icon: CSS,
       },
       {
         name: "Bootstrap",
-        icon: bootstrap,
+        icon: Bootstrap,
       },
     ],
   },
@@ -61,27 +61,27 @@ export const domains: IDomain[] = [
     skills: [
       {
         name: "Node",
-        icon: node,
+        icon: Node,
       },
       {
         name: "Express",
-        icon: express,
+        icon: Express,
       },
       {
         name: "Sockets",
-        icon: sockets,
+        icon: Sockets,
       },
       {
         name: "Mongoose",
-        icon: mongoose,
+        icon: Mongoose,
       },
       {
         name: "Nodemon",
-        icon: nodemon,
+        icon: Nodemon,
       },
       {
         name: "Dotenv",
-        icon: dotenv,
+        icon: Dotenv,
       },
     ],
   },
@@ -90,15 +90,15 @@ export const domains: IDomain[] = [
     skills: [
       {
         name: "Flutter",
-        icon: flutter,
+        icon: Flutter,
       },
       {
         name: "Dart",
-        icon: dart,
+        icon: Dart,
       },
       {
         name: "Firebase",
-        icon: firebase,
+        icon: Firebase,
       },
     ],
   },
@@ -107,11 +107,11 @@ export const domains: IDomain[] = [
     skills: [
       {
         name: "MongoDB",
-        icon: mongodb,
+        icon: MongoDB,
       },
       {
         name: "Firebase",
-        icon: firebase,
+        icon: Firebase,
       },
     ],
   },
@@ -120,23 +120,23 @@ export const domains: IDomain[] = [
     skills: [
       {
         name: "Figma",
-        icon: figma,
+        icon: Figma,
       },
       {
         name: "Dribbble",
-        icon: dribbble,
+        icon: Dribbble,
       },
       {
         name: "Behance",
-        icon: behance,
+        icon: Behance,
       },
       {
         name: "Pixels",
-        icon: pixels,
+        icon: Pixels,
       },
       {
         name: "Unsplash",
-        icon: unsplash,
+        icon: Unsplash,
       },
     ],
   },
