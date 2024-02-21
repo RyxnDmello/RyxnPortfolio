@@ -1,21 +1,16 @@
 import { IExplore } from "../../../interfaces/Explore";
 
-export default function Button({ label, icon, URL }: IExplore) {
+export default function Button({ url, label, icon, platform }: IExplore) {
   const className = "projects-project";
 
   return (
     <a
-      className={`${className}-button ${
-        label === undefined ? "rounded" : "square"
-      }`}
+      className={`${className}-button ${platform ?? "github"}`}
       target="_blank"
-      href={URL}
+      href={url}
     >
       <img className={`${className}-button-icon`} src={icon} />
-
-      {label !== undefined ? (
-        <p className={`${className}-button-label`}>{label}</p>
-      ) : undefined}
+      {label && <p className={`${className}-button-label`}>{label}</p>}
     </a>
   );
 }

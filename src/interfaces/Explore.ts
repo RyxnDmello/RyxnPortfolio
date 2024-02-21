@@ -1,5 +1,6 @@
 export interface IExplore {
-  URL: string;
+  url: string;
   icon: string;
   label?: string;
+  platform?: "website" | "desktop" | "android";
 }

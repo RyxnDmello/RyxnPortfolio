@@ -196,7 +196,7 @@
 }
 
 /*---------------------------------------*/
-/*------------ SKILLS STYLES ------------*/
+/*------------ BUTTON STYLES ------------*/
 /*---------------------------------------*/
 
 .projects-project-buttons {
@@ -215,26 +215,46 @@
   gap: 0.5rem;
 }
 
-.projects-project-button.square {
+.projects-project-button.github {
   background-color: #050505;
   padding: 0.45rem 1rem;
   border-radius: 2.5px;
 }
 
-.projects-project-button.rounded {
+.projects-project-button.website {
   transition: background-color 300ms;
   border: 2px solid #fff;
   border-radius: 40px;
   padding: 0.25rem;
 }
 
-.projects-project-button.square .projects-project-button-icon {
+.projects-project-button.desktop {
+  border: 2px solid #fa5c5c;
+  transition: scale 250ms;
+  border-radius: 40px;
+  margin-right: -1rem;
+  padding: 0.5rem;
+}
+
+.projects-project-button.android {
+  border: 2px solid #34a853;
+  transition: scale 250ms;
+  border-radius: 40px;
+  padding: 0.5rem;
+}
+
+.projects-project-button.github .projects-project-button-icon {
   width: 18px;
 }
 
-.projects-project-button.rounded .projects-project-button-icon {
+.projects-project-button.website .projects-project-button-icon {
   transition: filter 300ms;
   width: 22.5px;
+}
+
+.projects-project-button.desktop .projects-project-button-icon,
+.projects-project-button.android .projects-project-button-icon {
+  width: 16px;
 }
 
 .projects-project-button-label {
@@ -261,12 +281,17 @@
   border-color: #ffffff80;
 }
 
-.projects-project-button.rounded:hover {
+.projects-project-button.website:hover {
   background-color: #fff;
 }
 
-.projects-project-button.rounded:hover .projects-project-button-icon {
+.projects-project-button.website:hover .projects-project-button-icon {
   filter: invert(1);
+}
+
+.projects-project-button.desktop:hover,
+.projects-project-button.android:hover {
+  scale: 1.15;
 }
 
 /*------------------------------------------------*/
