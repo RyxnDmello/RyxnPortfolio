@@ -86,7 +86,7 @@ export const domains: IDomain[] = [
     ],
   },
   {
-    title: "Mobile Development",
+    title: "Mobile Applications",
     skills: [
       {
         name: "Flutter",
@@ -103,7 +103,7 @@ export const domains: IDomain[] = [
     ],
   },
   {
-    title: "Database & Libraries",
+    title: "Database",
     skills: [
       {
         name: "MongoDB",
