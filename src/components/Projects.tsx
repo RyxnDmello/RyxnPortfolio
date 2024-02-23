@@ -32,7 +32,7 @@ export default function Projects() {
         </div>
       </div>
 
-      <div className="projects-carousel">
+      <div className="projects-catalogue">
         {projects[active].map((project) => (
           <Project {...project} />
         ))}

@@ -1,10 +1,12 @@
 import { ISkill } from "../../../interfaces/Skill";
 
 export default function Skill({ name, icon }: ISkill) {
+  const className = "skills-domain-skill";
+
   return (
-    <div className="skills-domain-skill">
-      <img className="skills-domain-skill-icon" src={icon} />
-      <h2 className="skills-domain-skill-name">{name}</h2>
+    <div className={className}>
+      <img className={`${className}-icon`} src={icon} />
+      <h2 className={`${className}-name`}>{name}</h2>
     </div>
   );
 }

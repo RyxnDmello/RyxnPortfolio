@@ -10,7 +10,7 @@ export default function Skills() {
 
       <div className="skills-domains">
         {domains.map((domain, index) => (
-          <Domain key={index} title={domain.title} skills={domain.skills} />
+          <Domain key={index} {...domain} />
         ))}
       </div>
     </section>

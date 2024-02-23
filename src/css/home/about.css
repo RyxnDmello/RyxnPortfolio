@@ -51,7 +51,7 @@
   position: absolute;
   height: 4.5px;
   content: "";
-  width: 60%;
+  width: 50%;
   bottom: 0;
   left: 0;
 }
@@ -77,7 +77,8 @@
 /*------------------------------------*/
 
 .about-button {
-  background-color: #df0025;
+  transition: background-color 300ms, border-color 300ms;
+  background-color: #b5002a;
   padding: 0.4rem 2rem;
   width: fit-content;
 }
@@ -87,6 +88,15 @@
   font-weight: 300;
   font-size: 1rem;
   color: #fff;
+}
+
+/*-------------------------------------*/
+/*------------ TRANSITIONS ------------*/
+/*-------------------------------------*/
+
+.about-button:hover {
+  background-color: #df002a;
+  border-color: #df002a;
 }
 
 /*------------------------------------------*/

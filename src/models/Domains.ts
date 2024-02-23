@@ -1,5 +1,12 @@
 import { IDomain } from "../interfaces/Domain";
 
+import FrontendDev from "../images/skills/domains/web.png";
+import BackendDev from "../images/skills/domains/back.png";
+import MobileDev from "../images/skills/domains/mobile.png";
+import GameDev from "../images/skills/domains/game.png";
+import Database from "../images/skills/domains/database.png";
+import Designing from "../images/skills/domains/design.png";
+
 import React from "../images/skills/react.svg";
 import Typescript from "../images/skills/typescript.svg";
 import Javascript from "../images/skills/javascript.svg";
@@ -17,6 +24,12 @@ import Dotenv from "../images/skills/dotenv.svg";
 import Flutter from "../images/skills/flutter.svg";
 import Dart from "../images/skills/dart.svg";
 
+import Unity from "../images/skills/unity.svg";
+import CSharp from "../images/skills/csharp.svg";
+import PlayStore from "../images/skills/playstore.svg";
+import ItchIO from "../images/skills/itch.svg";
+import VS from "../images/skills/vs.svg";
+
 import MongoDB from "../images/skills/mongodb.svg";
 import Firebase from "../images/skills/firebase.svg";
 
@@ -29,6 +42,7 @@ import Pixels from "../images/skills/pixels.svg";
 export const domains: IDomain[] = [
   {
     title: "Frontend Development",
+    image: FrontendDev,
     skills: [
       {
         name: "React",
@@ -58,6 +72,7 @@ export const domains: IDomain[] = [
   },
   {
     title: "Backend Development",
+    image: BackendDev,
     skills: [
       {
         name: "Node",
@@ -86,7 +101,8 @@ export const domains: IDomain[] = [
     ],
   },
   {
-    title: "Mobile Applications",
+    title: "Mobile Development",
+    image: MobileDev,
     skills: [
       {
         name: "Flutter",
@@ -102,8 +118,10 @@ export const domains: IDomain[] = [
       },
     ],
   },
+
   {
-    title: "Database",
+    title: "Databases",
+    image: Database,
     skills: [
       {
         name: "MongoDB",
@@ -116,7 +134,34 @@ export const domains: IDomain[] = [
     ],
   },
   {
+    title: "Game Development",
+    image: GameDev,
+    skills: [
+      {
+        name: "Unity",
+        icon: Unity,
+      },
+      {
+        name: "CSharp",
+        icon: CSharp,
+      },
+      {
+        name: "PlayStore",
+        icon: PlayStore,
+      },
+      {
+        name: "Itch.IO",
+        icon: ItchIO,
+      },
+      {
+        name: "Visual Studio",
+        icon: VS,
+      },
+    ],
+  },
+  {
     title: "Designing",
+    image: Designing,
     skills: [
       {
         name: "Figma",

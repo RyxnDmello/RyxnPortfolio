@@ -1,18 +1,24 @@
-import Title from "./Domain/Title";
 import Skill from "./Domain/Skill";
 
 import { IDomain } from "../../interfaces/Domain";
 
-export default function Domain({ title, skills }: IDomain) {
-  return (
-    <div className="skills-domain-wrapper">
-      <div className="skills-domain">
-        <Title title={title} />
+export default function Domain({ title, image, skills }: IDomain) {
+  const className = "skills-domain";
 
-        <div className="skills-domain-skills">
-          {skills.map((skill) => (
-            <Skill icon={skill.icon} name={skill.name} />
-          ))}
+  return (
+    <div className={`${className}-wrapper`}>
+      <div className={className}>
+        <div className={`${className}-header`}>
+          <img className={`${className}-image`} src={image} />
+          <h2 className={`${className}-title`}>{title}</h2>
+        </div>
+
+        <div className={`${className}-skills-wrapper`}>
+          <div className={`${className}-skills`}>
+            {skills.map((skill) => (
+              <Skill {...skill} />
+            ))}
+          </div>
         </div>
       </div>
     </div>

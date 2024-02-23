@@ -4,7 +4,7 @@
 
 #projects {
   grid-template-columns: auto;
-  justify-content: stretch;
+  justify-content: center;
   align-items: center;
   padding: 4rem 2rem;
   display: grid;
@@ -16,10 +16,11 @@
 /*-----------------------------------------*/
 
 .projects-header {
-  justify-content: space-between;
+  justify-content: center;
   grid-auto-flow: column;
   align-items: center;
   display: grid;
+  gap: 8rem;
 }
 
 /*-----------------------------------------*/
@@ -29,7 +30,7 @@
 .projects-navbar {
   justify-content: center;
   grid-auto-flow: column;
-  align-items: start;
+  align-items: center;
   display: grid;
 }
 
@@ -60,16 +61,16 @@
 
 .projects-navbar-option-title {
   font-family: "Poppins", sans-serif;
+  font-size: 0.85rem;
   font-weight: 300;
-  font-size: 1rem;
   color: #fff;
 }
 
-/*-------------------------------------------*/
-/*------------- CAROUSEL STYLES -------------*/
-/*-------------------------------------------*/
+/*--------------------------------------------*/
+/*------------- CATALOGUE STYLES -------------*/
+/*--------------------------------------------*/
 
-.projects-carousel {
+.projects-catalogue {
   grid-template-columns: repeat(4, auto);
   justify-content: center;
   align-items: stretch;
