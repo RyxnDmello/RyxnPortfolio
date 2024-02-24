@@ -21,10 +21,10 @@
 /*---------------------------------------------*/
 
 .skills-domains {
-  grid-template-columns: repeat(4, auto);
   justify-content: center;
   align-items: stretch;
-  display: grid;
+  flex-wrap: wrap;
+  display: flex;
   gap: 1.25rem;
 }
 

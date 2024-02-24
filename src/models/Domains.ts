@@ -5,6 +5,7 @@ import BackendDev from "../images/skills/domains/back.png";
 import MobileDev from "../images/skills/domains/mobile.png";
 import GameDev from "../images/skills/domains/game.png";
 import Database from "../images/skills/domains/database.png";
+import Deployment from "../images/skills/domains/deployment.png";
 import Designing from "../images/skills/domains/design.png";
 
 import React from "../images/skills/react.svg";
@@ -32,6 +33,11 @@ import VS from "../images/skills/vs.svg";
 
 import MongoDB from "../images/skills/mongodb.svg";
 import Firebase from "../images/skills/firebase.svg";
+import VSCode from "../images/skills/vsc.svg";
+import AndroidStudio from "../images/skills/astudio.svg";
+
+import Heroku from "../images/skills/heroku.svg";
+import Vercel from "../images/skills/vercel.svg";
 
 import Figma from "../images/skills/figma.svg";
 import Dribbble from "../images/skills/dribbble.svg";
@@ -116,9 +122,42 @@ export const domains: IDomain[] = [
         name: "Firebase",
         icon: Firebase,
       },
+      {
+        name: "VS Code",
+        icon: VSCode,
+      },
+      {
+        name: "Android Studio",
+        icon: AndroidStudio,
+      },
     ],
   },
-
+  {
+    title: "Game Development",
+    image: GameDev,
+    skills: [
+      {
+        name: "Unity",
+        icon: Unity,
+      },
+      {
+        name: "C#",
+        icon: CSharp,
+      },
+      {
+        name: "PlayStore",
+        icon: PlayStore,
+      },
+      {
+        name: "Itch.io",
+        icon: ItchIO,
+      },
+      {
+        name: "Visual Studio",
+        icon: VS,
+      },
+    ],
+  },
   {
     title: "Databases",
     image: Database,
@@ -134,28 +173,16 @@ export const domains: IDomain[] = [
     ],
   },
   {
-    title: "Game Development",
-    image: GameDev,
+    title: "Deployment",
+    image: Deployment,
     skills: [
       {
-        name: "Unity",
-        icon: Unity,
+        name: "Heroku",
+        icon: Heroku,
       },
       {
-        name: "CSharp",
-        icon: CSharp,
-      },
-      {
-        name: "PlayStore",
-        icon: PlayStore,
-      },
-      {
-        name: "Itch.IO",
-        icon: ItchIO,
-      },
-      {
-        name: "Visual Studio",
-        icon: VS,
+        name: "Vercel",
+        icon: Vercel,
       },
     ],
   },

@@ -6,7 +6,7 @@ import Domain from "./Skills/Domain";
 export default function Skills() {
   return (
     <section id="skills">
-      <Title primary="Technical" secondary="Skills" />
+      <Title primary="Technical" secondary="Skills" isCentre />
 
       <div className="skills-domains">
         {domains.map((domain, index) => (
