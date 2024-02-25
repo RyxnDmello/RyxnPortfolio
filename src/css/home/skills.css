@@ -4,16 +4,47 @@
 
 #skills {
   box-shadow: 0 0 20px #000000a0;
+  padding: 2rem 4rem 3rem 4rem;
   grid-template-columns: auto;
   background-color: #000025;
   justify-content: center;
-  padding: 2.5rem 4rem;
   align-items: center;
   position: relative;
   overflow: hidden;
   display: grid;
-  gap: 1.5rem;
+  gap: 1rem;
   z-index: 0;
+}
+
+#skills .title {
+  font-size: 5rem;
+}
+
+#skills::before,
+#skills::after {
+  background-image: linear-gradient(
+    to bottom,
+    #800033 0%,
+    #5700a2 50%,
+    #004475 100%
+  );
+  transition: right 400ms, opacity 200ms;
+  box-shadow: 0 0 20px #000000a0;
+  background-color: #ff3cac;
+  transform: skew(40deg);
+  position: absolute;
+  height: 100%;
+  width: 100px;
+  z-index: -1;
+  content: "";
+}
+
+#skills::before {
+  right: 12rem;
+}
+
+#skills::after {
+  right: 20rem;
 }
 
 /*---------------------------------------------*/
@@ -132,16 +163,6 @@
 /*---------------------------------------*/
 /*------------- TRANSITIONS -------------*/
 /*---------------------------------------*/
-
-#skills:hover::before {
-  right: 30rem;
-  opacity: 1;
-}
-
-#skills:hover::after {
-  right: 20rem;
-  opacity: 1;
-}
 
 .skills-domain-wrapper:hover {
   translate: 0 -10px;
