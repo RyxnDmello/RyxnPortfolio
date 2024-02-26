@@ -13,12 +13,10 @@ export default function Domain({ title, image, skills }: IDomain) {
           <h2 className={`${className}-title`}>{title}</h2>
         </div>
 
-        <div className={`${className}-skills-wrapper`}>
-          <div className={`${className}-skills`}>
-            {skills.map((skill) => (
-              <Skill {...skill} />
-            ))}
-          </div>
+        <div className={`${className}-skills`}>
+          {skills.map((skill) => (
+            <Skill {...skill} />
+          ))}
         </div>
       </div>
     </div>
