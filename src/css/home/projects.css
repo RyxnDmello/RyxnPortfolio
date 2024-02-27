@@ -6,6 +6,7 @@
   grid-template-columns: auto;
   justify-content: center;
   align-items: center;
+  position: relative;
   padding: 4rem 2rem;
   display: grid;
   gap: 4rem;
@@ -125,7 +126,7 @@
 }
 
 .projects-project-header::before {
-  background-image: linear-gradient(to top, #000000a0, transparent);
+  background-image: linear-gradient(to top, #000000af, transparent);
   position: absolute;
   height: 100px;
   width: 100%;
@@ -290,6 +291,15 @@
 .projects-project-button.desktop .projects-project-button-icon,
 .projects-project-button.android .projects-project-button-icon {
   width: 16px;
+}
+
+/*---------------------------------------*/
+/*------------- DECORATIONS -------------*/
+/*---------------------------------------*/
+
+#projects .circles {
+  right: 4rem;
+  top: 15rem;
 }
 
 /*---------------------------------------*/

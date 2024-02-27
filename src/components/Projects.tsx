@@ -3,6 +3,8 @@ import { useState } from "react";
 import { options } from "../models/Options";
 import { projects } from "../models/Projects";
 
+import Circles from "./decorations/Circles";
+
 import Title from "./Common/Title";
 import Option from "./Projects/Option";
 import Project from "./Projects/Project";
@@ -37,6 +39,8 @@ export default function Projects() {
           <Project {...project} />
         ))}
       </div>
+
+      <Circles />
     </section>
   );
 }
