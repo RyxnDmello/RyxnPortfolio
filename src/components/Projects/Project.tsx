@@ -22,8 +22,8 @@ export default function Project({ title, about, image, explore }: IProject) {
             <Button {...explore[0]} />
 
             <div className={`${className}-buttons-platforms`}>
-              {explore.map((button) => {
-                return button.platform && <Button {...button} />;
+              {explore.map((button, i) => {
+                return button.platform && <Button key={i} {...button} />;
               })}
             </div>
           </div>

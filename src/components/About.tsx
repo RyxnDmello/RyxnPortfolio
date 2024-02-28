@@ -3,12 +3,6 @@ import Circles from "./decorations/Circles";
 import Statistic from "./About/Statistic";
 
 export default function About() {
-  const a = document.querySelector(".about-title");
-  
-  a?.addEventListener("click", () => {
-    console.log("ryan randi");
-  });
-
   return (
     <section id="about">
       <div className="about-details">

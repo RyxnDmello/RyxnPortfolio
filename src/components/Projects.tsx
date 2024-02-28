@@ -26,6 +26,7 @@ export default function Projects() {
           {options.map((option, ID) => {
             return (
               <Option
+                key={ID}
                 {...option}
                 isActive={active === ID}
                 onClick={() => onHandleActiveOption(ID)}
@@ -36,8 +37,8 @@ export default function Projects() {
       </div>
 
       <div className="projects-catalogue">
-        {projects[active].map((project) => (
-          <Project {...project} />
+        {projects[active].map((project, i) => (
+          <Project key={i} {...project} />
         ))}
       </div>
 

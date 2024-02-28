@@ -14,8 +14,8 @@ export default function Domain({ title, image, skills }: IDomain) {
         </div>
 
         <div className={`${className}-skills`}>
-          {skills.map((skill) => (
-            <Skill {...skill} />
+          {skills.map((skill, i) => (
+            <Skill key={i} {...skill} />
           ))}
         </div>
       </div>

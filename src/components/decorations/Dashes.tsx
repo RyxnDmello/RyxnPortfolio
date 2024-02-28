@@ -6,8 +6,8 @@ export default function Dashes({
 }: IDecoration) {
   return (
     <div className={`decoration dashes ${direction}`}>
-      {Array.from({ length: count }, () => {
-        return <div className="dash"></div>;
+      {Array.from({ length: count }, (_, i) => {
+        return <div key={i} className="dash"></div>;
       })}
     </div>
   );

@@ -11,8 +11,8 @@ export default function Skills() {
       <Title primary="Technical" secondary="Skills" />
 
       <div className="skills-domains">
-        {domains.map((domain, index) => (
-          <Domain key={index} {...domain} />
+        {domains.map((domain, i) => (
+          <Domain key={i} {...domain} />
         ))}
       </div>
 

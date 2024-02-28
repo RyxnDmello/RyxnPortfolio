@@ -7,11 +7,12 @@ export default function Statistic({ title, rating = 5 }: IStatistic) {
 
       <div className={`${className}-rating`}>
         {Array.from({ length: 5 }, (_, i) => {
-          if (i < rating) {
-            return <div className={`${className}-bullet marked`}></div>;
-          }
-
-          return <div className={`${className}-bullet`}></div>;
+          return (
+            <div
+              key={i}
+              className={`${className}-bullet ${i < rating && "marked"}`}
+            />
+          );
         })}
       </div>
     </div>
