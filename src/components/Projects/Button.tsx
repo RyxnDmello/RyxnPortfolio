@@ -1,4 +1,4 @@
-import { IExplore } from "../../../interfaces/Explore";
+import { IExplore } from "../../interfaces/Explore";
 
 export default function Button({ url, label, icon, platform }: IExplore) {
   const className = "projects-project";

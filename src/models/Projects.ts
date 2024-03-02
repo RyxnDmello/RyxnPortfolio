@@ -12,26 +12,9 @@ import PixelFlix from "../images/projects/pixelflix.png";
 import GeoMadness from "../images/projects/geomadness.png";
 import HyperCrash from "../images/projects/hypercrash.png";
 
-import HTML from "../images/skills/html.svg";
-import CSS from "../images/skills/css.svg";
-import Javascript from "../images/skills/javascript.svg";
-import Node from "../images/skills/node.svg";
-import Express from "../images/skills/express.svg";
-import Mongoose from "../images/skills/mongoose.svg";
-import MongoDB from "../images/skills/mongodb.svg";
-import Dotenv from "../images/skills/dotenv.svg";
-import Nodemon from "../images/skills/nodemon.svg";
-
-import Flutter from "../images/skills/flutter.svg";
-import Dart from "../images/skills/dart.svg";
-import Firebase from "../images/skills/firebase.svg";
-
-import Unity from "../images/skills/unity.svg";
-import CSharp from "../images/skills/csharp.svg";
-import Android from "../images/skills/android.svg";
-import ItchIO from "../images/skills/itch.svg";
-
 import GitHub from "../images/buttons/github.svg";
+import ItchIO from "../images/skills/itch.svg";
+import Android from "../images/skills/android.svg";
 import Explore from "../images/buttons/explore.svg";
 
 export const webApplications: IProject[] = [
@@ -39,44 +22,6 @@ export const webApplications: IProject[] = [
     image: Codexo,
     title: "Codexo",
     about: "Get the latest insights on leading technologies and frameworks",
-    skills: [
-      {
-        name: "HTML5",
-        icon: HTML,
-      },
-      {
-        name: "CSS5",
-        icon: CSS,
-      },
-      {
-        name: "JavaScript",
-        icon: Javascript,
-      },
-      {
-        name: "Node.js",
-        icon: Node,
-      },
-      {
-        name: "Express",
-        icon: Express,
-      },
-      {
-        name: "Nodemon",
-        icon: Nodemon,
-      },
-      {
-        name: "Dotenv",
-        icon: Dotenv,
-      },
-      {
-        name: "Mongoose",
-        icon: Mongoose,
-      },
-      {
-        name: "MongoDB",
-        icon: MongoDB,
-      },
-    ],
     explore: [
       {
         url: "https://github.com/RyxnDmello/WebApp-NodeJs-02",
@@ -94,44 +39,6 @@ export const webApplications: IProject[] = [
     image: TaskTonic,
     title: "TaskTonic",
     about: "Stay organized by creating and managing your tasks efficiently",
-    skills: [
-      {
-        name: "HTML5",
-        icon: HTML,
-      },
-      {
-        name: "CSS5",
-        icon: CSS,
-      },
-      {
-        name: "JavaScript",
-        icon: Javascript,
-      },
-      {
-        name: "Node.js",
-        icon: Node,
-      },
-      {
-        name: "Express",
-        icon: Express,
-      },
-      {
-        name: "Nodemon",
-        icon: Nodemon,
-      },
-      {
-        name: "Dotenv",
-        icon: Dotenv,
-      },
-      {
-        name: "Mongoose",
-        icon: Mongoose,
-      },
-      {
-        name: "MongoDB",
-        icon: MongoDB,
-      },
-    ],
     explore: [
       {
         url: "https://github.com/RyxnDmello/WebApp-NodeJs-03",
@@ -149,44 +56,6 @@ export const webApplications: IProject[] = [
     image: CloudSense,
     title: "CloudSense",
     about: "Experience realtime weather forecast for your favorite cities",
-    skills: [
-      {
-        name: "HTML5",
-        icon: HTML,
-      },
-      {
-        name: "CSS5",
-        icon: CSS,
-      },
-      {
-        name: "JavaScript",
-        icon: Javascript,
-      },
-      {
-        name: "Node.js",
-        icon: Node,
-      },
-      {
-        name: "Express",
-        icon: Express,
-      },
-      {
-        name: "Nodemon",
-        icon: Nodemon,
-      },
-      {
-        name: "Dotenv",
-        icon: Dotenv,
-      },
-      {
-        name: "Mongoose",
-        icon: Mongoose,
-      },
-      {
-        name: "MongoDB",
-        icon: MongoDB,
-      },
-    ],
     explore: [
       {
         url: "https://github.com/RyxnDmello/WebApp-NodeJs-04",
@@ -204,44 +73,6 @@ export const webApplications: IProject[] = [
     image: CyberVerse,
     title: "CyberVerse",
     about: "Explore, customize, and buy the latest consoles and games",
-    skills: [
-      {
-        name: "HTML5",
-        icon: HTML,
-      },
-      {
-        name: "CSS5",
-        icon: CSS,
-      },
-      {
-        name: "JavaScript",
-        icon: Javascript,
-      },
-      {
-        name: "Node.js",
-        icon: Node,
-      },
-      {
-        name: "Express",
-        icon: Express,
-      },
-      {
-        name: "Nodemon",
-        icon: Nodemon,
-      },
-      {
-        name: "Dotenv",
-        icon: Dotenv,
-      },
-      {
-        name: "Mongoose",
-        icon: Mongoose,
-      },
-      {
-        name: "MongoDB",
-        icon: MongoDB,
-      },
-    ],
     explore: [
       {
         url: "https://github.com/RyxnDmello/WebApp-NodeJs-05",
@@ -262,20 +93,6 @@ export const mobileApplications: IProject[] = [
     image: TaskFlow,
     title: "TaskFlow",
     about: "Efficiently create, manage, and analyze your tasks with ease",
-    skills: [
-      {
-        name: "Flutter",
-        icon: Flutter,
-      },
-      {
-        name: "Dart",
-        icon: Dart,
-      },
-      {
-        name: "Firebase",
-        icon: Firebase,
-      },
-    ],
     explore: [
       {
         url: "https://github.com/RyxnDmello/flutter_firebase_01",
@@ -288,20 +105,6 @@ export const mobileApplications: IProject[] = [
     image: SkySync,
     title: "SkySync",
     about: "Realtime weather forecast with precise graphical analysis",
-    skills: [
-      {
-        name: "Flutter",
-        icon: Flutter,
-      },
-      {
-        name: "Dart",
-        icon: Dart,
-      },
-      {
-        name: "Firebase",
-        icon: Firebase,
-      },
-    ],
     explore: [
       {
         url: "https://github.com/RyxnDmello/flutter_firebase_02",
@@ -314,20 +117,6 @@ export const mobileApplications: IProject[] = [
     image: PixelFlix,
     title: "PixelFlix",
     about: "Explore, save, and share your favorite movies and TV series",
-    skills: [
-      {
-        name: "Flutter",
-        icon: Flutter,
-      },
-      {
-        name: "Dart",
-        icon: Dart,
-      },
-      {
-        name: "Firebase",
-        icon: Firebase,
-      },
-    ],
     explore: [
       {
         url: "https://github.com/RyxnDmello/flutter_firebase_03",
@@ -343,16 +132,6 @@ export const videoGames: IProject[] = [
     image: GeoMadness,
     title: "GeometricMadness",
     about: "Escape all kinds of obstacles in this blooming world of madness",
-    skills: [
-      {
-        name: "Unity",
-        icon: Unity,
-      },
-      {
-        name: "C#",
-        icon: CSharp,
-      },
-    ],
     explore: [
       {
         url: "https://github.com/RyxnDmello/GameDev-Unity-01",
@@ -375,16 +154,6 @@ export const videoGames: IProject[] = [
     image: HyperCrash,
     title: "HyperCrash",
     about: "Destroy treacherous enemies with powerful weapons and skills",
-    skills: [
-      {
-        name: "Unity",
-        icon: Unity,
-      },
-      {
-        name: "C#",
-        icon: CSharp,
-      },
-    ],
     explore: [
       {
         url: "https://github.com/RyxnDmello/GameDev-Unity-02",

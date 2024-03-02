@@ -1,15 +1,8 @@
 import { IProject } from "../../interfaces/Project";
 
-import Skill from "./Project/Skill";
-import Button from "./Project/Button";
+import Button from "./Button";
 
-export default function Project({
-  title,
-  about,
-  image,
-  skills,
-  explore,
-}: IProject) {
+export default function Project({ title, about, image, explore }: IProject) {
   const className = "projects-project";
 
   return (
@@ -25,18 +18,14 @@ export default function Project({
 
           <hr className={`${className}-divider`} />
 
-          <div className={`${className}-skills`}>
-            {skills.map((skill) => (
-              <Skill {...skill} />
-            ))}
-          </div>
-
-          <hr className={`${className}-divider`} />
-
           <div className={`${className}-buttons`}>
-            {explore.map((button) => (
-              <Button {...button} />
-            ))}
+            <Button {...explore[0]} />
+
+            <div className={`${className}-buttons-platforms`}>
+              {explore.map((button) => {
+                return button.platform && <Button {...button} />;
+              })}
+            </div>
           </div>
         </div>
       </div>
