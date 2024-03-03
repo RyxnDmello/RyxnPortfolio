@@ -1,4 +1,6 @@
-export default function Circles({ count = 6, direction = "column" }: ICircle) {
+import { IDecoration } from "../../interfaces/Decoration";
+
+export default function Circles({ count = 6, direction = "column" }: IDecoration) {
   return (
     <div className={`decoration circles ${direction}`}>
       {Array.from({ length: count }, () => {
@@ -6,9 +8,4 @@ export default function Circles({ count = 6, direction = "column" }: ICircle) {
       })}
     </div>
   );
-}
-
-interface ICircle {
-  count?: number;
-  direction?: "row" | "column";
 }

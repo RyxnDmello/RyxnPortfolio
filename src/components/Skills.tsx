@@ -1,5 +1,7 @@
 import { domains } from "../models/Domains";
 
+import Circles from "./decorations/Circles";
+
 import Title from "./Common/Title";
 import Domain from "./Skills/Domain";
 
@@ -13,6 +15,8 @@ export default function Skills() {
           <Domain key={index} {...domain} />
         ))}
       </div>
+
+      <Circles />
     </section>
   );
 }

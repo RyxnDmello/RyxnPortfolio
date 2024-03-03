@@ -2,18 +2,25 @@
 /*---------------- DECORATIONS ----------------*/
 /*---------------------------------------------*/
 
-/*-------------------------------------*/
-/*-------------- CIRCLES --------------*/
-/*-------------------------------------*/
-
-.circles {
-  grid-template-columns: auto;
+.decoration {
   justify-content: center;
   align-items: center;
   position: absolute;
   display: grid;
   gap: 0.5rem;
 }
+
+.column {
+  grid-template-columns: auto;
+}
+
+.row {
+  grid-auto-flow: column;
+}
+
+/*-------------------------------------*/
+/*-------------- CIRCLES --------------*/
+/*-------------------------------------*/
 
 .circle {
   border: 2.25px solid;
@@ -28,6 +35,22 @@
 
 .circle:nth-of-type(odd) {
   border-color: #ff0025;
+}
+
+/*------------------------------------*/
+/*-------------- DASHES --------------*/
+/*------------------------------------*/
+
+.dashes {
+  gap: 1rem;
+}
+
+.dash {
+  background-image: linear-gradient(45deg, #ff0000, #0000ff);
+  transform: skew(-40deg);
+  rotate: -40deg;
+  width: 80px;
+  height: 6px;
 }
 
 /*----------------------------------------*/
