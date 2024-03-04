@@ -7,17 +7,10 @@
   grid-auto-flow: column;
   align-content: center;
   align-items: start;
-  padding: 4rem 2rem;
+  padding: 6rem 4rem;
+  position: relative;
   display: grid;
-  gap: 4rem;
-}
-
-.about-image {
-  border-radius: 2.5px;
-  object-fit: cover;
-  height: 400px;
-  width: 300px;
-  top: 0;
+  gap: 8rem;
 }
 
 /*-------------------------------------*/
@@ -35,6 +28,7 @@
 
 .about-title {
   font-family: "Poppins", sans-serif;
+  margin-bottom: 0.5rem;
   position: relative;
   width: fit-content;
   font-size: 3.5rem;
@@ -46,7 +40,6 @@
 .about-title::before {
   background-image: linear-gradient(90deg, #fad961 0%, #f76b1c 100%);
   background-color: #fad961;
-  background-color: #fff;
   transform: skew(-25deg);
   position: absolute;
   height: 4.5px;
@@ -66,10 +59,10 @@
 
 .about-description {
   font-family: "Poppins", sans-serif;
-  font-weight: 300;
+  color: #ffffffcf;
+  font-weight: 200;
   font-size: 1rem;
   cursor: default;
-  color: #fff;
 }
 
 /*------------------------------------*/
@@ -88,6 +81,75 @@
   font-weight: 300;
   font-size: 1rem;
   color: #fff;
+}
+
+/*----------------------------------------*/
+/*-------------- STATISTICS --------------*/
+/*----------------------------------------*/
+
+.about-statistics {
+  grid-template-columns: auto;
+  justify-content: stretch;
+  align-items: center;
+  display: grid;
+  gap: 1.25rem;
+}
+
+.about-statistics-panel {
+  grid-template-columns: auto;
+  justify-content: stretch;
+  align-items: center;
+  display: grid;
+  gap: 0.25rem;
+}
+
+.about-statistic {
+  justify-content: space-between;
+  grid-auto-flow: column;
+  align-items: center;
+  display: grid;
+  gap: 2rem;
+}
+
+.about-statistic-title {
+  font-family: "Poppins", sans-serif;
+  color: #ffffffcf;
+  font-size: 1rem;
+  font-weight: 200;
+  cursor: default;
+}
+
+.about-statistic-rating {
+  justify-content: center;
+  grid-auto-flow: column;
+  align-items: center;
+  display: grid;
+  gap: 0.85rem;
+}
+
+.about-statistic-bullet {
+  border: 2px solid #ffffff50;
+  aspect-ratio: 1 / 1;
+  border-radius: 40px;
+  width: 15px;
+}
+
+.about-statistic-bullet.marked {
+  background-color: #fff;
+}
+
+/*-------------------------------------*/
+/*------------ DECORATIONS ------------*/
+/*-------------------------------------*/
+
+#about .circles:nth-of-type(3) {
+  bottom: 2.5rem;
+  left: 4.5rem;
+}
+
+#about .circles:nth-of-type(4) {
+  right: 4.5rem;
+  top: 2.5rem;
 }
 
 /*-------------------------------------*/

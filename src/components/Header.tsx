@@ -14,9 +14,10 @@ export default function Header() {
 
         <div className="nav-links">
           <div className="nav-utils-links">
-            <Link URL="#" text="Services" />
-            <Link URL="#" text="Portfolio" />
-            <Link URL="#" text="Contacts" />
+            <Link URL="#services" text="Services" />
+            <Link URL="#skills" text="Skills" />
+            <Link URL="#projects" text="Portfolio" />
+            <Link URL="#contacts" text="Contacts" />
           </div>
 
           <Link URL="#" text="Download CV" isButton />
