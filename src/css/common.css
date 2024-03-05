@@ -1,13 +1,34 @@
-/*-----------------------------------------------*/
-/*---------------- COMMON STYLES ----------------*/
-/*-----------------------------------------------*/
+/*-------------------------------------------*/
+/*-------------- CURSOR STYLES --------------*/
+/*-------------------------------------------*/
+
+#cursor {
+  transition: translate 100ms, opacity 100ms, border-radius 100ms, scale 50ms;
+  transition-timing-function: ease;
+  border: 2px solid #fff;
+  pointer-events: none;
+  aspect-ratio: 1 / 1;
+  border-radius: 40px;
+  position: absolute;
+  width: 20px;
+  left: -10px;
+  top: -10px;
+}
+
+#cursor.clickable {
+  border-radius: 2.5px;
+  rotate: 45deg;
+}
+
+/*------------------------------------------*/
+/*-------------- TITLE STYLES --------------*/
+/*------------------------------------------*/
 
 .title {
   font-family: "Poppins", sans-serif;
   letter-spacing: -2.5px;
   font-weight: 400;
   font-size: 4rem;
-  cursor: default;
   color: #fff;
 }
 
