@@ -1,6 +1,6 @@
 const mouseCursor = document.getElementById("cursor");
 
-const clickables = ["projects-project", "skills-domain"];
+const hoverables = ["projects-project", "skills-domain"];
 
 const mouseHover = (event, options, animationClass) => {
   for (const i in event.target.classList) {
@@ -13,7 +13,6 @@ const mouseHover = (event, options, animationClass) => {
     }
   }
 
-  console.log(false);
   mouseCursor.classList.remove(animationClass);
 };
 
@@ -28,5 +27,5 @@ window.addEventListener("mouseup", () => {
 window.addEventListener("mousemove", (event) => {
   mouseCursor.style.translate = `${event.pageX}px ${event.pageY}px`;
 
-  mouseHover(event, clickables, "clickable");
+  mouseHover(event, hoverables, "hoverable");
 });

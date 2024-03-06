@@ -12,7 +12,7 @@ header {
 }
 
 .header-heading {
-  background: -webkit-linear-gradient(45deg, red, blue);
+  background: -webkit-linear-gradient(45deg, #ff0000, #0000ff);
   -webkit-text-fill-color: transparent;
   font-family: "Poppins", sans-serif;
   -webkit-background-clip: text;

@@ -15,7 +15,7 @@
   top: -10px;
 }
 
-#cursor.clickable {
+#cursor.hoverable {
   border-radius: 2.5px;
   rotate: 45deg;
 }

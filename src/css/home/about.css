@@ -6,8 +6,8 @@
   justify-content: center;
   grid-auto-flow: column;
   align-content: center;
+  padding: 8rem 4rem;
   align-items: start;
-  padding: 6rem 4rem;
   position: relative;
   display: grid;
   gap: 8rem;
