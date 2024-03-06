@@ -25,7 +25,7 @@ export default function App() {
 
       <Cursor />
 
-      <Script src="/Cursor.js" />
+      <Script src="/App.js" />
     </>
   );
 }

@@ -1,7 +1,9 @@
 export default function Logo() {
+  const className = "nav-logo";
+
   return (
-    <a className="nav-logo-link" href="#">
-      <p className="nav-logo">RD</p>
+    <a className={`${className}-link`} href="#">
+      <p className={className}>RD</p>
     </a>
   );
 }

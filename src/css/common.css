@@ -1,4 +1,32 @@
 /*-------------------------------------------*/
+/*-------------- REVEAL STYLES --------------*/
+/*-------------------------------------------*/
+
+.scroll {
+  transform: translateY(-40px);
+  opacity: 0;
+}
+
+.reveal {
+  animation: Reveal 500ms forwards ease;
+}
+
+@keyframes Reveal {
+  0% {
+    transform: translateY(-40px);
+  }
+
+  50% {
+    opacity: 1;
+  }
+  
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+
+/*-------------------------------------------*/
 /*-------------- CURSOR STYLES --------------*/
 /*-------------------------------------------*/
 

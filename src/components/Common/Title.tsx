@@ -1,5 +1,5 @@
 export default function Title({ primary, secondary, isCentre }: ITitle) {
-  const className = `title ${isCentre ? "centre" : undefined}`;
+  const className = `title ${isCentre ? "centre" : undefined} scroll`;
 
   return (
     <h1 className={className}>

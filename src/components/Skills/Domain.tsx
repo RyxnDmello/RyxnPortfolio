@@ -6,7 +6,7 @@ export default function Domain({ title, image, skills }: IDomain) {
   const className = "skills-domain";
 
   return (
-    <div className={`${className}-wrapper`}>
+    <div className={`${className}-wrapper scroll`}>
       <div className={className}>
         <div className={`${className}-header`}>
           <img className={`${className}-image`} src={image} />
