@@ -2,7 +2,7 @@ export default function Statistic({ title, rating = 5 }: IStatistic) {
   const className = "about-statistic";
 
   return (
-    <div className={className}>
+    <div className={`${className} scroll`}>
       <p className={`${className}-title`}>{title}</p>
 
       <div className={`${className}-rating`}>

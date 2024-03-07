@@ -8,7 +8,7 @@ import SendIcon from "../images/buttons/send.png";
 
 export default function Header() {
   return (
-    <header>
+    <header id="header">
       <nav>
         <Logo />
 

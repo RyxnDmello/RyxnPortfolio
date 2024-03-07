@@ -1,21 +1,21 @@
-const sections = document.querySelectorAll("#about, #skills, #projects");
+const sections = document.querySelectorAll(
+  "#header, #about, #skills, #projects"
+);
 
 export default function Reveal() {
   Controller();
 }
 
 const Controller = () => {
-  const observerOptions = {
-    threshold: 0.65,
-    root: null,
-  };
-
-  const controller = new IntersectionObserver((entries, observer) => {
-    entries.forEach((entry) => {
-      if (!entry.isIntersecting) return;
-      Effect(entry.target.id, observer);
-    });
-  }, observerOptions);
+  const controller = new IntersectionObserver(
+    (entries, observer) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) return;
+        Effect(entry.target.id, observer);
+      });
+    },
+    { threshold: 0.5 }
+  );
 
   sections.forEach((section) => controller.observe(section));
 };

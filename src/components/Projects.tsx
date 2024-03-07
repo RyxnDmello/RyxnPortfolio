@@ -22,7 +22,7 @@ export default function Projects() {
       <div className="projects-header">
         <Title primary="Personal" secondary="Projects" />
 
-        <div className="projects-navbar">
+        <div className="projects-navbar scroll">
           {options.map((option, ID) => {
             return (
               <Option

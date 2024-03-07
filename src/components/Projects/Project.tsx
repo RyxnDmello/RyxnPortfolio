@@ -6,7 +6,7 @@ export default function Project({ title, about, image, explore }: IProject) {
   const className = "projects-project";
 
   return (
-    <div className={`${className}-wrapper`}>
+    <div className={`${className}-wrapper scroll`}>
       <div className={className}>
         <div className={`${className}-header`}>
           <h2 className={`${className}-title`}>{title}</h2>

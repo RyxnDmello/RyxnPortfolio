@@ -1,5 +1,5 @@
 export default function Title() {
-  const className = "header-title";
+  const className = "header-title scroll";
 
   return (
     <>
