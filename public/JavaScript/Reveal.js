@@ -21,7 +21,7 @@ const Controller = () => {
 };
 
 const Effect = (section, observer) => {
-  const children = document.querySelectorAll(`#${section} .scroll`);
+  const children = document.querySelectorAll(`#${section} .scroll, #${section} .decoration`);
   let duration = 0;
 
   children.forEach((child) => {

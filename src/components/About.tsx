@@ -30,6 +30,7 @@ export default function About() {
           <Statistic title="Web Development" rating={4} />
           <Statistic title="Mobile Development" rating={3} />
           <Statistic title="Game Development" rating={2} />
+          <Statistic title="Critical Thinking" rating={4} />
           <Statistic title="App Design" rating={4} />
         </div>
       </div>

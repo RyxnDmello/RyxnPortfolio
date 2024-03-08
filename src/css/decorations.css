@@ -3,15 +3,17 @@
 /*---------------------------------------------*/
 
 .decoration {
+  transform: translateY(-20px);
   justify-content: center;
   align-items: center;
   position: absolute;
   display: grid;
   gap: 0.5rem;
+  opacity: 0;
 }
 
 .column {
-  grid-template-columns: auto;
+  grid-auto-flow: row;
 }
 
 .row {
@@ -31,6 +33,7 @@
   align-items: center;
   position: relative;
   display: grid;
+  --width: 0%;
   gap: 1rem;
 }
 
@@ -49,13 +52,14 @@
 
 .strip:nth-of-type(1)::before,
 .strip:nth-of-type(2)::before {
+  transition: width 1250ms ease;
+  width: var(--width);
   border-radius: 40px;
   position: absolute;
   margin: 0 auto;
   height: 100%;
   content: "";
   z-index: -1;
-  width: 100%;
   right: 0;
   left: 0;
   top: 0;
