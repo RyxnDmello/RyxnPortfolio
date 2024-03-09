@@ -232,6 +232,33 @@
   color: #fff;
 }
 
+/*---------------------------------------*/
+/*-------------- VIEW MORE --------------*/
+/*---------------------------------------*/
+
+.projects-explore-button {
+  transition: border-color 350ms;
+  border: 2px solid #fff;
+  justify-content: center;
+  grid-auto-flow: column;
+  padding: 0.25rem 2rem;
+  align-items: center;
+  width: fit-content;
+  position: relative;
+  overflow: hidden;
+  margin: 0 auto;
+  display: grid;
+}
+
+.projects-explore-button-text {
+  font-family: "Poppins", sans-serif;
+  transition: color 350ms;
+  letter-spacing: 0.25px;
+  font-size: 1.2rem;
+  font-weight: 300;
+  color: #fff;
+}
+
 /*------------------------------------*/
 /*------------- WEBSITES -------------*/
 /*------------------------------------*/
@@ -327,6 +354,14 @@
 .projects-project-button.desktop:hover,
 .projects-project-button.android:hover {
   scale: 1.15;
+}
+
+.projects-explore-button:hover {
+  border-color: #ff0033;
+}
+
+.projects-explore-button:hover .projects-explore-button-text {
+  color: #ff0033;
 }
 
 /*------------------------------------------------*/
