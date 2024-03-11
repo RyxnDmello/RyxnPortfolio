@@ -15,7 +15,7 @@ import HyperCrash from "../images/projects/hypercrash.png";
 import GitHub from "../images/buttons/github.svg";
 import ItchIO from "../images/skills/itch.svg";
 import Android from "../images/skills/android.svg";
-import Explore from "../images/buttons/explore.svg";
+import Explore from "../images/buttons/up.svg";
 
 export const webApplications: IProject[] = [
   {

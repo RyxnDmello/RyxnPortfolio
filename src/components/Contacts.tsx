@@ -1,15 +1,11 @@
 import { useState } from "react";
 
 import { IContact } from "../interfaces/Contact.ts";
+import { inputs, options } from "../models/Contact.ts";
 
 import Title from "./Common/Title.tsx";
-
-import UserIcon from "../images/inputs/username.png";
-import EmailIcon from "../images/inputs/email.png";
-import NumberIcon from "../images/inputs/number.png";
-import DescriptionIcon from "../images/inputs/description.png";
-
 import Input from "./Contacts/Input";
+import Option from "./Contacts/Option.tsx";
 
 export default function Contacts() {
   const [contact, setContact] = useState<IContact>({
@@ -32,47 +28,31 @@ export default function Contacts() {
       <Title primary="Contact" secondary="Me" />
 
       <div className="contacts-information">
-        <div className="contacts-types"></div>
+        <div className="contacts-options">
+          {options.map((option) => (
+            <Option
+              name={option}
+              onSelect={() => onHandleContact("type", option)}
+            />
+          ))}
+        </div>
 
         <form className="contacts-form" action="/contact" method="post">
-          <Input
-            onChange={onHandleContact}
-            value={contact.name}
-            icon={UserIcon}
-            label="Name"
-            name="name"
-            type="text"
-          />
-
-          <Input
-            onChange={onHandleContact}
-            value={contact.email}
-            icon={EmailIcon}
-            label="Email"
-            name="email"
-            type="email"
-          />
-
-          <Input
-            onChange={onHandleContact}
-            value={contact.number}
-            icon={NumberIcon}
-            label="Number"
-            name="number"
-            type="number"
-          />
-
-          <Input
-            onChange={onHandleContact}
-            value={contact.description}
-            icon={DescriptionIcon}
-            label="Description"
-            name="description"
-            type="textarea"
-          />
+          {inputs.map((input, i) => (
+            <Input
+              key={i}
+              {...input}
+              onChange={onHandleContact}
+              value={contact[`${input.name as keyof typeof contact}`]}
+            />
+          ))}
 
           <button className="form-button" type="submit">
-            <p className="form-button-text">Send Request</p>
+            <p className="form-button-text">
+              {contact.type === "Drop A Comment"
+                ? "Add Comment"
+                : "Send Request"}
+            </p>
           </button>
         </form>
       </div>

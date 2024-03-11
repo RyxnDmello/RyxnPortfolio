@@ -4,7 +4,7 @@ import Heading from "./Header/Heading";
 import Title from "./Header/Title";
 import Button from "./Header/Button";
 
-import SendIcon from "../images/buttons/send.png";
+import SendIcon from "../images/buttons/send.svg";
 
 export default function Header() {
   return (

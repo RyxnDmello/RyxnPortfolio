@@ -10,14 +10,77 @@
   align-items: center;
   display: grid;
   padding: 4rem;
-  gap: 1rem;
+  gap: 1.5rem;
 }
 
 .contacts-information {
   justify-content: center;
   grid-auto-flow: column;
-  align-items: center;
+  align-items: start;
   display: grid;
+  gap: 10rem;
+}
+
+/*-------------------------------------------*/
+/*-------------- OPTION STYLES --------------*/
+/*-------------------------------------------*/
+
+.contacts-options {
+  grid-template-columns: auto;
+  justify-content: stretch;
+  align-items: start;
+  display: grid;
+  gap: 2.5rem;
+}
+
+.contact-option {
+  justify-content: space-between;
+  grid-auto-flow: column;
+  align-items: center;
+  position: relative;
+  display: grid;
+  width: 400px;
+}
+
+.contact-option::after,
+.contact-option::before {
+  background-color: #ffffff50;
+  border-radius: 40px;
+  position: absolute;
+  height: 1.5px;
+  bottom: -1rem;
+  content: "";
+  width: 100%;
+  left: 0;
+}
+
+.contact-option::before {
+  background-color: #fff;
+  transition: width 350ms;
+  width: 0%;
+}
+
+.contact-option:hover::before {
+  width: 100%;
+  z-index: 1;
+}
+
+.contact-option-name {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 300;
+  color: #fff;
+}
+
+.contact-option-icon {
+  border: 2px solid #fff;
+  border-radius: 100%;
+  padding: 0.35rem;
+  display: flex;
+}
+
+.contact-option-icon-image {
+  width: 25px;
 }
 
 /*-------------------------------------------*/
@@ -29,7 +92,7 @@
   justify-content: stretch;
   align-items: center;
   display: grid;
-  width: 350px;
+  width: 400px;
   gap: 0.5rem;
 }
 
