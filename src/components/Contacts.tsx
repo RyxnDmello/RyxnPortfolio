@@ -12,7 +12,7 @@ export default function Contacts() {
     name: "",
     email: "",
     number: "",
-    type: "",
+    type: "Drop A Comment",
     description: "",
   });
 
@@ -32,6 +32,7 @@ export default function Contacts() {
           {options.map((option) => (
             <Option
               name={option}
+              isSelected={contact.type === option}
               onSelect={() => onHandleContact("type", option)}
             />
           ))}

@@ -6,10 +6,10 @@ import Number from "../images/inputs/number.png";
 import Description from "../images/inputs/description.png";
 
 export const options: string[] = [
+  "Drop A Comment",
   "Web Development",
   "Mobile Development",
-  "UI/UX App Design",
-  "Drop A Comment",
+  "UI • UX App Design",
 ];
 
 export const inputs: IInput[] = [

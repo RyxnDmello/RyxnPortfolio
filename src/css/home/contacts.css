@@ -3,14 +3,12 @@
 /*--------------------------------------------------*/
 
 #contacts {
-  box-shadow: 0 0 20px #000000a0;
   grid-template-columns: auto;
-  background-color: #000025;
   justify-content: center;
   align-items: center;
   display: grid;
   padding: 4rem;
-  gap: 1.5rem;
+  gap: 2.5rem;
 }
 
 .contacts-information {
@@ -35,6 +33,7 @@
 
 .contact-option {
   justify-content: space-between;
+  transition: opacity 300ms;
   grid-auto-flow: column;
   align-items: center;
   position: relative;
@@ -42,9 +41,14 @@
   width: 400px;
 }
 
+.contact-option:not(.selected) {
+  opacity: 0.25;
+}
+
 .contact-option::after,
 .contact-option::before {
-  background-color: #ffffff50;
+  background-color: #ffffff25;
+  transition: width 300ms;
   border-radius: 40px;
   position: absolute;
   height: 1.5px;
@@ -55,14 +59,13 @@
 }
 
 .contact-option::before {
-  background-color: #fff;
-  transition: width 350ms;
-  width: 0%;
-}
-
-.contact-option:hover::before {
+  background-image: linear-gradient(45deg, #ff0000, #0000ff);
   width: 100%;
   z-index: 1;
+}
+
+.contact-option:not(.selected)::before {
+  width: 0%;
 }
 
 .contact-option-name {
@@ -73,13 +76,19 @@
 }
 
 .contact-option-icon {
+  transition: rotate 300ms;
   border: 2px solid #fff;
   border-radius: 100%;
   padding: 0.35rem;
   display: flex;
 }
 
+.contact-option:not(.selected) .contact-option-icon {
+  rotate: -90deg;
+}
+
 .contact-option-icon-image {
+  translate: 1px 0;
   width: 25px;
 }
 
