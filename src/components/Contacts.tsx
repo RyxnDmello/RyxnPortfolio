@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-import { IContact } from "../interfaces/Contact.ts";
+import { IContact, ContactType } from "../interfaces/Contact.ts";
 import { inputs, options } from "../models/Contact.ts";
 
 import Title from "./Common/Title.tsx";
@@ -9,14 +9,14 @@ import Option from "./Contacts/Option.tsx";
 
 export default function Contacts() {
   const [contact, setContact] = useState<IContact>({
+    type: ContactType.Comment,
     name: "",
     email: "",
     number: "",
-    type: "Drop A Comment",
     description: "",
   });
 
-  const onHandleContact = (identifier: string, value: string) => {
+  const onHandleContact = (identifier: string, value: string | ContactType) => {
     setContact((prevContact) => ({
       ...prevContact,
       [identifier]: value,
@@ -29,28 +29,33 @@ export default function Contacts() {
 
       <div className="contacts-information">
         <div className="contacts-options">
-          {options.map((option) => (
+          {options.map((option, i) => (
             <Option
-              name={option}
-              isSelected={contact.type === option}
-              onSelect={() => onHandleContact("type", option)}
+              key={i}
+              {...option}
+              isSelected={option.type === contact.type}
+              onSelect={() => onHandleContact("type", option.type)}
             />
           ))}
         </div>
 
         <form className="contacts-form" action="/contact" method="post">
-          {inputs.map((input, i) => (
-            <Input
-              key={i}
-              {...input}
-              onChange={onHandleContact}
-              value={contact[`${input.name as keyof typeof contact}`]}
-            />
-          ))}
+          {inputs.map((input, i) => {
+            const value = contact[`${input.name as keyof typeof contact}`];
+
+            return (
+              <Input
+                key={i}
+                {...input}
+                onChange={onHandleContact}
+                value={value.toString()}
+              />
+            );
+          })}
 
           <button className="form-button" type="submit">
             <p className="form-button-text">
-              {contact.type === "Drop A Comment"
+              {contact.type === ContactType.Comment
                 ? "Add Comment"
                 : "Send Request"}
             </p>

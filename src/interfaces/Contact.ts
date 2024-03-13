@@ -1,9 +1,21 @@
+export enum ContactType {
+  "Comment",
+  "Web Application",
+  "Mobile Application",
+  "UI • UX App Design",
+}
+
 export interface IContact {
+  type: ContactType;
   name: string;
   email: string;
   number: string;
-  type: string;
   description: string;
+}
+
+export interface IOption {
+  name: string;
+  type: ContactType
 }
 
 export interface IInput {
