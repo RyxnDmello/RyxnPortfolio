@@ -1,0 +1,134 @@
+/*----------------------------------------------------*/
+/*------------------ PRICING STYLES ------------------*/
+/*----------------------------------------------------*/
+
+#pricing {
+  box-shadow: 0 0 20px #000000a0;
+  grid-template-columns: auto;
+  background-color: #000025;
+  justify-content: center;
+  align-items: center;
+  padding: 4rem;
+  display: grid;
+  gap: 1.25rem;
+}
+
+/*-----------------------------------*/
+/*-------------- CARDS --------------*/
+/*-----------------------------------*/
+
+.pricing-cards {
+  justify-content: center;
+  grid-auto-flow: column;
+  align-items: center;
+  display: grid;
+  gap: 2.5rem;
+}
+
+.pricing-card {
+  border: 2px solid #ffffff25;
+  grid-template-columns: auto;
+  background-color: #000010;
+  justify-content: stretch;
+  align-items: center;
+  padding: 2rem 1rem;
+  border-radius: 5px;
+  display: grid;
+  width: 350px;
+  gap: 2.5rem;
+}
+
+/*-------------------------------*/
+/*----------- DETAILS -----------*/
+/*-------------------------------*/
+
+.pricing-card-details {
+  grid-template-columns: auto;
+  background-color: #000010;
+  justify-content: stretch;
+  align-items: center;
+  display: grid;
+  gap: 0.5rem;
+}
+
+.pricing-card-plan {
+  font-family: "Poppins", sans-serif;
+  border: 2px solid #fff;
+  padding: 0.25rem 2.5rem;
+  border-radius: 40px;
+  width: fit-content;
+  font-size: 1.2rem;
+  font-weight: 300;
+  margin: 0 auto;
+  color: #fff;
+}
+
+.pricing-card-price {
+  background: -webkit-linear-gradient(45deg, #ff0000, #0000ff);
+  font-family: "Plus Jakarta Sans", sans-serif;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: #fff;
+}
+
+.pricing-card-price .unit {
+  margin-right: 0.25rem;
+  font-weight: 400;
+}
+
+.pricing-card-price span:not(.unit) {
+  background: -webkit-linear-gradient(0, #656565, #656565);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+.pricing-card-about {
+  font-family: "Poppins", sans-serif;
+  text-align: center;
+  color: #ffffffa0;
+  line-height: 1.4;
+  font-weight: 300;
+  font-size: 1rem;
+}
+
+/*--------------------------------*/
+/*------------ POINTS ------------*/
+/*--------------------------------*/
+
+.pricing-card-points {
+  grid-template-columns: auto;
+  justify-content: center;
+  align-items: center;
+  display: grid;
+  gap: 0.5rem;
+}
+
+.pricing-card-point {
+  justify-content: start;
+  grid-auto-flow: column;
+  align-items: center;
+  display: grid;
+  gap: 0.65rem;
+}
+
+.pricing-card-point-icon {
+  width: 25px;
+}
+
+.pricing-card-point-text {
+  font-family: "Poppins", sans-serif;
+  color: #ffffffa0;
+  font-weight: 300;
+  font-size: 1rem;
+}
+
+/*------------------------------------------*/
+/*--------------- END OF CSS ---------------*/
+/*------------------------------------------*/
