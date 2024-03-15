@@ -10,7 +10,11 @@
   align-items: center;
   padding: 4rem;
   display: grid;
-  gap: 1.25rem;
+  gap: 2.8rem;
+}
+
+#pricing .title {
+  font-size: 5rem;
 }
 
 /*-----------------------------------*/
@@ -26,6 +30,8 @@
 }
 
 .pricing-card {
+  box-shadow: 0 0 20px #00000080;
+  transition: border-color 250ms;
   border: 2px solid #ffffff25;
   grid-template-columns: auto;
   background-color: #000010;
@@ -36,6 +42,11 @@
   display: grid;
   width: 350px;
   gap: 2.5rem;
+}
+
+.pricing-card:nth-of-type(2) {
+  border-color: #daa520;
+  scale: 1.1;
 }
 
 /*-------------------------------*/
@@ -85,7 +96,7 @@
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
   background-clip: text;
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   font-weight: 500;
 }
 
@@ -127,6 +138,47 @@
   color: #ffffffa0;
   font-weight: 300;
   font-size: 1rem;
+}
+
+/*--------------------------------*/
+/*------------ POINTS ------------*/
+/*--------------------------------*/
+
+.pricing-card-button {
+  transition: background-color 350ms;
+  margin: -0.5rem auto 0rem auto;
+  background-color: #0000ff40;
+  border-radius: 5px;
+  padding: 0.5rem 0;
+  width: 90%;
+}
+
+.pricing-card:nth-of-type(2) .pricing-card-button {
+  background-image: linear-gradient(-45deg, #cf0000, #0000cf);
+}
+
+.pricing-card-button-text {
+  font-family: "Poppins", sans-serif;
+  text-align: center;
+  font-weight: 300;
+  font-size: 1rem;
+  color: #fff;
+}
+
+/*-------------------------------------*/
+/*------------ TRANSITIONS ------------*/
+/*-------------------------------------*/
+
+.pricing-card:not(:nth-of-type(2)):hover {
+  border-color: #ffffff80;
+}
+
+.pricing-card-button:hover {
+  background-color: #0000a0;
+}
+
+.pricing-card-button:active {
+  background-color: #000025;
 }
 
 /*------------------------------------------*/

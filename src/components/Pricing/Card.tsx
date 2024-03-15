@@ -24,6 +24,10 @@ export default function Card({ plan, price, about, points }: ICard) {
           <Point point={point} />
         ))}
       </div>
+
+      <a className={`${className}-button`} href="#contacts">
+        <p className={`${className}-button-text`}>Discuss Your Idea</p>
+      </a>
     </div>
   );
 }
