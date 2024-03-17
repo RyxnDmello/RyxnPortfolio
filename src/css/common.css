@@ -19,7 +19,7 @@
   50% {
     opacity: 1;
   }
-  
+
   100% {
     transform: translateY(0px);
     opacity: 1;
@@ -62,6 +62,10 @@
 
 .title.centre {
   text-align: center;
+}
+
+.title.right {
+  text-align: right;
 }
 
 .title span {

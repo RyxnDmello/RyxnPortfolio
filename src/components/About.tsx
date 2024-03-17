@@ -1,4 +1,4 @@
-import Circles from "./decorations/Circles";
+import Circles from "./Decorations/Circles";
 
 import Statistic from "./About/Statistic";
 

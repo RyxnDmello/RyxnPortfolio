@@ -1,6 +1,6 @@
 import { domains } from "../models/Domains";
 
-import Circles from "./decorations/Circles";
+import Circles from "./Decorations/Circles";
 
 import Title from "./Common/Title";
 import Domain from "./Skills/Domain";

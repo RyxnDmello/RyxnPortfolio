@@ -24,7 +24,6 @@
     #5700a2 50%,
     #004475 100%
   );
-  transition: right 400ms, opacity 200ms;
   box-shadow: 0 0 20px #000000a0;
   background-color: #ff3cac;
   transform: skew(40deg);
@@ -41,6 +40,10 @@
 
 #skills::after {
   right: 22rem;
+}
+
+#skills .title {
+  font-size: 5rem;
 }
 
 /*---------------------------------------------*/

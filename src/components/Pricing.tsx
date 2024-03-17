@@ -6,7 +6,7 @@ import Card from "./Pricing/Card";
 export default function Pricing() {
   return (
     <section id="pricing">
-      <Title primary="Explore" secondary="Plans" isCentre />
+      <Title primary="Explore" secondary="Plans" />
 
       <div className="pricing-cards">
         {cards.map((card, i) => (

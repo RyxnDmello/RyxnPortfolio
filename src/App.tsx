@@ -1,6 +1,6 @@
 import Script from "./components/Common/Script";
 
-import Strip from "./components/decorations/Strip";
+import Strip from "./components/Decorations/Strip";
 
 import Cursor from "./components/Common/Cursor";
 

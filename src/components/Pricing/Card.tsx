@@ -20,8 +20,8 @@ export default function Card({ plan, price, about, points }: ICard) {
       </div>
 
       <div className={`${className}-points`}>
-        {points.map((point) => (
-          <Point point={point} />
+        {points.map((point, i) => (
+          <Point key={i} point={point} />
         ))}
       </div>
 

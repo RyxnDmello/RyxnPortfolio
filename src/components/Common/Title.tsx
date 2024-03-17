@@ -1,5 +1,5 @@
-export default function Title({ primary, secondary, isCentre }: ITitle) {
-  const className = `title ${isCentre ? "centre" : undefined}`;
+export default function Title({ primary, secondary, position }: ITitle) {
+  const className = `title ${position}`;
 
   return (
     <h1 className={className}>
@@ -11,5 +11,5 @@ export default function Title({ primary, secondary, isCentre }: ITitle) {
 interface ITitle {
   primary: string;
   secondary: string;
-  isCentre?: boolean;
+  position?: "center" | "right";
 }

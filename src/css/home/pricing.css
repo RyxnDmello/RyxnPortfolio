@@ -8,9 +8,38 @@
   background-color: #000025;
   justify-content: center;
   align-items: center;
+  position: relative;
+  overflow: hidden;
   padding: 4rem;
   display: grid;
   gap: 2.8rem;
+  z-index: 0;
+}
+
+#pricing::before,
+#pricing::after {
+  background-image: linear-gradient(
+    to bottom,
+    #800033 0%,
+    #5700a2 50%,
+    #004475 100%
+  );
+  box-shadow: 0 0 20px #000000a0;
+  background-color: #ff3cac;
+  transform: skew(40deg);
+  position: absolute;
+  height: 100%;
+  width: 100px;
+  z-index: -1;
+  content: "";
+}
+
+#pricing::before {
+  right: 14rem;
+}
+
+#pricing::after {
+  right: 22rem;
 }
 
 #pricing .title {
