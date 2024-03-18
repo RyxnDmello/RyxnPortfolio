@@ -28,7 +28,7 @@ export default function Contacts() {
       <Title primary="Contact" secondary="Me" />
 
       <div className="contacts-information">
-        <div className="contacts-options">
+        <div className="contacts-options scroll">
           {options.map((option, i) => (
             <Option
               key={i}
@@ -39,7 +39,7 @@ export default function Contacts() {
           ))}
         </div>
 
-        <form className="contacts-form" action="/contact" method="post">
+        <form className="contacts-form scroll" action="/contact" method="post">
           {inputs.map((input, i) => {
             const value = contact[`${input.name as keyof typeof contact}`];
 

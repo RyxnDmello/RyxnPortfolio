@@ -47,7 +47,7 @@ export default function Projects() {
         })}
       </div>
 
-      {!isExpanded && projects[active].length > 5 && (
+      {!isExpanded && projects[active].length > 9 && (
         <Expand onClick={() => onHandleExpanded()} />
       )}
 

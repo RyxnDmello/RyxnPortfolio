@@ -1,14 +1,13 @@
 import Circles from "./Decorations/Circles";
 
+import Title from "./Common/Title";
 import Statistic from "./About/Statistic";
 
 export default function About() {
   return (
     <section id="about">
       <div className="about-details">
-        <h3 className="about-title scroll">
-          <span>About</span> Me
-        </h3>
+        <Title primary="About" secondary="Me" />
 
         <p className="about-description scroll">
           Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officiis
@@ -22,9 +21,7 @@ export default function About() {
       </div>
 
       <div className="about-statistics">
-        <h3 className="about-title scroll">
-          <span>Skills</span> Overview
-        </h3>
+        <Title primary="Skills" secondary="Overview" />
 
         <div className="about-statistics-panel">
           <Statistic title="Web Development" rating={4} />

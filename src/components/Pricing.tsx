@@ -1,5 +1,7 @@
 import { cards } from "../models/Pricing";
 
+import Circles from "./Decorations/Circles";
+
 import Title from "./Common/Title";
 import Card from "./Pricing/Card";
 
@@ -13,6 +15,8 @@ export default function Pricing() {
           <Card key={i} {...card} />
         ))}
       </div>
+
+      <Circles />
     </section>
   );
 }

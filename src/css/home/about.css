@@ -23,37 +23,11 @@
   align-items: center;
   display: grid;
   width: 500px;
-  gap: 1.25rem;
+  gap: 0.5rem;
 }
 
-.about-title {
-  font-family: "Poppins", sans-serif;
-  margin-bottom: 0.5rem;
-  position: relative;
-  width: fit-content;
+#about .title {
   font-size: 3.5rem;
-  font-weight: 400;
-  color: #fff;
-}
-
-.about-title::before {
-  background-image: linear-gradient(90deg, #fad961 0%, #f76b1c 100%);
-  background-color: #fad961;
-  transform: skew(-25deg);
-  position: absolute;
-  height: 4.5px;
-  content: "";
-  width: 50%;
-  bottom: 0;
-  left: 0;
-}
-
-.about-title span {
-  background: -webkit-linear-gradient(45deg, #ff0000, #0000ff);
-  -webkit-text-fill-color: transparent;
-  -webkit-background-clip: text;
-  background-clip: text;
-  font-weight: 500;
 }
 
 .about-description {
@@ -71,6 +45,7 @@
   transition: background-color 300ms, border-color 300ms;
   background-color: #b5002a;
   padding: 0.4rem 2rem;
+  margin-top: 0.75rem;
   width: fit-content;
 }
 
@@ -90,7 +65,7 @@
   justify-content: stretch;
   align-items: center;
   display: grid;
-  gap: 1.25rem;
+  gap: 0.5rem;
 }
 
 .about-statistics-panel {

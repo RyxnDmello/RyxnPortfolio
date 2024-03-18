@@ -6,7 +6,7 @@ export default function Card({ plan, price, about, points }: ICard) {
   const className = "pricing-card";
 
   return (
-    <div className={className}>
+    <div className={`${className} scroll`}>
       <h2 className={`${className}-plan`}>{plan} Plan</h2>
 
       <div className={`${className}-details`}>
