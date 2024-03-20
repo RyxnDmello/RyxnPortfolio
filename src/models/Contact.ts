@@ -2,6 +2,7 @@ import { IOption, IInput, ContactType } from "../interfaces/Contact";
 
 import Name from "../images/inputs/username.png";
 import Email from "../images/inputs/email.png";
+import Designation from "../images/inputs/designation.png";
 import Number from "../images/inputs/number.png";
 import Description from "../images/inputs/description.png";
 
@@ -36,6 +37,12 @@ export const inputs: IInput[] = [
     label: "Email",
     name: "email",
     type: "email",
+  },
+  {
+    icon: Designation,
+    label: "Designation",
+    name: "designation",
+    type: "text",
   },
   {
     icon: Number,

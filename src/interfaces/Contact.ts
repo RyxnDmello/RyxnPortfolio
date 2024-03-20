@@ -10,12 +10,13 @@ export interface IContact {
   name: string;
   email: string;
   number: string;
+  designation: string;
   description: string;
 }
 
 export interface IOption {
   name: string;
-  type: ContactType
+  type: ContactType;
 }
 
 export interface IInput {

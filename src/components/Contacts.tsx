@@ -13,6 +13,7 @@ export default function Contacts() {
     name: "",
     email: "",
     number: "",
+    designation: "",
     description: "",
   });
 
