@@ -1,10 +1,10 @@
-import Logo from "./Header/Logo";
+import SendIcon from "../images/buttons/send.svg";
+
+import Logo from "./Common/Logo";
 import Link from "./Header/Link";
 import Heading from "./Header/Heading";
 import Title from "./Header/Title";
 import Button from "./Header/Button";
-
-import SendIcon from "../images/buttons/send.svg";
 
 export default function Header() {
   return (

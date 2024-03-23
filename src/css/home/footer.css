@@ -1,0 +1,44 @@
+/*-----------------------------------------------*/
+/*---------------- FOOTER STYLES ----------------*/
+/*-----------------------------------------------*/
+
+footer {
+  box-shadow: 0 0 20px #000000a0;
+  background-color: #000025;
+  grid-template-columns: auto;
+  justify-content: stretch;
+  align-items: center;
+  padding: 2.5rem;
+  display: grid;
+  gap: 2rem;
+}
+
+/*-----------------------------------------*/
+/*------------- HEADER STYLES -------------*/
+/*-----------------------------------------*/
+
+.footer-header {
+  justify-content: space-between;
+  grid-auto-flow: column;
+  align-items: center;
+  display: grid;
+}
+
+.footer-message {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.65rem;
+  font-weight: 300;
+  color: #fff;
+}
+
+.footer-message span {
+  background: -webkit-linear-gradient(45deg, #ff0000, #0000ff);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  font-weight: 500;
+}
+
+/*----------------------------------------*/
+/*-------------- END OF CSS --------------*/
+/*----------------------------------------*/

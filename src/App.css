@@ -1,3 +1,5 @@
+@import url("./css/global.css");
+
 @import url("./css/fonts.css");
 @import url("./css/common.css");
 @import url("./css/decorations.css");
@@ -9,6 +11,7 @@
 @import url("./css/home/projects.css");
 @import url("./css/home/pricing.css");
 @import url("./css/home/contacts.css");
+@import url("./css/home/footer.css");
 
 * {
   scroll-behavior: smooth;

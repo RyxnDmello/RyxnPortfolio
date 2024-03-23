@@ -1,4 +1,4 @@
-import { ILink } from "../../interfaces/links";
+import { ILink } from "../../interfaces/Link";
 
 export default function Link({ URL, text, isButton }: ILink) {
   const className = isButton ? "nav-button" : "nav-link";

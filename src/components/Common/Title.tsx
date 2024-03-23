@@ -1,8 +1,8 @@
 export default function Title({ primary, secondary, position }: ITitle) {
-  const className = `title ${position} scroll`;
+  const className = `${position} scroll`;
 
   return (
-    <h1 className={className}>
+    <h1 id="title" className={className}>
       <span>{primary}</span> {secondary}
     </h1>
   );

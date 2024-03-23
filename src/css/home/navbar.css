@@ -11,13 +11,6 @@ nav {
   display: grid;
 }
 
-.nav-logo {
-  font-family: "Poppins", sans-serif;
-  font-weight: 600;
-  font-size: 2rem;
-  color: #fff;
-}
-
 .nav-links {
   justify-content: center;
   grid-auto-flow: column;

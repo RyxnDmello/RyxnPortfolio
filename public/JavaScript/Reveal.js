@@ -27,7 +27,7 @@ const sections = [
   {
     id: "#contacts",
     threshold: 0.5,
-    delay: 100,
+    delay: 200,
   },
 ];
 
