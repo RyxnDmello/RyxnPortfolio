@@ -1,7 +1,8 @@
-import Circles from "./Decorations/Circles";
+import { stats } from "../models/About";
 
 import Title from "./Common/Title";
 import Statistic from "./About/Statistic";
+import Circles from "./Decorations/Circles";
 
 export default function About() {
   return (
@@ -24,11 +25,9 @@ export default function About() {
         <Title primary="Skills" secondary="Overview" />
 
         <div className="about-statistics-panel">
-          <Statistic title="Web Development" rating={4} />
-          <Statistic title="Mobile Development" rating={3} />
-          <Statistic title="Game Development" rating={2} />
-          <Statistic title="Critical Thinking" rating={4} />
-          <Statistic title="App Design" rating={4} />
+          {stats.map((stat, i) => (
+            <Statistic key={i} {...stat} />
+          ))}
         </div>
       </div>
 

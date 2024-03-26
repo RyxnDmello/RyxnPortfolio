@@ -1,5 +1,5 @@
 export interface ILink {
-  URL: string;
+  url: string;
   text: string;
   isButton?: boolean,
 }

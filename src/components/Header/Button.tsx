@@ -1,6 +1,6 @@
 import { ILink } from "../../interfaces/Link";
 
-export default function Button({ URL, text, icon, isSolid }: IButton) {
+export default function Button({ url: URL, text, icon, isSolid }: IButton) {
   const className = "header-button";
 
   return (

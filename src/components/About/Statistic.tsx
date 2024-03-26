@@ -1,3 +1,5 @@
+import { IStatistic } from "../../interfaces/About";
+
 export default function Statistic({ title, rating = 5 }: IStatistic) {
   const className = "about-statistic";
 
@@ -17,9 +19,4 @@ export default function Statistic({ title, rating = 5 }: IStatistic) {
       </div>
     </div>
   );
-}
-
-interface IStatistic {
-  title: string;
-  rating?: number;
 }

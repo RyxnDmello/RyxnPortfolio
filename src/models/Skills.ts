@@ -1,4 +1,4 @@
-import { IDomain } from "../interfaces/Domain";
+import { IDomain } from "../interfaces/Skill";
 
 import FrontendDev from "../images/skills/domains/web.png";
 import BackendDev from "../images/skills/domains/back.png";

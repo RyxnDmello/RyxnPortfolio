@@ -1,6 +1,6 @@
 import Skill from "./Domain/Skill";
 
-import { IDomain } from "../../interfaces/Domain";
+import { IDomain } from "../../interfaces/Skill";
 
 export default function Domain({ title, image, skills }: IDomain) {
   const className = "skills-domain";

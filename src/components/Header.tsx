@@ -14,13 +14,13 @@ export default function Header() {
 
         <div className="nav-links">
           <div className="nav-utils-links">
-            <Link URL="#services" text="Services" />
-            <Link URL="#skills" text="Skills" />
-            <Link URL="#projects" text="Portfolio" />
-            <Link URL="#contacts" text="Contacts" />
+            <Link url="#services" text="Services" />
+            <Link url="#skills" text="Skills" />
+            <Link url="#projects" text="Portfolio" />
+            <Link url="#contacts" text="Contacts" />
           </div>
 
-          <Link URL="#" text="Download CV" isButton />
+          <Link url="#" text="Download CV" isButton />
         </div>
       </nav>
 
@@ -31,8 +31,8 @@ export default function Header() {
           <Title />
 
           <div className="header-buttons">
-            <Button URL="#" text="Services" icon={SendIcon} isSolid />
-            <Button URL="#" text="Download CV" />
+            <Button url="#" text="Services" icon={SendIcon} isSolid />
+            <Button url="#" text="Download CV" />
           </div>
         </div>
       </div>

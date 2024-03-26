@@ -1,4 +1,4 @@
-import { domains } from "../models/Domains";
+import { domains } from "../models/Skills";
 
 import Circles from "./Decorations/Circles";
 
