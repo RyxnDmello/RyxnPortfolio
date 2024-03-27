@@ -10,24 +10,156 @@ footer {
   align-items: center;
   padding: 2.5rem;
   display: grid;
-  gap: 2rem;
+  gap: 1.25rem;
 }
 
-/*-----------------------------------------*/
-/*------------- HEADER STYLES -------------*/
-/*-----------------------------------------*/
+.footer-divider {
+  border-bottom: 2px solid #ffffff15;
+  border-radius: 40px;
+  border-right: none;
+  border-left: none;
+  border-top: none;
+}
 
-.footer-header {
+/*---------------------------------------*/
+/*------------- LINK STYLES -------------*/
+/*---------------------------------------*/
+
+.footer-links {
+  justify-content: center;
+  grid-auto-flow: column;
+  align-items: center;
+  display: grid;
+  gap: 1rem;
+}
+
+.footer-link {
+  position: relative;
+}
+
+.footer-link.solid {
+  transition: background-color 300ms;
+  background-color: #b5002a;
+  padding: 0.5rem 2rem;
+  margin-left: 0.5rem;
+}
+
+.footer-link:not(.solid)::before {
+  transition: background-color 300ms, translate 300ms;
+  background-color: #ffffff00;
+  border-radius: 40px;
+  position: absolute;
+  aspect-ratio: 1;
+  content: "";
+  width: 5px;
+}
+
+.footer-link.column::before {
+  margin: 0 auto;
+  bottom: 0;
+  right: 0;
+  left: 0;
+}
+
+.footer-link.row::before {
+  translate: -0.5rem 0;
+  margin: auto 0;
+  bottom: 0;
+  top: 0;
+}
+
+.footer-link-text {
+  font-family: "Poppins", sans-serif;
+  transition: color 300ms;
+  color: #ffffff50;
+  font-weight: 300;
+  font-size: 1rem;
+}
+
+.footer-link.solid .footer-link-text {
+  letter-spacing: 0.5px;
+  color: #fff;
+}
+
+/*------------------------------------*/
+/*-------------- LAYOUT --------------*/
+/*------------------------------------*/
+
+.footer-row {
   justify-content: space-between;
   grid-auto-flow: column;
   align-items: center;
   display: grid;
 }
 
+.footer-row:nth-of-type(2) {
+  align-items: start;
+}
+
+.footer-column {
+  justify-content: center;
+  grid-auto-flow: column;
+  align-items: start;
+  display: grid;
+  gap: 2.5rem;
+}
+
+.footer-column-panel {
+  grid-template-columns: auto;
+  justify-content: center;
+  align-items: start;
+  display: grid;
+  gap: 0.5rem;
+}
+
+.footer-column-panel-title {
+  background: -webkit-linear-gradient(45deg, #bf953f, #fcf6ba);
+  -webkit-text-fill-color: transparent;
+  font-family: "Poppins", sans-serif;
+  -webkit-background-clip: text;
+  background-clip: text;
+  font-weight: 400;
+  font-size: 2rem;
+}
+
+.footer-column-panel-links {
+  grid-template-columns: auto;
+  justify-content: left;
+  align-items: start;
+  display: grid;
+  gap: 0.5rem;
+}
+
+/*----------------------------------------*/
+/*------------- SOCIAL LINKS -------------*/
+/*----------------------------------------*/
+
+.footer-social-link {
+  transition: border-color 300ms, translate 300ms;
+  border: 2px solid #ffffff35;
+  grid-template-columns: auto;
+  justify-content: center;
+  border-radius: 40px;
+  align-items: center;
+  padding: 0.5rem;
+  display: grid;
+}
+
+.footer-social-link-icon {
+  transition: opacity 300ms;
+  opacity: 0.35;
+  width: 15px;
+}
+
+/*----------------------------------------------*/
+/*--------------- MESSAGE STYLES ---------------*/
+/*----------------------------------------------*/
+
 .footer-message {
   font-family: "Poppins", sans-serif;
-  font-size: 1.65rem;
+  margin-left: 2rem;
   font-weight: 300;
+  font-size: 2rem;
   color: #fff;
 }
 
@@ -37,6 +169,39 @@ footer {
   -webkit-background-clip: text;
   background-clip: text;
   font-weight: 500;
+}
+
+/*----------------------------------------*/
+/*-------------- TRANSITION --------------*/
+/*----------------------------------------*/
+
+.footer-link:hover::before {
+  background-color: #fff;
+}
+
+.footer-link.row:hover::before {
+  translate: -1rem 0;
+}
+
+.footer-link.column:hover::before {
+  translate: 0 0.5rem;
+}
+
+.footer-link:hover .footer-link-text {
+  color: #fff;
+}
+
+.footer-link.solid:hover {
+  background-color: #950023;
+}
+
+.footer-social-link:hover {
+  border-color: #fff;
+  translate: 5px 0;
+}
+
+.footer-social-link:hover .footer-social-link-icon {
+  opacity: 1;
 }
 
 /*----------------------------------------*/
