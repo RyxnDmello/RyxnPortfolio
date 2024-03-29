@@ -321,14 +321,14 @@
 /*------------- DECORATIONS -------------*/
 /*---------------------------------------*/
 
-#projects .circles {
+#projects .dashes:nth-of-type(3) {
   right: 4rem;
   top: 15rem;
 }
 
-#projects .dashes {
+#projects .dashes:nth-of-type(4) {
   bottom: 6rem;
-  left: 2.5rem;
+  left: 4rem;
 }
 
 /*---------------------------------------*/

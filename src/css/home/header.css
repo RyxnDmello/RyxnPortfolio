@@ -5,10 +5,9 @@
 header {
   grid-template-columns: auto;
   justify-content: stretch;
-  padding-bottom: 4rem;
+  padding-bottom: 6.5rem;
   align-items: center;
   display: grid;
-  gap: 2rem;
 }
 
 .header-heading {

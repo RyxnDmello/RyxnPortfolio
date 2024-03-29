@@ -1,6 +1,6 @@
 import { domains } from "../models/Skills";
 
-import Circles from "./Decorations/Circles";
+import Dashes from "./Decorations/Dashes";
 
 import Title from "./Common/Title";
 import Domain from "./Skills/Domain";
@@ -16,7 +16,7 @@ export default function Skills() {
         ))}
       </div>
 
-      <Circles />
+      <Dashes />
     </section>
   );
 }

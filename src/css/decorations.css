@@ -93,30 +93,15 @@
   color: #fff;
 }
 
-/*-------------------------------------*/
-/*-------------- CIRCLES --------------*/
-/*-------------------------------------*/
-
-.circle {
-  border: 2.25px solid;
-  border-radius: 40px;
-  aspect-ratio: 1 / 1;
-  width: 30px;
-}
-
-.circle:nth-of-type(even) {
-  border-color: #0000ff;
-}
-
-.circle:nth-of-type(odd) {
-  border-color: #ff0025;
-}
-
 /*------------------------------------*/
 /*-------------- DASHES --------------*/
 /*------------------------------------*/
 
 .dashes {
+  grid-template-columns: auto;
+  justify-content: center;
+  align-items: center;
+  display: grid;
   gap: 1rem;
 }
 

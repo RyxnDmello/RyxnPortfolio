@@ -1,6 +1,6 @@
 import { cards } from "../models/Pricing";
 
-import Circles from "./Decorations/Circles";
+import Dashes from "./Decorations/Dashes";
 
 import Title from "./Common/Title";
 import Card from "./Pricing/Card";
@@ -16,7 +16,7 @@ export default function Pricing() {
         ))}
       </div>
 
-      <Circles />
+      <Dashes />
     </section>
   );
 }

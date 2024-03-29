@@ -2,7 +2,6 @@ import { stats } from "../models/About";
 
 import Title from "./Common/Title";
 import Statistic from "./About/Statistic";
-import Circles from "./Decorations/Circles";
 
 export default function About() {
   return (
@@ -16,7 +15,7 @@ export default function About() {
           praesentium.
         </p>
 
-        <a className="about-button scroll" href="#services">
+        <a className="about-button scroll" href="#contacts">
           <p className="about-button-text">Contact Me</p>
         </a>
       </div>
@@ -30,9 +29,6 @@ export default function About() {
           ))}
         </div>
       </div>
-
-      <Circles count={4} />
-      <Circles count={4} />
     </section>
   );
 }

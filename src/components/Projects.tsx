@@ -4,7 +4,6 @@ import { options } from "../models/Options";
 import { projects } from "../models/Projects";
 
 import Dashes from "./Decorations/Dashes";
-import Circles from "./Decorations/Circles";
 
 import Title from "./Common/Title";
 import Option from "./Projects/Option";
@@ -51,7 +50,7 @@ export default function Projects() {
         <Expand onClick={() => onHandleExpanded()} />
       )}
 
-      <Circles />
+      <Dashes />
       <Dashes />
     </section>
   );
