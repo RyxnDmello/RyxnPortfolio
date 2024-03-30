@@ -1,9 +1,6 @@
-import { IDecoration } from "../../interfaces/Decoration";
+import { IDashes } from "../../interfaces/Decoration";
 
-export default function Dashes({
-  count = 10,
-  direction = "column",
-}: IDecoration) {
+export default function Dashes({ count = 10, direction = "column" }: IDashes) {
   return (
     <div className={`decoration dashes ${direction}`}>
       {Array.from({ length: count }, (_, i) => {

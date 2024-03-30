@@ -1,9 +1,7 @@
-import { IDecoration } from "../../interfaces/Decoration";
-
-export default function Strip({ count = 2 }: IDecoration) {
+export default function Strip({ groups = 2 }: { groups?: number }) {
   return (
     <div className="strip">
-      {Array.from({ length: count }, (_, i) => {
+      {Array.from({ length: groups }, (_, i) => {
         return (
           <div key={i} className="strip-label-group">
             <h4 className="strip-label">Web Developer</h4>

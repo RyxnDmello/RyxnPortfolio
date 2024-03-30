@@ -1,10 +1,9 @@
 import Script from "./components/Common/Script";
 
-import Strip from "./components/Decorations/Strip";
-
 import Cursor from "./components/Common/Cursor";
 
 import Header from "./components/Header";
+import Strip from "./components/Strip";
 import About from "./components/About";
 import Skills from "./components/Skills";
 import Projects from "./components/Projects";
