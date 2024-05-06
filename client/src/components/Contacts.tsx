@@ -1,28 +1,17 @@
 import { useState } from "react";
 
-import { IContact, ContactType } from "../interfaces/Contact.ts";
+import { ContactType } from "../interfaces/Contact.ts";
 import { inputs, options } from "../models/Contact.ts";
+
+import useContactForm from "../hooks/useContactForm.tsx";
 
 import Title from "./Common/Title.tsx";
 import Input from "./Contacts/Input";
 import Option from "./Contacts/Option.tsx";
 
 export default function Contacts() {
-  const [contact, setContact] = useState<IContact>({
-    type: ContactType.Comment,
-    name: "",
-    email: "",
-    number: "",
-    designation: "",
-    description: "",
-  });
-
-  const onHandleContact = (identifier: string, value: string | ContactType) => {
-    setContact((prevContact) => ({
-      ...prevContact,
-      [identifier]: value,
-    }));
-  };
+  const [type, setType] = useState<ContactType>(ContactType.Comment);
+  const { values, handleSubmit, handleChange } = useContactForm(type);
 
   return (
     <section id="contacts">
@@ -34,21 +23,21 @@ export default function Contacts() {
             <Option
               key={i}
               {...option}
-              isSelected={option.type === contact.type}
-              onSelect={() => onHandleContact("type", option.type)}
+              isSelected={option.type === type}
+              onSelect={() => setType(option.type)}
             />
           ))}
         </div>
 
-        <form className="contacts-form scroll" action="/contact" method="post">
+        <form className="contacts-form scroll" onSubmit={handleSubmit}>
           {inputs.map((input, i) => {
-            const value = contact[`${input.name as keyof typeof contact}`];
+            const value = values[`${input.name as keyof typeof values}`];
 
             return (
               <Input
                 key={i}
                 {...input}
-                onChange={onHandleContact}
+                onChange={handleChange}
                 value={value.toString()}
               />
             );
@@ -56,9 +45,7 @@ export default function Contacts() {
 
           <button className="form-button" type="submit">
             <p className="form-button-text">
-              {contact.type === ContactType.Comment
-                ? "Add Comment"
-                : "Send Request"}
+              {type === ContactType.Comment ? "Add Comment" : "Send Request"}
             </p>
           </button>
         </form>

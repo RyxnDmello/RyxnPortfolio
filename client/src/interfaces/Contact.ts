@@ -1,3 +1,5 @@
+import { ChangeEvent } from "react";
+
 export enum ContactType {
   "Comment",
   "Web Application",
@@ -6,7 +8,6 @@ export enum ContactType {
 }
 
 export interface IContact {
-  type: ContactType;
   name: string;
   email: string;
   number: string;
@@ -24,6 +25,7 @@ export interface IInput {
   icon: string;
   name: string;
   value?: string;
+  required: boolean;
   type: "text" | "textarea" | "email" | "number";
-  onChange?: (identifier: string, value: string) => void;
+  onChange?: (event: ChangeEvent) => void;
 }

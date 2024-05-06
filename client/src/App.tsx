@@ -1,6 +1,3 @@
-import { useEffect } from "react";
-import axios from "axios";
-
 import Script from "./components/Common/Script";
 
 import Cursor from "./components/Common/Cursor";
@@ -15,15 +12,6 @@ import Pricing from "./components/Pricing";
 import Footer from "./components/Footer";
 
 export default function App() {
-  useEffect(() => {
-    const test = async () => {
-      const response = await axios.get("http://localhost:8080/test");
-      console.log(response.data);
-    };
-
-    test();
-  }, []);
-
   return (
     <>
       <Header />

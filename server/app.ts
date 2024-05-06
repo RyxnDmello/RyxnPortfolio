@@ -3,6 +3,8 @@ import Express, { Application, Request, Response } from "express";
 import { urlencoded, json } from "body-parser";
 import cors from "cors";
 
+import contactsRouter from "./routes/Contacts";
+
 dotenv.config();
 
 const app: Application = Express();
@@ -17,12 +19,7 @@ app.use(
   })
 );
 
-app.get("/test", (req: Request, res: Response) => {
-  res.send({
-    type: "Test",
-    value: "Comment",
-  });
-});
+app.use("/contacts", contactsRouter);
 
 app.listen(process.env.DEVELOPMENT_PORT || process.env.PORT, () => {
   console.log(`ACTIVE | ${process.env.DEVELOPMENT_PORT || process.env.PORT}`);
