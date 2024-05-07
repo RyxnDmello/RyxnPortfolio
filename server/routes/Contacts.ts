@@ -1,9 +1,9 @@
 import { Router } from "express";
 
-import { contacts } from "../controllers/ContactsController";
+import { comment } from "../controllers/ContactsController";
 
 const router: Router = Router();
 
-router.post("/", contacts);
+router.post("/comment", comment);
 
 export default router;

@@ -1,11 +1,11 @@
 import { Request, Response } from "express";
 
-import { mailer } from "../emails/Mailer";
+import { createComment } from "../database/CommentManager";
 
-export const contacts = async (req: Request, res: Response) => {
-  console.log("CONTACT: ");
-  console.log(req.body);
+import { sender, receiver } from "../emails/Mailer";
 
-  mailer(req.body.type, req.body.name, req.body.email, req.body.description);
-  return;
+export const comment = async (req: Request, res: Response) => {
+  await createComment(req.body);
+  sender(req.body.name, req.body.email);
+  receiver("Comment", req.body.description);
 };

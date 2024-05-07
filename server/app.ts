@@ -1,7 +1,9 @@
 import dotenv from "dotenv";
-import Express, { Application, Request, Response } from "express";
+import Express, { Application } from "express";
 import { urlencoded, json } from "body-parser";
 import cors from "cors";
+
+import { connectDatabase } from "./database/DatabaseManager";
 
 import contactsRouter from "./routes/Contacts";
 
@@ -18,6 +20,8 @@ app.use(
     methods: ["GET", "POST"],
   })
 );
+
+connectDatabase();
 
 app.use("/contacts", contactsRouter);
 

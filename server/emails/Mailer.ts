@@ -13,7 +13,7 @@ const transporter = nodemailer.createTransport({
   port: 465,
 });
 
-const receiver = (type: string, description: string) => {
+export const receiver = (type: string, description: string) => {
   const config = {
     from: process.env.EMAIL_ADDRESS,
     to: process.env.EMAIL_ADDRESS,
@@ -27,7 +27,7 @@ const receiver = (type: string, description: string) => {
   });
 };
 
-const sender = (name: string, email: string) => {
+export const sender = (name: string, email: string) => {
   const config = {
     from: process.env.EMAIL_ADDRESS,
     to: email,
@@ -51,14 +51,4 @@ const sender = (name: string, email: string) => {
     if (error) return;
     console.log("EMAIL SENT | SUCCESS");
   });
-};
-
-export const mailer = (
-  type: string,
-  name: string,
-  email: string,
-  description: string
-) => {
-  sender(name, email);
-  receiver(type, description);
 };

@@ -12,9 +12,8 @@ export default function useContactForm(type: ContactType) {
     description: "",
   };
 
-  const submitContact = async () => {
-    await axios.post("http://localhost:8080/contacts", {
-      type: ContactType[type],
+  const submitComment = async () => {
+    await axios.post("http://localhost:8080/contacts/comment", {
       ...values,
     });
   };
@@ -23,7 +22,7 @@ export default function useContactForm(type: ContactType) {
     {
       initialValues: initialValues,
       onSubmit: async () => {
-        await submitContact();
+        type === ContactType.Comment ? await submitComment() : undefined;
       },
     }
   );
