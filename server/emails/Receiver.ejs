@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RyxnDmello</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+      }
+
+      img {
+        box-shadow: 0 2.5px 10px #00000050;
+        border-radius: 5px;
+        object-fit: cover;
+        height: 125px;
+        width: 98%;
+      }
+
+      h2 {
+        margin-top: 0.25rem;
+        font-size: 1.25rem;
+      }
+
+      hr {
+        border: none;
+        border-bottom: 2px solid #cccccc;
+        border-radius: 40px;
+        margin: 0.65rem 0;
+      }
+
+      .type {
+        font-size: 1.5rem;
+        line-height: 1;
+      }
+
+      .details p {
+        text-decoration: none;
+        font-size: 1rem;
+      }
+
+      .buttons {
+        margin-top: 0.5rem;
+        display: flex;
+      }
+
+      a {
+        background-color: #0e0e0e;
+        padding: 0.5rem 1.5rem;
+        margin-right: 0.25rem;
+        text-decoration: none;
+        border-radius: 2.5px;
+        color: #fff;
+      }
+
+      a.email {
+        background-color: #ff0050;
+      }
+
+      a.whatsapp {
+        background-color: #008000;
+      }
+
+      a p {
+        color: #fff;
+      }
+
+      .part {
+        margin-top: 0.25rem;
+      }
+
+      .description {
+        margin-bottom: 0.5rem;
+        line-height: 1.25;
+        font-size: 1rem;
+      }
+
+      footer p {
+        font-size: 0.85rem;
+        color: #505050;
+      }
+    </style>
+  </head>
+
+  <body>
+    <img
+      src="https://user-images.githubusercontent.com/64190011/226141289-776ee394-3a06-4e9e-b52f-7202038cb75d.jpg"
+    />
+
+    <main>
+      <h2 class="type"><%= type %></h2>
+
+      <hr />
+
+      <div class="details">
+        <h2>Details</h2>
+        <p><%= name %></p>
+        <p><%= designation %></p>
+        <p><%= number %></p>
+      </div>
+
+      <div class="part">
+        <h2>Description</h2>
+        <p class="description"><%= description %></p>
+      </div>
+
+      <div class="buttons">
+        <a href="mailto:<%= email %>" class="email" target="_blank">
+          <p>Email</p>
+        </a>
+
+        <a href="https://wa.me/<%= number %>" class="whatsapp" target="_blank">
+          <p>WhatsApp</p>
+        </a>
+      </div>
+    </main>
+
+    <hr />
+
+    <footer>
+      <p>Ryan Nolasco D Mello • Software Developer</p>
+    </footer>
+  </body>
+</html>

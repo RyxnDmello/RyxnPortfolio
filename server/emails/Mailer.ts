@@ -1,5 +1,6 @@
 import dotenv from "dotenv";
 import nodemailer from "nodemailer";
+import ejs from "ejs";
 
 dotenv.config();
 
@@ -13,42 +14,38 @@ const transporter = nodemailer.createTransport({
   port: 465,
 });
 
-export const receiver = (type: string, description: string) => {
-  const config = {
+export const receiver = async (
+  type: string,
+  name: string,
+  email: string,
+  number: number,
+  designation: string,
+  description: string
+) => {
+  const render = await ejs.renderFile(__dirname + "/Receiver.ejs", {
+    type,
+    name,
+    email,
+    number,
+    designation,
+    description,
+  });
+
+  await transporter.sendMail({
     from: process.env.EMAIL_ADDRESS,
     to: process.env.EMAIL_ADDRESS,
-    subject: type.toString(),
-    text: description,
-  };
-
-  transporter.sendMail(config, (error) => {
-    if (error) return;
-    console.log("EMAIL RECEIVED | SUCCESS");
+    subject: "Service Request!",
+    html: render,
   });
 };
 
-export const sender = (name: string, email: string) => {
-  const config = {
+export const sender = async (name: string, email: string) => {
+  const render = await ejs.renderFile(__dirname + "/Sender.ejs", { name });
+
+  await transporter.sendMail({
     from: process.env.EMAIL_ADDRESS,
     to: email,
-    subject: "Thank You for Your Inquiry",
-    html: `
-    Hey ${name},
-    <br><br>
-    
-    Thank you sincerely for reaching out! Your interest means the world to us. We're dedicated to providing the best experience possible and would love for you to explore our website further. 
-    Feel free to share it with your friends and family to help us expand our community. Your support is invaluable in our journey to grow and improve.
-    <br><br>
-    
-    Best Regards,<br>
-    RyxnDmello
-    `
-      .replace(/\s{2,}/g, " ")
-      .trim(),
-  };
-
-  transporter.sendMail(config, (error) => {
-    if (error) return;
-    console.log("EMAIL SENT | SUCCESS");
+    subject: "Thank You for Your Feedback!",
+    html: render,
   });
 };

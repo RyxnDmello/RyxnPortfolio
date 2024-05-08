@@ -6,6 +6,17 @@ import { sender, receiver } from "../emails/Mailer";
 
 export const comment = async (req: Request, res: Response) => {
   await createComment(req.body);
-  sender(req.body.name, req.body.email);
-  receiver("Comment", req.body.description);
+};
+
+export const service = async (req: Request, res: Response) => {
+  await sender("Swarup", "ryanndmello10@gmail.com");
+
+  await receiver(
+    req.body.type,
+    req.body.name,
+    req.body.email,
+    req.body.number,
+    req.body.designation,
+    req.body.description
+  );
 };
