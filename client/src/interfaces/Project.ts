@@ -16,3 +16,8 @@ export interface IOption {
   title: string;
   icon: string;
 }
+
+export interface IOptional extends IOption {
+  isActive: boolean;
+  onClick: () => void;
+}

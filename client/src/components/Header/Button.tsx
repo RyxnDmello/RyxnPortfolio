@@ -1,4 +1,4 @@
-import { ILink } from "../../interfaces/Link";
+import { IButton } from "../../interfaces/Link";
 
 export default function Button({ url: URL, text, icon, isSolid }: IButton) {
   const className = "header-button";
@@ -15,9 +15,4 @@ export default function Button({ url: URL, text, icon, isSolid }: IButton) {
       ) : undefined}
     </a>
   );
-}
-
-interface IButton extends ILink {
-  icon?: string;
-  isSolid?: boolean;
 }

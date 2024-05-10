@@ -1,9 +1,12 @@
+import { useRef } from "react";
 import { useFormik } from "formik";
 import axios from "axios";
 
 import { ContactType, IContact } from "../interfaces/Contact";
 
 export default function useContactForm(type: ContactType) {
+  const toasterRef = useRef<HTMLDivElement>(null);
+
   const initialValues: IContact = {
     name: "",
     email: "",
@@ -25,16 +28,33 @@ export default function useContactForm(type: ContactType) {
     });
   };
 
-  const { values, handleSubmit, handleChange, resetForm } = useFormik<IContact>(
-    {
+  const toggleToaster = () => {
+    toasterRef.current!.classList.remove("toaster-hide");
+    toasterRef.current!.classList.add("toaster-reveal");
+
+    setTimeout(() => {
+      toasterRef.current!.classList.remove("toaster-reveal");
+      toasterRef.current!.classList.add("toaster-hide");
+      handleReset({});
+    }, 5000);
+  };
+
+  const { values, handleSubmit, handleChange, handleReset } =
+    useFormik<IContact>({
       initialValues: initialValues,
       onSubmit: async () => {
         type === ContactType.Comment
           ? await submitComment()
           : await submitService();
       },
-    }
-  );
+    });
 
-  return { values, handleSubmit, handleChange, resetForm };
+  return {
+    values,
+    toasterRef,
+    handleChange,
+    handleSubmit,
+    handleReset,
+    toggleToaster,
+  };
 }

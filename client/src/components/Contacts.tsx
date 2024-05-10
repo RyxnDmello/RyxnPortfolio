@@ -8,10 +8,13 @@ import useContactForm from "../hooks/useContactForm.tsx";
 import Title from "./Common/Title.tsx";
 import Input from "./Contacts/Input";
 import Option from "./Contacts/Option.tsx";
+import Toaster from "./Contacts/Toaster.tsx";
 
 export default function Contacts() {
   const [type, setType] = useState<ContactType>(ContactType.Comment);
-  const { values, handleSubmit, handleChange } = useContactForm(type);
+
+  const { values, toasterRef, handleChange, handleSubmit, toggleToaster } =
+    useContactForm(type);
 
   return (
     <section id="contacts">
@@ -43,12 +46,26 @@ export default function Contacts() {
             );
           })}
 
-          <button className="form-button" type="submit">
+          <button className="form-button" type="submit" onClick={toggleToaster}>
             <p className="form-button-text">
               {type === ContactType.Comment ? "Add Comment" : "Send Request"}
             </p>
           </button>
         </form>
+
+        {type === ContactType.Comment ? (
+          <Toaster
+            ref={toasterRef}
+            title="Thank You"
+            description="for lending your voice"
+          />
+        ) : (
+          <Toaster
+            ref={toasterRef}
+            title="Service Request!"
+            description="We will get back to you soon"
+          />
+        )}
       </div>
     </section>
   );

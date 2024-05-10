@@ -4,26 +4,28 @@ import Title from "./Common/Title";
 import Statistic from "./About/Statistic";
 
 export default function About() {
+  const className = "about";
+
   return (
-    <section id="about">
-      <div className="about-details">
+    <section id={className}>
+      <div className={`${className}-details`}>
         <Title primary="About" secondary="Me" />
 
-        <p className="about-description scroll">
+        <p className={`${className}-description scroll`}>
           Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officiis
           totam commodi molestias odio facere rerum adipisci esse rem recusandae
           praesentium.
         </p>
 
-        <a className="about-button scroll" href="#contacts">
+        <a className={`${className}-button scroll`} href="#contacts">
           <p className="about-button-text">Contact Me</p>
         </a>
       </div>
 
-      <div className="about-statistics">
+      <div className={`${className}-statistics`}>
         <Title primary="Skills" secondary="Overview" />
 
-        <div className="about-statistics-panel">
+        <div className={`${className}-statistics-panel`}>
           {stats.map((stat, i) => (
             <Statistic key={i} {...stat} />
           ))}

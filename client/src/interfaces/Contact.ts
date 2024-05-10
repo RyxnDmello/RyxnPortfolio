@@ -20,6 +20,12 @@ export interface IOption {
   type: ContactType;
 }
 
+export interface IOptional {
+  name: string;
+  isSelected: boolean;
+  onSelect: () => void;
+}
+
 export interface IInput {
   label: string;
   icon: string;
@@ -28,4 +34,9 @@ export interface IInput {
   required: boolean;
   type: "text" | "textarea" | "email" | "number";
   onChange?: (event: ChangeEvent) => void;
+}
+
+export interface IToaster {
+  title: string;
+  description: string;
 }

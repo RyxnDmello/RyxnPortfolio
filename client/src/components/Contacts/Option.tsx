@@ -1,6 +1,8 @@
+import { IOptional } from "../../interfaces/Contact";
+
 import ArrowIcon from "../../images/buttons/right.svg";
 
-export default function Option({ name, isSelected, onSelect }: IOption) {
+export default function Option({ name, isSelected, onSelect }: IOptional) {
   const className = "contact-option";
 
   return (
@@ -15,10 +17,4 @@ export default function Option({ name, isSelected, onSelect }: IOption) {
       </div>
     </div>
   );
-}
-
-interface IOption {
-  name: string;
-  isSelected: boolean;
-  onSelect: () => void;
 }

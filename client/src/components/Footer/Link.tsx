@@ -1,4 +1,4 @@
-import { ILink } from "../../interfaces/Link";
+import { ILinkable } from "../../interfaces/Link";
 
 export default function Link({
   url,
@@ -18,9 +18,4 @@ export default function Link({
       <p className={`${className}-text`}>{text}</p>
     </a>
   );
-}
-
-interface ILinkable extends ILink {
-  direction?: "row" | "column";
-  isBlank?: boolean;
 }

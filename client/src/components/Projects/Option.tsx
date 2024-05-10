@@ -1,4 +1,4 @@
-import { IOption } from "../../interfaces/Project";
+import { IOptional } from "../../interfaces/Project";
 
 export default function Option({ title, icon, isActive, onClick }: IOptional) {
   const className = "projects-navbar-option";
@@ -12,9 +12,4 @@ export default function Option({ title, icon, isActive, onClick }: IOptional) {
       <p className={`${className}-title`}>{title}</p>
     </div>
   );
-}
-
-interface IOptional extends IOption {
-  isActive: boolean;
-  onClick: Function;
 }
