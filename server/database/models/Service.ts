@@ -15,10 +15,12 @@ const serviceSchema = new Schema({
   },
   number: {
     type: Schema.Types.Number,
+    default: 0,
     required: false,
   },
   designation: {
     type: Schema.Types.String,
+    default: "UNKNOWN",
     required: false,
   },
   description: {

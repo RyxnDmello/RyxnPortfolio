@@ -7,19 +7,19 @@ import Whatsapp from "../images/socials/whatsapp.png";
 
 export const socials: ILink[] = [
   {
-    url: "#",
+    url: "https://www.instagram.com/ryxndmello10/",
     icon: Instagram,
   },
   {
-    url: "#",
+    url: "https://twitter.com/RyxnDmello",
     icon: Twitter,
   },
   {
-    url: "#",
+    url: " https://wa.me/9145000789",
     icon: Whatsapp,
   },
   {
-    url: "#",
+    url: "https://www.linkedin.com/in/ryanndmello/",
     icon: Linkedin,
   },
 ];

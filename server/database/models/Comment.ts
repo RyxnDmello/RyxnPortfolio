@@ -11,10 +11,12 @@ const commentSchema = new Schema({
   },
   number: {
     type: Schema.Types.Number,
+    default: "UNKNOWN",
     required: false,
   },
   designation: {
     type: Schema.Types.String,
+    default: "UNKNOWN",
     required: false,
   },
   description: {

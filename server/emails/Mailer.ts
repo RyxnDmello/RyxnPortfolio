@@ -2,6 +2,8 @@ import dotenv from "dotenv";
 import nodemailer from "nodemailer";
 import ejs from "ejs";
 
+import { IContact } from "../interfaces/Contact";
+
 dotenv.config();
 
 const transporter = nodemailer.createTransport({
@@ -14,21 +16,10 @@ const transporter = nodemailer.createTransport({
   port: 465,
 });
 
-export const receiver = async (
-  type: string,
-  name: string,
-  email: string,
-  number: number,
-  designation: string,
-  description: string
-) => {
+export const receiver = async (type: string, contact: IContact) => {
   const render = await ejs.renderFile(__dirname + "/Receiver.ejs", {
     type,
-    name,
-    email,
-    number,
-    designation,
-    description,
+    ...contact,
   });
 
   await transporter.sendMail({

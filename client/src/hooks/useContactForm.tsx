@@ -18,11 +18,20 @@ export default function useContactForm(type: ContactType) {
     });
   };
 
+  const submitService = async () => {
+    await axios.post("http://localhost:8080/contacts/service", {
+      type: ContactType[type],
+      ...values,
+    });
+  };
+
   const { values, handleSubmit, handleChange, resetForm } = useFormik<IContact>(
     {
       initialValues: initialValues,
       onSubmit: async () => {
-        type === ContactType.Comment ? await submitComment() : undefined;
+        type === ContactType.Comment
+          ? await submitComment()
+          : await submitService();
       },
     }
   );

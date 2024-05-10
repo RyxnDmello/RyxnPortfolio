@@ -1,22 +1,17 @@
 import { Request, Response } from "express";
 
 import { createComment } from "../database/CommentManager";
+import { createService } from "../database/ServiceManager";
 
 import { sender, receiver } from "../emails/Mailer";
 
 export const comment = async (req: Request, res: Response) => {
   await createComment(req.body);
+  await sender(req.body.name, req.body.email);
 };
 
 export const service = async (req: Request, res: Response) => {
-  await sender("Swarup", "ryanndmello10@gmail.com");
-
-  await receiver(
-    req.body.type,
-    req.body.name,
-    req.body.email,
-    req.body.number,
-    req.body.designation,
-    req.body.description
-  );
+  await createService(req.body);
+  await sender(req.body.name, req.body.email);
+  await receiver(req.body.type, req.body);
 };

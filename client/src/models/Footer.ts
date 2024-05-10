@@ -26,15 +26,15 @@ export const links: ILink[] = [
 
 export const inspires: ILink[] = [
   {
-    url: "#",
+    url: "https://www.figma.com/",
     text: "Figma",
   },
   {
-    url: "#",
+    url: "https://dribbble.com/",
     text: "Dribble",
   },
   {
-    url: "#",
+    url: "https://www.behance.net/",
     text: "Behance",
   },
 ];

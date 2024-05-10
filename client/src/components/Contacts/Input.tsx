@@ -1,5 +1,7 @@
 import { IInput } from "../../interfaces/Contact";
 
+import Required from "../../images/inputs/required.png";
+
 export default function Input({
   label,
   icon,
@@ -13,12 +15,12 @@ export default function Input({
 
   return (
     <div className={`${className} ${value!.length > 0 && "valid"}`}>
-      {label && icon && (
-        <div className={`${className}-label`}>
-          <img className={`${className}-label-icon`} src={icon} />
-          <p className={`${className}-label-text`}>{label}</p>
-        </div>
-      )}
+      <div className={`${className}-label`}>
+        <img className={`${className}-label-icon`} src={icon} />
+        <p className={`${className}-label-text`}>{label}</p>
+      </div>
+
+      {required && <img className={`${className}-required`} src={Required} />}
 
       {type === "textarea" ? (
         <textarea

@@ -66,7 +66,11 @@ export default function Footer() {
           </p>
         </div>
 
-        <a className={`${className}-conclusion`} href="#">
+        <a
+          className={`${className}-conclusion`}
+          href={GitHubURL}
+          target="_blank"
+        >
           <img className={`${className}-conclusion-icon`} src={GitHub} />
           <p className={`${className}-conclusion-text`}>GitHub</p>
         </a>
@@ -76,3 +80,5 @@ export default function Footer() {
     </footer>
   );
 }
+
+const GitHubURL = "https://github.com//RyxnDmello";
