@@ -57,10 +57,10 @@
 }
 
 /*----------------------------------------*/
-/*-------------- STATISTICS --------------*/
+/*---------------- SKILLS ----------------*/
 /*----------------------------------------*/
 
-.about-statistics {
+.about-skills {
   grid-template-columns: auto;
   justify-content: stretch;
   align-items: center;
@@ -68,7 +68,7 @@
   gap: 0.5rem;
 }
 
-.about-statistics-panel {
+.about-skills-panel {
   grid-template-columns: auto;
   justify-content: stretch;
   align-items: center;
@@ -76,7 +76,7 @@
   gap: 0.25rem;
 }
 
-.about-statistic {
+.about-skill {
   justify-content: space-between;
   grid-auto-flow: column;
   align-items: center;
@@ -84,14 +84,14 @@
   gap: 2rem;
 }
 
-.about-statistic-title {
+.about-skill-title {
   font-family: "Poppins", sans-serif;
   color: #ffffffcf;
   font-size: 1rem;
   font-weight: 200;
 }
 
-.about-statistic-rating {
+.about-skill-rating {
   justify-content: center;
   grid-auto-flow: column;
   align-items: center;
@@ -99,14 +99,14 @@
   gap: 0.85rem;
 }
 
-.about-statistic-bullet {
+.about-skill-bullet {
   border: 2px solid #ffffff50;
   aspect-ratio: 1 / 1;
   border-radius: 40px;
   width: 15px;
 }
 
-.about-statistic-bullet.marked {
+.about-skill-bullet.marked {
   background-color: #fff;
 }
 

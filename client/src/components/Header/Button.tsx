@@ -1,17 +1,14 @@
 import { IButton } from "../../interfaces/Link";
 
-export default function Button({ url: URL, text, icon, isSolid }: IButton) {
+export default function Button({ url, text, icon, solid }: IButton) {
   const className = "header-button";
 
   return (
-    <a
-      className={`${className} ${isSolid ? "solid" : undefined} scroll`}
-      href={URL}
-    >
+    <a className={`${className} ${solid && "solid"} scroll`} href={url}>
       <p className={`${className}-text`}>{text}</p>
 
       {icon !== undefined ? (
-        <img className={`${className}-image`} src={icon} />
+        <img className={`${className}-icon`} src={icon} />
       ) : undefined}
     </a>
   );

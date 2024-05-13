@@ -1,6 +1,6 @@
-import { IStatistic } from "../interfaces/About";
+import { ISkill } from "../interfaces/About";
 
-export const stats: IStatistic[] = [
+export const skills: ISkill[] = [
   {
     title: "Web Development",
     rating: 4,

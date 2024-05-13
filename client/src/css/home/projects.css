@@ -59,7 +59,7 @@
   border-top-right-radius: 5px;
 }
 
-.projects-navbar-option-title {
+.projects-navbar-option-label {
   font-family: "Poppins", sans-serif;
   font-size: 0.85rem;
   font-weight: 300;
@@ -159,14 +159,6 @@
 /*----------- DETAILS STYLES -----------*/
 /*--------------------------------------*/
 
-.projects-project-about {
-  font-family: "Poppins", sans-serif;
-  color: #ffffffa0;
-  line-height: 1.25;
-  font-weight: 300;
-  font-size: 1rem;
-}
-
 .projects-project-details {
   padding: 0.25rem 0.65rem 0.65rem 0.65rem;
   grid-template-columns: auto;
@@ -176,39 +168,19 @@
   gap: 0.5rem;
 }
 
-/*---------------------------------------*/
-/*------------ SKILLS STYLES ------------*/
-/*---------------------------------------*/
-
-.projects-project-skills {
-  justify-content: center;
-  align-items: center;
-  padding: 0.5rem 0;
-  flex-wrap: wrap;
-  display: flex;
-  gap: 0.25rem;
-}
-
-.projects-project-skill {
-  transition: border-color 400ms;
-  border: 2px solid #ffffff25;
-  grid-template-columns: auto;
-  justify-content: center;
-  align-items: center;
-  border-radius: 40px;
-  padding: 0.65rem;
-  display: grid;
-}
-
-.projects-project-skill-icon {
-  width: 20px;
+.projects-project-about {
+  font-family: "Poppins", sans-serif;
+  color: #ffffffa0;
+  line-height: 1.25;
+  font-weight: 300;
+  font-size: 1rem;
 }
 
 /*---------------------------------------*/
-/*------------ BUTTON STYLES ------------*/
+/*------------- LINK STYLES -------------*/
 /*---------------------------------------*/
 
-.projects-project-buttons {
+.projects-project-links {
   justify-content: space-between;
   grid-auto-flow: column;
   align-items: center;
@@ -216,7 +188,7 @@
   display: grid;
 }
 
-.projects-project-button {
+.projects-project-link {
   justify-content: center;
   grid-auto-flow: column;
   align-items: center;
@@ -224,7 +196,7 @@
   gap: 0.5rem;
 }
 
-.projects-project-button-label {
+.projects-project-link-text {
   font-family: "Poppins", sans-serif;
   letter-spacing: 0.25px;
   font-weight: 300;
@@ -232,11 +204,69 @@
   color: #fff;
 }
 
+/*------------------------------------*/
+/*------------- WEBSITES -------------*/
+/*------------------------------------*/
+
+.projects-project-link.source {
+  background-color: #050505;
+  padding: 0.45rem 1rem;
+  border-radius: 2.5px;
+}
+
+.projects-project-link.website {
+  transition: background-color 300ms;
+  border: 2px solid #fff;
+  border-radius: 40px;
+  padding: 0.25rem;
+}
+
+.projects-project-link.source .projects-project-link-icon {
+  width: 18px;
+}
+
+.projects-project-link.website .projects-project-link-icon {
+  transition: filter 300ms;
+  width: 22.5px;
+}
+
+/*-------------------------------------*/
+/*------------- PLATFORMS -------------*/
+/*-------------------------------------*/
+
+.projects-project-platform-links {
+  justify-content: center;
+  grid-auto-flow: column;
+  align-items: center;
+  display: grid;
+  gap: 0.5rem;
+}
+
+.projects-project-link.desktop,
+.projects-project-link.mobile {
+  transition: scale 250ms;
+  border-radius: 40px;
+  padding: 0.5rem;
+}
+
+.projects-project-link.desktop {
+  border: 2px solid #fa5c5c;
+}
+
+.projects-project-link.mobile {
+  border: 2px solid #34a853;
+}
+
+.projects-project-link.desktop .projects-project-link-icon,
+.projects-project-link.mobile .projects-project-link-icon {
+  width: 16px;
+}
+
 /*---------------------------------------*/
-/*-------------- VIEW MORE --------------*/
+/*------------ EXPAND BUTTON ------------*/
 /*---------------------------------------*/
 
-.projects-explore-button {
+.projects-expand-button {
   transition: border-color 350ms;
   border: 2px solid #fff;
   justify-content: center;
@@ -250,71 +280,13 @@
   display: grid;
 }
 
-.projects-explore-button-text {
+.projects-expand-button-text {
   font-family: "Poppins", sans-serif;
   transition: color 350ms;
   letter-spacing: 0.25px;
   font-size: 1.2rem;
   font-weight: 300;
   color: #fff;
-}
-
-/*------------------------------------*/
-/*------------- WEBSITES -------------*/
-/*------------------------------------*/
-
-.projects-project-button.github {
-  background-color: #050505;
-  padding: 0.45rem 1rem;
-  border-radius: 2.5px;
-}
-
-.projects-project-button.website {
-  transition: background-color 300ms;
-  border: 2px solid #fff;
-  border-radius: 40px;
-  padding: 0.25rem;
-}
-
-.projects-project-button.github .projects-project-button-icon {
-  width: 18px;
-}
-
-.projects-project-button.website .projects-project-button-icon {
-  transition: filter 300ms;
-  width: 22.5px;
-}
-
-/*-------------------------------------*/
-/*------------- PLATFORMS -------------*/
-/*-------------------------------------*/
-
-.projects-project-buttons-platforms {
-  justify-content: center;
-  grid-auto-flow: column;
-  align-items: center;
-  display: grid;
-  gap: 0.5rem;
-}
-
-.projects-project-button.desktop,
-.projects-project-button.android {
-  transition: scale 250ms;
-  border-radius: 40px;
-  padding: 0.5rem;
-}
-
-.projects-project-button.desktop {
-  border: 2px solid #fa5c5c;
-}
-
-.projects-project-button.android {
-  border: 2px solid #34a853;
-}
-
-.projects-project-button.desktop .projects-project-button-icon,
-.projects-project-button.android .projects-project-button-icon {
-  width: 16px;
 }
 
 /*---------------------------------------*/
@@ -339,28 +311,24 @@
   scale: 1.2;
 }
 
-.projects-project-skill:hover {
-  border-color: #ffffff80;
-}
-
-.projects-project-button.website:hover {
+.projects-project-link.website:hover {
   background-color: #fff;
 }
 
-.projects-project-button.website:hover .projects-project-button-icon {
+.projects-project-link.website:hover .projects-project-link-icon {
   filter: invert(1);
 }
 
-.projects-project-button.desktop:hover,
-.projects-project-button.android:hover {
+.projects-project-link.desktop:hover,
+.projects-project-link.mobile:hover {
   scale: 1.15;
 }
 
-.projects-explore-button:hover {
+.projects-expand-button:hover {
   border-color: #ff0033;
 }
 
-.projects-explore-button:hover .projects-explore-button-text {
+.projects-expand-button:hover .projects-expand-button-text {
   color: #ff0033;
 }
 

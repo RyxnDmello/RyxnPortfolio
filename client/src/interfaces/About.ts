@@ -1,4 +1,4 @@
-export interface IStatistic {
+export interface ISkill {
   title: string;
   rating?: number;
 }

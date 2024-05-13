@@ -1,15 +1,15 @@
-import { IOptional } from "../../interfaces/Project";
-
-export default function Option({ title, icon, isActive, onClick }: IOptional) {
+export default function Option({ label, selected, onSelect }: IOption) {
   const className = "projects-navbar-option";
 
   return (
-    <div
-      className={`${className} ${isActive ? "active" : undefined}`}
-      onClick={() => onClick()}
-    >
-      <img className={`${className}-image`} src={icon} />
-      <p className={`${className}-title`}>{title}</p>
+    <div className={`${className} ${selected && "active"}`} onClick={onSelect}>
+      <p className={`${className}-label`}>{label}</p>
     </div>
   );
+}
+
+export interface IOption {
+  label: string;
+  selected: boolean;
+  onSelect: () => void;
 }

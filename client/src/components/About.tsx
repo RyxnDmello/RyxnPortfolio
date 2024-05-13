@@ -1,7 +1,7 @@
-import { stats } from "../models/About";
+import { skills } from "../models/About";
 
 import Title from "./Common/Title";
-import Statistic from "./About/Statistic";
+import Skill from "./About/Skill";
 
 export default function About() {
   const className = "about";
@@ -12,9 +12,10 @@ export default function About() {
         <Title primary="About" secondary="Me" />
 
         <p className={`${className}-description scroll`}>
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officiis
-          totam commodi molestias odio facere rerum adipisci esse rem recusandae
-          praesentium.
+          A driven and enthusiastic developer specializing in web and mobile
+          applications. I utilize cutting-edge industry technologies to
+          seamlessly blend front-end and back-end components, crafting immersive
+          and feature-rich experiences.
         </p>
 
         <a className={`${className}-button scroll`} href="#contacts">
@@ -22,12 +23,12 @@ export default function About() {
         </a>
       </div>
 
-      <div className={`${className}-statistics`}>
+      <div className={`${className}-skills`}>
         <Title primary="Skills" secondary="Overview" />
 
-        <div className={`${className}-statistics-panel`}>
-          {stats.map((stat, i) => (
-            <Statistic key={i} {...stat} />
+        <div className={`${className}-skills-panel`}>
+          {skills.map((skill, i) => (
+            <Skill key={i} {...skill} />
           ))}
         </div>
       </div>

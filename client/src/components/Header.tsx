@@ -1,4 +1,4 @@
-import SendIcon from "../images/buttons/send.svg";
+import SendIcon from "../images/buttons/send.png";
 
 import Logo from "./Common/Logo";
 import Link from "./Header/Link";
@@ -13,14 +13,14 @@ export default function Header() {
         <Logo />
 
         <div className="nav-links">
-          <div className="nav-utils-links">
-            <Link url="#services" text="Services" />
-            <Link url="#skills" text="Skills" />
-            <Link url="#projects" text="Portfolio" />
-            <Link url="#contacts" text="Contacts" />
+          <div className="nav-section-links">
+            <Link url="#pricing" text="Services" solid={false} />
+            <Link url="#skills" text="Skills" solid={false} />
+            <Link url="#projects" text="Portfolio" solid={false} />
+            <Link url="#contacts" text="Contacts" solid={false} />
           </div>
 
-          <Link url="#" text="Download CV" isButton />
+          <Link url="#" text="Download CV" solid />
         </div>
       </nav>
 
@@ -31,8 +31,8 @@ export default function Header() {
           <Title />
 
           <div className="header-buttons">
-            <Button url="#" text="Services" icon={SendIcon} isSolid />
-            <Button url="#" text="Download CV" />
+            <Button url="#pricing" text="Services" icon={SendIcon} solid />
+            <Button url="#" text="Download CV" solid={false} />
           </div>
         </div>
       </div>

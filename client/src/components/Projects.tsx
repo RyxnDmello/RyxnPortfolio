@@ -1,7 +1,6 @@
-import { useState } from "react";
-
 import { options } from "../models/Options";
-import { projects } from "../models/Projects";
+
+import useProjectsCatalogue from "../hooks/useProjectsCatalogue";
 
 import Dashes from "./Decorations/Dashes";
 
@@ -11,14 +10,8 @@ import Project from "./Projects/Project";
 import Expand from "./Projects/Expand";
 
 export default function Projects() {
-  const [active, setActive] = useState<number>(0);
-  const [isExpanded, setExpanded] = useState<boolean>(false);
-
-  const onHandleActiveOption = (activeOption: number) => {
-    setActive(activeOption);
-  };
-
-  const onHandleExpanded = () => setExpanded(true);
+  const { projects, option, expandable, onSelectOption, onSetExpandable } =
+    useProjectsCatalogue();
 
   return (
     <section id="projects">
@@ -26,13 +19,13 @@ export default function Projects() {
         <Title primary="Personal" secondary="Projects" />
 
         <div className="projects-navbar scroll">
-          {options.map((option, ID) => {
+          {options.map((label, i) => {
             return (
               <Option
-                key={ID}
-                {...option}
-                isActive={active === ID}
-                onClick={() => onHandleActiveOption(ID)}
+                key={i}
+                label={label}
+                selected={option === i}
+                onSelect={() => onSelectOption(i)}
               />
             );
           })}
@@ -40,14 +33,14 @@ export default function Projects() {
       </div>
 
       <div className="projects-catalogue">
-        {projects[active].map((project, i) => {
-          if (isExpanded) return <Project key={i} {...project} />;
+        {projects.map((project, i) => {
+          if (expandable) return <Project key={i} {...project} />;
           return i < 9 && <Project key={i} {...project} />;
         })}
       </div>
 
-      {!isExpanded && projects[active].length > 9 && (
-        <Expand onClick={() => onHandleExpanded()} />
+      {!expandable && projects.length > 9 && (
+        <Expand onExpand={onSetExpandable} />
       )}
 
       <Dashes />

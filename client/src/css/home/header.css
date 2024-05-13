@@ -50,22 +50,22 @@ header {
 
 .header-title {
   font-family: "Poppins", sans-serif;
-  line-height: 0.85;
+  line-height: 1.2;
 }
 
-.header-title.opening {
+.header-title .opening {
   font-size: 2.5rem;
   font-weight: 200;
   color: #808080;
 }
 
-.header-title.name {
+.header-title .name {
   font-weight: 400;
   font-size: 3rem;
   color: #fff;
 }
 
-.header-title.about {
+.header-title .about {
   font-size: 1.5rem;
   font-weight: 300;
   color: #a0a0a0;
@@ -91,7 +91,7 @@ header {
   grid-auto-flow: column;
   align-items: center;
   display: grid;
-  gap: 0.45rem;
+  gap: 0.5rem;
 }
 
 .header-button.solid {
@@ -107,8 +107,8 @@ header {
   color: #fff;
 }
 
-.header-button-image {
-  width: 20px;
+.header-button-icon {
+  width: 18px;
 }
 
 /*-------------------------------------------*/
@@ -116,8 +116,8 @@ header {
 /*-------------------------------------------*/
 
 .header-button.solid:hover {
-  background-color: #df002a;
-  border-color: #df002a;
+  background-color: #ff003c;
+  border-color: #ff003c;
 }
 
 /*--------------------------------------------*/

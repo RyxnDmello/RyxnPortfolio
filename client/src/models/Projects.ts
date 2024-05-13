@@ -15,23 +15,24 @@ import HyperCrash from "../images/projects/hypercrash.png";
 import GitHub from "../images/buttons/github.svg";
 import ItchIO from "../images/skills/itch.svg";
 import Android from "../images/skills/android.svg";
-import Explore from "../images/buttons/up.svg";
+import Website from "../images/buttons/up.svg";
 
-export const webApplications: IProject[] = [
+export const web: IProject[] = [
   {
-    image: Codexo,
-    title: "Codexo",
-    about: "Get the latest insights on leading technologies and frameworks",
-    explore: [
+    image: CyberVerse,
+    title: "CyberVerse",
+    about: "Explore, customize, and buy the latest consoles and games",
+    links: [
       {
-        url: "https://github.com/RyxnDmello/WebApp-NodeJs-02",
-        label: "Source Code",
+        url: "https://github.com/RyxnDmello/WebApp-NodeJs-05",
+        text: "Source Code",
+        platform: "source",
         icon: GitHub,
       },
       {
-        url: "https://codexo-v76g.onrender.com",
+        url: "#",
         platform: "website",
-        icon: Explore,
+        icon: Website,
       },
     ],
   },
@@ -39,16 +40,35 @@ export const webApplications: IProject[] = [
     image: TaskTonic,
     title: "TaskTonic",
     about: "Stay organized by creating and managing your tasks efficiently",
-    explore: [
+    links: [
       {
         url: "https://github.com/RyxnDmello/WebApp-NodeJs-03",
-        label: "Source Code",
+        text: "Source Code",
+        platform: "source",
         icon: GitHub,
       },
       {
-        url: "https://codexo-v76g.onrender.com",
+        url: "#",
         platform: "website",
-        icon: Explore,
+        icon: Website,
+      },
+    ],
+  },
+  {
+    image: Codexo,
+    title: "Codexo",
+    about: "Get the latest insights on leading technologies and frameworks",
+    links: [
+      {
+        url: "https://github.com/RyxnDmello/WebApp-NodeJs-02",
+        text: "Source Code",
+        platform: "source",
+        icon: GitHub,
+      },
+      {
+        url: "#",
+        platform: "website",
+        icon: Website,
       },
     ],
   },
@@ -56,59 +76,32 @@ export const webApplications: IProject[] = [
     image: CloudSense,
     title: "CloudSense",
     about: "Experience realtime weather forecast for your favorite cities",
-    explore: [
+    links: [
       {
         url: "https://github.com/RyxnDmello/WebApp-NodeJs-04",
-        label: "Source Code",
+        text: "Source Code",
+        platform: "source",
         icon: GitHub,
       },
       {
-        url: "https://codexo-v76g.onrender.com",
+        url: "#",
         platform: "website",
-        icon: Explore,
-      },
-    ],
-  },
-  {
-    image: CyberVerse,
-    title: "CyberVerse",
-    about: "Explore, customize, and buy the latest consoles and games",
-    explore: [
-      {
-        url: "https://github.com/RyxnDmello/WebApp-NodeJs-05",
-        label: "Source Code",
-        icon: GitHub,
-      },
-      {
-        url: "https://codexo-v76g.onrender.com",
-        platform: "website",
-        icon: Explore,
+        icon: Website,
       },
     ],
   },
 ];
 
-export const mobileApplications: IProject[] = [
+export const mobile: IProject[] = [
   {
     image: TaskFlow,
     title: "TaskFlow",
     about: "Efficiently create, manage, and analyze your tasks with ease",
-    explore: [
+    links: [
       {
         url: "https://github.com/RyxnDmello/flutter_firebase_01",
-        label: "Source Code",
-        icon: GitHub,
-      },
-    ],
-  },
-  {
-    image: SkySync,
-    title: "SkySync",
-    about: "Realtime weather forecast with precise graphical analysis",
-    explore: [
-      {
-        url: "https://github.com/RyxnDmello/flutter_firebase_02",
-        label: "Source Code",
+        text: "Source Code",
+        platform: "source",
         icon: GitHub,
       },
     ],
@@ -117,25 +110,40 @@ export const mobileApplications: IProject[] = [
     image: PixelFlix,
     title: "PixelFlix",
     about: "Explore, save, and share your favorite movies and TV series",
-    explore: [
+    links: [
       {
         url: "https://github.com/RyxnDmello/flutter_firebase_03",
-        label: "Source Code",
+        text: "Source Code",
+        platform: "source",
+        icon: GitHub,
+      },
+    ],
+  },
+  {
+    image: SkySync,
+    title: "SkySync",
+    about: "Realtime weather forecast with precise graphical analysis",
+    links: [
+      {
+        url: "https://github.com/RyxnDmello/flutter_firebase_02",
+        text: "Source Code",
+        platform: "source",
         icon: GitHub,
       },
     ],
   },
 ];
 
-export const videoGames: IProject[] = [
+export const games: IProject[] = [
   {
     image: GeoMadness,
     title: "GeometricMadness",
     about: "Escape all kinds of obstacles in this blooming world of madness",
-    explore: [
+    links: [
       {
         url: "https://github.com/RyxnDmello/GameDev-Unity-01",
-        label: "Source Code",
+        text: "Source Code",
+        platform: "source",
         icon: GitHub,
       },
       {
@@ -145,7 +153,7 @@ export const videoGames: IProject[] = [
       },
       {
         url: "https://play.google.com/store/apps/details?id=com.ShadowLight.GeometricMadness&hl=en_IN&gl=US",
-        platform: "android",
+        platform: "mobile",
         icon: Android,
       },
     ],
@@ -154,10 +162,11 @@ export const videoGames: IProject[] = [
     image: HyperCrash,
     title: "HyperCrash",
     about: "Destroy treacherous enemies with powerful weapons and skills",
-    explore: [
+    links: [
       {
         url: "https://github.com/RyxnDmello/GameDev-Unity-02",
-        label: "Source Code",
+        text: "Source Code",
+        platform: "source",
         icon: GitHub,
       },
       {
@@ -167,16 +176,16 @@ export const videoGames: IProject[] = [
       },
       {
         url: "https://play.google.com/store/apps/details?id=com.ShadowLight.HyperCrash&hl=en_IN&gl=US",
-        platform: "android",
+        platform: "mobile",
         icon: Android,
       },
     ],
   },
 ];
 
-export const projects: IProject[][] = [
-  [...webApplications, ...mobileApplications, ...videoGames],
-  [...webApplications],
-  [...mobileApplications],
-  [...videoGames],
+export const catalogue: IProject[][] = [
+  [...web, ...mobile, ...games],
+  [...web],
+  [...mobile],
+  [...games],
 ];

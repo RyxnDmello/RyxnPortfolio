@@ -7,7 +7,7 @@ import GitHub from "../images/buttons/github.svg";
 import Logo from "./Common/Logo";
 import Top from "./Common/Top";
 
-import Link from "./Footer/Link";
+import Link from "./Footer/NavLink";
 import Social from "./Footer/Social";
 
 export default function Footer() {
@@ -20,7 +20,7 @@ export default function Footer() {
 
         <div className={`${className}-links`}>
           {links.map((link, i) => (
-            <Link key={i} {...link} />
+            <Link key={i} {...link} external={false} direction="column" />
           ))}
         </div>
       </div>
@@ -34,7 +34,7 @@ export default function Footer() {
 
             <div className={`${className}-column-feature-links`}>
               {inspires.map((inspire, i) => (
-                <Link key={i} {...inspire} direction="row" />
+                <Link key={i} {...inspire} external direction="row" />
               ))}
             </div>
           </div>
@@ -59,7 +59,7 @@ export default function Footer() {
 
       <div className={`${className}-row`}>
         <div className={`${className}-conclusion`}>
-          <img className={`${className}-conclusion-icon l`} src={Copyright} />
+          <img className={`${className}-conclusion-icon`} src={Copyright} />
 
           <p className={`${className}-conclusion-text`}>
             2024 • Ryan Nolasco D Mello
@@ -68,7 +68,7 @@ export default function Footer() {
 
         <a
           className={`${className}-conclusion`}
-          href={GitHubURL}
+          href="https://github.com//RyxnDmello"
           target="_blank"
         >
           <img className={`${className}-conclusion-icon`} src={GitHub} />
@@ -80,5 +80,3 @@ export default function Footer() {
     </footer>
   );
 }
-
-const GitHubURL = "https://github.com//RyxnDmello";

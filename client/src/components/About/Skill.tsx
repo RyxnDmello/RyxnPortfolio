@@ -1,7 +1,7 @@
-import { IStatistic } from "../../interfaces/About";
+import { ISkill } from "../../interfaces/About";
 
-export default function Statistic({ title, rating = 5 }: IStatistic) {
-  const className = "about-statistic";
+export default function Skill({ title, rating = 5 }: ISkill) {
+  const className = "about-skill";
 
   return (
     <div className={`${className} scroll`}>

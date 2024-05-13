@@ -1,8 +1,8 @@
 import { IProject } from "../../interfaces/Project";
 
-import Button from "./Button";
+import Link from "./Project/Link";
 
-export default function Project({ title, about, image, explore }: IProject) {
+export default function Project({ title, about, image, links }: IProject) {
   const className = "projects-project";
 
   return (
@@ -15,15 +15,14 @@ export default function Project({ title, about, image, explore }: IProject) {
 
         <div className={`${className}-details`}>
           <p className={`${className}-about`}>{about}</p>
-
           <hr className={`${className}-divider`} />
 
-          <div className={`${className}-buttons`}>
-            <Button {...explore[0]} />
+          <div className={`${className}-links`}>
+            <Link {...links[0]} />
 
-            <div className={`${className}-buttons-platforms`}>
-              {explore.map((button, i) => {
-                return button.platform && <Button key={i} {...button} />;
+            <div className={`${className}-platform-links`}>
+              {links.map((link, i) => {
+                return link.platform !== "source" && <Link key={i} {...link} />;
               })}
             </div>
           </div>

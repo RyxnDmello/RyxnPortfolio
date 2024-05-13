@@ -19,7 +19,11 @@ nav {
   gap: 2rem;
 }
 
-.nav-utils-links {
+/*-----------------------------------------*/
+/*------------- SECTION LINKS -------------*/
+/*-----------------------------------------*/
+
+.nav-section-links {
   justify-content: center;
   grid-auto-flow: column;
   align-items: center;
@@ -31,7 +35,12 @@ nav {
   position: relative;
 }
 
-.nav-link::before {
+.nav-link.solid {
+  background-color: #b5002a;
+  padding: 0.5rem 1.65rem;
+}
+
+.nav-link:not(.solid)::before {
   transition: width 450ms, opacity 250ms;
   background-color: #fff;
   position: absolute;
@@ -54,12 +63,7 @@ nav {
   font-size: 1rem;
 }
 
-.nav-button {
-  background-color: #b5002a;
-  padding: 0.5rem 1.65rem;
-}
-
-.nav-button-text {
+.nav-link.solid .nav-link-text {
   font-family: "Poppins", sans-serif;
   font-weight: 300;
   font-size: 1rem;

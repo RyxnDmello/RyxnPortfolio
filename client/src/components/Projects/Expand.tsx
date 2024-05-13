@@ -1,11 +1,13 @@
-import { MouseEventHandler } from "react";
-
-export default function Expand({ onClick }: { onClick: MouseEventHandler }) {
-  const className = "projects-explore-button";
+export default function Expand({ onExpand }: IExpand) {
+  const className = "projects-expand-button";
 
   return (
-    <div className={`${className} scroll`} onClick={onClick}>
+    <div className={`${className} scroll`} onClick={onExpand}>
       <p className={`${className}-text`}>View More</p>
     </div>
   );
+}
+
+interface IExpand {
+  onExpand: () => void;
 }
