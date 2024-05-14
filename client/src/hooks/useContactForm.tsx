@@ -28,7 +28,7 @@ export default function useContactForm(type: ContactType) {
     });
   };
 
-  const toggleToaster = () => {
+  const showToaster = () => {
     toasterRef.current!.classList.remove("toaster-hide");
     toasterRef.current!.classList.add("toaster-reveal");
 
@@ -55,6 +55,6 @@ export default function useContactForm(type: ContactType) {
     handleChange,
     handleSubmit,
     handleReset,
-    toggleToaster,
+    showToaster,
   };
 }

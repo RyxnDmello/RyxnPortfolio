@@ -198,20 +198,33 @@
 /*----------- BUTTON STYLES -----------*/
 /*-------------------------------------*/
 
+.form-buttons {
+  justify-content: center;
+  align-items: stretch;
+  margin-top: 0.5rem;
+  display: flex;
+  gap: 0.25rem;
+}
+
 .form-button {
-  transition: background-color 300ms, border-color 300ms;
   box-shadow: 0 0 20px #00000080;
   background-color: transparent;
   border: 2px solid #b5002a;
-  padding: 0.35rem 2rem;
   border-radius: 2.5px;
+}
+
+.form-button:nth-of-type(1) {
+  transition: background-color 300ms, border-color 300ms;
+  box-shadow: 0 0 20px #00000080;
+  background-color: transparent;
+  padding: 0.35rem 2rem;
   position: relative;
-  margin-top: 0.5rem;
   overflow: hidden;
+  flex-grow: 1;
   z-index: 0;
 }
 
-.form-button::before {
+.form-button:nth-of-type(1)::before {
   background-color: #af0025;
   transition: width 450ms;
   transform: skew(25deg);
@@ -224,6 +237,13 @@
   top: 0;
 }
 
+.form-button:nth-of-type(2) {
+  padding: 0.35rem 0.65rem;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
 .form-button-text {
   font-family: "Poppins", sans-serif;
   transition: color 450ms;
@@ -231,6 +251,10 @@
   color: #b5002a;
   font-weight: 400;
   font-size: 1rem;
+}
+
+.form-button-icon {
+  width: 18px;
 }
 
 /*-------------------------------------------*/
@@ -326,11 +350,11 @@
   color: transparent;
 }
 
-.form-button:hover::before {
+.form-button:nth-of-type(1):hover::before {
   width: calc(100% + 2rem);
 }
 
-.form-button:hover .form-button-text {
+.form-button:nth-of-type(1):hover .form-button-text {
   color: #fff;
 }
 

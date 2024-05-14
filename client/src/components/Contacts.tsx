@@ -6,15 +6,24 @@ import { inputs, options } from "../models/Contact.ts";
 import useContactForm from "../hooks/useContactForm.tsx";
 
 import Title from "./Common/Title.tsx";
-import Input from "./Contacts/Input";
 import Option from "./Contacts/Option.tsx";
+import Input from "./Contacts/Input";
+import Button from "./Contacts/Button.tsx";
 import Toaster from "./Contacts/Toaster.tsx";
+
+import ResetIcon from "../images/inputs/reset.png";
 
 export default function Contacts() {
   const [type, setType] = useState<ContactType>(ContactType.Comment);
 
-  const { values, toasterRef, handleChange, handleSubmit, toggleToaster } =
-    useContactForm(type);
+  const {
+    values,
+    toasterRef,
+    handleChange,
+    handleSubmit,
+    handleReset,
+    showToaster,
+  } = useContactForm(type);
 
   return (
     <section id="contacts">
@@ -32,7 +41,11 @@ export default function Contacts() {
           ))}
         </div>
 
-        <form className="contacts-form scroll" onSubmit={handleSubmit}>
+        <form
+          className="contacts-form scroll"
+          onSubmit={handleSubmit}
+          onReset={handleReset}
+        >
           {inputs.map((input, i) => {
             const value = values[`${input.name as keyof typeof values}`];
 
@@ -46,11 +59,10 @@ export default function Contacts() {
             );
           })}
 
-          <button className="form-button" type="submit" onClick={toggleToaster}>
-            <p className="form-button-text">
-              {type === ContactType.Comment ? "Add Comment" : "Send Request"}
-            </p>
-          </button>
+          <div className="form-buttons">
+            <Button type="submit" onClick={showToaster} />
+            <Button icon={ResetIcon} type="reset" />
+          </div>
         </form>
 
         {type === ContactType.Comment ? (
