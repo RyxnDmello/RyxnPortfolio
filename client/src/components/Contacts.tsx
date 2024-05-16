@@ -18,6 +18,7 @@ export default function Contacts() {
 
   const {
     values,
+    errors,
     toasterRef,
     handleChange,
     handleSubmit,
@@ -48,11 +49,13 @@ export default function Contacts() {
         >
           {inputs.map((input, i) => {
             const value = values[`${input.name as keyof typeof values}`];
+            const error = errors[`${input.name as keyof typeof errors}`];
 
             return (
               <Input
                 key={i}
                 {...input}
+                error={!!error}
                 onChange={handleChange}
                 value={value.toString()}
               />

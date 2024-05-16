@@ -8,14 +8,15 @@ export default function Input({
   value,
   name,
   type,
+  error,
   required,
   onChange,
 }: IInput) {
   const className = "form-input";
 
   return (
-    <div className={`${className} ${value!.length > 0 && "valid"}`}>
-      <div className={`${className}-label`}>
+    <div className={`${className} ${error && "error"}`}>
+      <div className={`${className}-label ${value!.length > 0 && "hidden"}`}>
         <img className={`${className}-label-icon`} src={icon} />
         <p className={`${className}-label-text`}>{label}</p>
       </div>

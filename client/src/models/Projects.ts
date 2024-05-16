@@ -24,7 +24,7 @@ export const web: IProject[] = [
     about: "Explore, customize, and buy the latest consoles and games",
     links: [
       {
-        url: "https://github.com/RyxnDmello/WebApp-NodeJs-05",
+        url: "https://github.com/RyxnDmello/WebApp-NodeJs-CyberVerse",
         text: "Source Code",
         platform: "source",
         icon: GitHub,
@@ -42,7 +42,7 @@ export const web: IProject[] = [
     about: "Stay organized by creating and managing your tasks efficiently",
     links: [
       {
-        url: "https://github.com/RyxnDmello/WebApp-NodeJs-03",
+        url: "https://github.com/RyxnDmello/WebApp-NodeJs-TaskTonic",
         text: "Source Code",
         platform: "source",
         icon: GitHub,
@@ -60,7 +60,7 @@ export const web: IProject[] = [
     about: "Get the latest insights on leading technologies and frameworks",
     links: [
       {
-        url: "https://github.com/RyxnDmello/WebApp-NodeJs-02",
+        url: "https://github.com/RyxnDmello/WebApp-NodeJs-Codexo",
         text: "Source Code",
         platform: "source",
         icon: GitHub,
@@ -78,7 +78,7 @@ export const web: IProject[] = [
     about: "Experience realtime weather forecast for your favorite cities",
     links: [
       {
-        url: "https://github.com/RyxnDmello/WebApp-NodeJs-04",
+        url: "https://github.com/RyxnDmello/WebApp-NodeJs-CloudSense",
         text: "Source Code",
         platform: "source",
         icon: GitHub,
@@ -141,7 +141,7 @@ export const games: IProject[] = [
     about: "Escape all kinds of obstacles in this blooming world of madness",
     links: [
       {
-        url: "https://github.com/RyxnDmello/GameDev-Unity-01",
+        url: "https://github.com/RyxnDmello/Unity2D-GeometricMadness",
         text: "Source Code",
         platform: "source",
         icon: GitHub,
@@ -164,7 +164,7 @@ export const games: IProject[] = [
     about: "Destroy treacherous enemies with powerful weapons and skills",
     links: [
       {
-        url: "https://github.com/RyxnDmello/GameDev-Unity-02",
+        url: "https://github.com/RyxnDmello/Unity2D-HyperCrash",
         text: "Source Code",
         platform: "source",
         icon: GitHub,

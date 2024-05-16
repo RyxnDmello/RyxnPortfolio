@@ -31,6 +31,7 @@ export interface IInput {
   icon: string;
   name: string;
   value?: string;
+  error?: boolean;
   required: boolean;
   type: "text" | "textarea" | "email" | "number";
   onChange?: (event: ChangeEvent) => void;

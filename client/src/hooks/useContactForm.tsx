@@ -3,6 +3,7 @@ import { useFormik } from "formik";
 import axios from "axios";
 
 import { ContactType, IContact } from "../interfaces/Contact";
+import { validationSchema } from "../schemas/Contact";
 
 export default function useContactForm(type: ContactType) {
   const toasterRef = useRef<HTMLDivElement>(null);
@@ -29,6 +30,8 @@ export default function useContactForm(type: ContactType) {
   };
 
   const showToaster = () => {
+    if (errors) return;
+
     toasterRef.current!.classList.remove("toaster-hide");
     toasterRef.current!.classList.add("toaster-reveal");
 
@@ -39,9 +42,10 @@ export default function useContactForm(type: ContactType) {
     }, 5000);
   };
 
-  const { values, handleSubmit, handleChange, handleReset } =
+  const { values, errors, handleSubmit, handleChange, handleReset } =
     useFormik<IContact>({
       initialValues: initialValues,
+      validationSchema: validationSchema,
       onSubmit: async () => {
         type === ContactType.Comment
           ? await submitComment()
@@ -51,6 +55,7 @@ export default function useContactForm(type: ContactType) {
 
   return {
     values,
+    errors,
     toasterRef,
     handleChange,
     handleSubmit,
