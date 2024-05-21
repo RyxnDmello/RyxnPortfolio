@@ -16,7 +16,7 @@ app.use(json());
 
 app.use(
   cors({
-    origin: process.env.CLIENT_CORS,
+    origin: process.env.CORS,
     methods: ["GET", "POST"],
   })
 );
@@ -25,6 +25,6 @@ connectDatabase();
 
 app.use("/contacts", contactsRouter);
 
-app.listen(process.env.DEVELOPMENT_PORT || process.env.PORT, () => {
-  console.log(`ACTIVE | ${process.env.DEVELOPMENT_PORT || process.env.PORT}`);
+app.listen(process.env.PORT || process.env.DEVELOPMENT_PORT, () => {
+  console.log(`ACTIVE | ${process.env.PORT || process.env.DEVELOPMENT_PORT}`);
 });

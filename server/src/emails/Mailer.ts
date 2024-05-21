@@ -1,4 +1,5 @@
 import dotenv from "dotenv";
+import { join } from "path";
 import nodemailer from "nodemailer";
 import ejs from "ejs";
 
@@ -17,10 +18,8 @@ const transporter = nodemailer.createTransport({
 });
 
 export const receiver = async (type: string, contact: IContact) => {
-  const render = await ejs.renderFile(__dirname + "/Receiver.ejs", {
-    type,
-    ...contact,
-  });
+  const file = join(__dirname, "..", "..", "emails", "Receiver.ejs");
+  const render = await ejs.renderFile(file, { type, ...contact });
 
   await transporter.sendMail({
     from: process.env.EMAIL_ADDRESS,
@@ -31,7 +30,8 @@ export const receiver = async (type: string, contact: IContact) => {
 };
 
 export const sender = async (name: string, email: string) => {
-  const render = await ejs.renderFile(__dirname + "/Sender.ejs", { name });
+  const file = join(__dirname, "..", "..", "emails", "Sender.ejs");
+  const render = await ejs.renderFile(file, { name });
 
   await transporter.sendMail({
     from: process.env.EMAIL_ADDRESS,
