@@ -17,20 +17,20 @@ export default function useContactForm(type: ContactType) {
   };
 
   const submitComment = async () => {
-    await axios.post("http://localhost:8080/contacts/comment", {
+    await axios.post("/api/contacts/comment", {
       ...values,
     });
   };
 
   const submitService = async () => {
-    await axios.post("http://localhost:8080/contacts/service", {
+    await axios.post("/api/contacts/service", {
       type: ContactType[type],
       ...values,
     });
   };
 
   const showToaster = () => {
-    if (errors) return;
+    if (Object.keys(errors).length !== 0 || values.email.length === 0) return;
 
     toasterRef.current!.classList.remove("toaster-hide");
     toasterRef.current!.classList.add("toaster-reveal");

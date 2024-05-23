@@ -23,7 +23,7 @@ app.use(
 
 connectDatabase();
 
-app.use("/contacts", contactsRouter);
+app.use("/api/contacts", contactsRouter);
 
 app.listen(process.env.PORT || process.env.DEVELOPMENT_PORT, () => {
   console.log(`ACTIVE | ${process.env.PORT || process.env.DEVELOPMENT_PORT}`);
