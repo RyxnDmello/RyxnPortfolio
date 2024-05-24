@@ -5,6 +5,10 @@ import axios from "axios";
 import { ContactType, IContact } from "../interfaces/Contact";
 import { validationSchema } from "../schemas/Contact";
 
+const _api: string = import.meta.env.PROD
+  ? `${import.meta.env.VITE_SERVER_API}/api`
+  : "/api";
+
 export default function useContactForm(type: ContactType) {
   const toasterRef = useRef<HTMLDivElement>(null);
 
@@ -17,13 +21,13 @@ export default function useContactForm(type: ContactType) {
   };
 
   const submitComment = async () => {
-    await axios.post("/api/contacts/comment", {
+    await axios.post(`${_api}/contacts/comment`, {
       ...values,
     });
   };
 
   const submitService = async () => {
-    await axios.post("/api/contacts/service", {
+    await axios.post(`${_api}/contacts/service`, {
       type: ContactType[type],
       ...values,
     });
