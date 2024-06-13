@@ -1,3 +1,5 @@
+import styles from "./Heading.module.scss";
+
 export default function Heading({ title }: { title: string }) {
-  return <h1 className="header-heading scroll">{title}</h1>;
+  return <h1 className={`${styles.heading} scroll`}>{title}</h1>;
 }

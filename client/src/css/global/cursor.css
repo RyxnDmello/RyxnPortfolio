@@ -2,19 +2,6 @@
 /*----------------- CURSOR STYLES -----------------*/
 /*-------------------------------------------------*/
 
-#cursor {
-  transition: translate 100ms, opacity 100ms, border-radius 100ms, scale 50ms;
-  transition-timing-function: ease;
-  border: 2px solid #fff;
-  pointer-events: none;
-  aspect-ratio: 1 / 1;
-  border-radius: 40px;
-  position: absolute;
-  width: 20px;
-  left: -10px;
-  top: -10px;
-}
-
 /*----------------------------------------------*/
 /*----------------- END OF CSS -----------------*/
 /*----------------------------------------------*/

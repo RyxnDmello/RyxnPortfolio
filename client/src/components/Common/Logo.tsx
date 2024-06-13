@@ -1,9 +1,9 @@
-export default function Logo() {
-  const className = "logo";
+import styles from "./Logo.module.scss";
 
+export default function Logo() {
   return (
-    <a id={className} href="#">
-      <p className={`${className}-text`}>RD</p>
+    <a id={styles.logo}>
+      <p>RD</p>
     </a>
   );
 }

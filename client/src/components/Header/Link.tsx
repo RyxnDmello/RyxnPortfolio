@@ -1,11 +1,11 @@
 import { ILink } from "../../interfaces/Link";
 
-export default function Link({ url, text, solid }: ILink) {
-  const className = "nav-link"
+import styles from "./Link.module.scss";
 
+export default function Link({ url, text, solid }: ILink) {
   return (
-    <a className={`${className} ${solid && "solid"}`} href={url}>
-      <p className={`${className}-text`}>{text}</p>
+    <a className={solid ? styles.solid : styles.link} href={url}>
+      <p>{text}</p>
     </a>
   );
 }

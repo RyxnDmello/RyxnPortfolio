@@ -1,0 +1,22 @@
+@mixin text($size, $weight, $color) {
+  font-weight: $weight;
+  font-size: $size;
+  color: $color;
+}
+
+.title {
+  font-family: "Poppins", sans-serif;
+  line-height: 1.2;
+
+  span:nth-of-type(1) {
+    @include text(2.5rem, 200, #808080);
+  }
+
+  span:nth-of-type(2) {
+    @include text(3rem, 400, #fff);
+  }
+
+  span:nth-of-type(3) {
+    @include text(1.5rem, 300, #a0a0a0);
+  }
+}

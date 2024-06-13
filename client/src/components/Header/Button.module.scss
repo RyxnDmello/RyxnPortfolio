@@ -1,0 +1,37 @@
+@mixin button {
+  border: 2px solid #fff;
+  justify-content: center;
+  padding: 0.35rem 2.5rem;
+  grid-auto-flow: column;
+  align-items: center;
+  display: grid;
+  gap: 0.5rem;
+}
+
+.button {
+  @include button();
+}
+
+.solid {
+  @include button();
+
+  transition: background-color 300ms, border-color 300ms;
+  background-color: #b5002a;
+  border-color: #b5002a;
+
+  &:hover {
+    background-color: #ff003c;
+    border-color: #ff003c;
+  }
+}
+
+.label {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.2rem;
+  font-weight: 300;
+  color: #fff;
+}
+
+.icon {
+  width: 18px;
+}

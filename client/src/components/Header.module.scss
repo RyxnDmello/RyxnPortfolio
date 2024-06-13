@@ -1,0 +1,58 @@
+.nav {
+  background-image: linear-gradient(to bottom, #00000050, transparent);
+  justify-content: space-between;
+  grid-auto-flow: column;
+  padding: 1.5rem 2rem;
+  align-items: center;
+  display: grid;
+}
+
+@mixin row($space) {
+  justify-content: center;
+  grid-auto-flow: column;
+  align-items: center;
+  display: grid;
+  gap: $space;
+}
+
+.links {
+  @include row(2rem);
+
+  > div {
+    @include row(1rem);
+  }
+}
+
+.header {
+  grid-template-columns: auto;
+  justify-content: stretch;
+  padding-bottom: 6.5rem;
+  align-items: center;
+  display: grid;
+}
+
+.details {
+  justify-content: center;
+  grid-auto-flow: column;
+  align-items: center;
+  padding: 4rem 0;
+  display: grid;
+  gap: 2rem;
+
+  > div {
+    grid-template-columns: auto;
+    justify-content: center;
+    align-items: center;
+    display: grid;
+    gap: 1rem;
+  }
+}
+
+.buttons {
+  justify-content: start;
+  grid-auto-flow: column;
+  align-items: center;
+  margin-top: 1rem;
+  display: grid;
+  gap: 0.65rem;
+}
