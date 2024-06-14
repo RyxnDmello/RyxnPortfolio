@@ -1,0 +1,18 @@
+.point {
+  justify-content: start;
+  grid-auto-flow: column;
+  align-items: center;
+  display: grid;
+  gap: 0.65rem;
+
+  img {
+    width: 25px;
+  }
+
+  p {
+    font-family: "Poppins", sans-serif;
+    color: #ffffffa0;
+    font-weight: 300;
+    font-size: 1rem;
+  }
+}

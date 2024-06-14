@@ -1,12 +1,12 @@
 import Icon from "../../images/pricing/tick.svg";
 
-export default function Point({ point }: { point: string }) {
-  const className = "pricing-card-point";
+import styles from "./Point.module.scss";
 
+export default function Point({ point }: { point: string }) {
   return (
-    <div className={className}>
-      <img className={`${className}-icon`} src={Icon} />
-      <p className={`${className}-text`}>{point}</p>
+    <div className={styles.point}>
+      <img src={Icon} />
+      <p>{point}</p>
     </div>
   );
 }

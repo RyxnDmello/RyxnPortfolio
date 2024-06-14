@@ -16,17 +16,17 @@
   content: "";
 }
 
-.skills {
+.pricing {
   box-shadow: 0 0 20px #000000a0;
-  padding: 2rem 4rem 3rem 4rem;
   grid-template-columns: auto;
   background-color: #000025;
   justify-content: center;
   align-items: center;
   position: relative;
   overflow: hidden;
+  padding: 4rem;
   display: grid;
-  gap: 1.5rem;
+  gap: 2.8rem;
   z-index: 0;
 
   &::before {
@@ -38,10 +38,10 @@
   }
 }
 
-.catalogue {
-  grid-template-columns: repeat(4, auto);
+.cards {
   justify-content: center;
-  align-items: stretch;
+  grid-auto-flow: column;
+  align-items: center;
   display: grid;
-  gap: 1.25rem;
+  gap: 2.5rem;
 }
