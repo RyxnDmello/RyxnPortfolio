@@ -1,11 +1,9 @@
 @import url("./css/global.css");
 
 @import url("./css/fonts.css");
-@import url("./css/common.css");
 @import url("./css/decorations.css");
 
 @import url("./css/home/strips.css");
-@import url("./css/home/about.css");
 @import url("./css/home/skills.css");
 @import url("./css/home/projects.css");
 @import url("./css/home/pricing.css");

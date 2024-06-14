@@ -1,8 +1,8 @@
-export default function Title({ primary, secondary, position }: ITitle) {
-  const className = `${position} scroll`;
+import styles from "./Title.module.scss";
 
+export default function Title({ primary, secondary, position }: ITitle) {
   return (
-    <h1 id="title" className={className}>
+    <h1 className={`${styles.title} ${position}`}>
       <span>{primary}</span> {secondary}
     </h1>
   );

@@ -1,0 +1,33 @@
+.skill {
+  justify-content: space-between;
+  grid-auto-flow: column;
+  align-items: center;
+  display: grid;
+  gap: 2rem;
+
+  > p {
+    font-family: "Poppins", sans-serif;
+    color: #ffffffcf;
+    font-size: 1rem;
+    font-weight: 200;
+  }
+}
+
+.ratings {
+  justify-content: center;
+  grid-auto-flow: column;
+  align-items: center;
+  display: grid;
+  gap: 0.85rem;
+}
+
+.bullet {
+  border: 2px solid #ffffff50;
+  aspect-ratio: 1 / 1;
+  border-radius: 40px;
+  width: 15px;
+
+  &.solid {
+    background-color: #fff;
+  }
+}

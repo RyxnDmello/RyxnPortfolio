@@ -1,18 +1,18 @@
 import { ISkill } from "../../interfaces/About";
 
+import styles from "./Skill.module.scss";
+
 export default function Skill({ title, rating = 5 }: ISkill) {
-  const className = "about-skill";
-
   return (
-    <div className={`${className} scroll`}>
-      <p className={`${className}-title`}>{title}</p>
+    <div className={`${styles.skill} scroll`}>
+      <p>{title}</p>
 
-      <div className={`${className}-rating`}>
+      <div className={styles.ratings}>
         {Array.from({ length: 5 }, (_, i) => {
           return (
             <div
               key={i}
-              className={`${className}-bullet ${i < rating && "marked"}`}
+              className={`${styles.bullet} ${i < rating && styles.solid}`}
             />
           );
         })}
