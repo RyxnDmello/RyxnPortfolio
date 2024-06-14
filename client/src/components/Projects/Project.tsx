@@ -1,23 +1,26 @@
 import { IProject } from "../../interfaces/Project";
 
-import Link from "./Project/Link";
+import Link from "./Link";
+
+import styles from "./Project.module.scss";
 
 export default function Project({ title, about, image, links }: IProject) {
   const className = "projects-project";
 
   return (
-    <div className={`${className}-wrapper scroll`}>
-      <div className={className}>
-        <div className={`${className}-header`}>
-          <h2 className={`${className}-title`}>{title}</h2>
-          <img className={`${className}-background`} src={image} />
+    <div className={`${styles.project} scroll`}>
+      <div>
+        <div className={styles.header}>
+          <p>{title}</p>
+          <img src={image} />
         </div>
 
-        <div className={`${className}-details`}>
-          <p className={`${className}-about`}>{about}</p>
-          <hr className={`${className}-divider`} />
+        <div className={styles.details}>
+          <p className={styles.about}>{about}</p>
 
-          <div className={`${className}-links`}>
+          <hr className={styles.divider} />
+
+          <div className={styles.links}>
             <Link {...links[0]} />
 
             <div className={`${className}-platform-links`}>

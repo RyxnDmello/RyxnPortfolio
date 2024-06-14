@@ -189,3 +189,10 @@ export const catalogue: IProject[][] = [
   [...mobile],
   [...games],
 ];
+
+export const tabs: string[] = [
+  "Explore All",
+  "Web Applications",
+  "Mobile Applications",
+  "Video Games",
+];

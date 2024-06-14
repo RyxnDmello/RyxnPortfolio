@@ -1,0 +1,30 @@
+.tab {
+  transition: background-color 300ms;
+  background-color: #000025;
+  justify-content: center;
+  grid-auto-flow: column;
+  padding: 0.5rem 1.5rem;
+  align-items: center;
+  display: grid;
+
+  &.active {
+    background-color: #ff0033;
+  }
+
+  &:first-of-type {
+    border-bottom-left-radius: 5px;
+    border-top-left-radius: 5px;
+  }
+
+  &:last-of-type {
+    border-bottom-right-radius: 5px;
+    border-top-right-radius: 5px;
+  }
+
+  > p {
+    font-family: "Poppins", sans-serif;
+    font-size: 0.85rem;
+    font-weight: 300;
+    color: #fff;
+  }
+}

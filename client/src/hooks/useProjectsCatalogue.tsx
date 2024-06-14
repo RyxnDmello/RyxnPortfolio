@@ -2,7 +2,7 @@ import { useState } from "react";
 
 import { IProject } from "../interfaces/Project";
 
-import { catalogue } from "../models/Projects";
+import { tabs, catalogue } from "../models/Projects";
 
 export default function useProjectsCatalogue() {
   const [projects, setProjects] = useState<IProject[]>(catalogue[0]);
@@ -16,5 +16,12 @@ export default function useProjectsCatalogue() {
 
   const onSetExpandable = () => setExpandable(true);
 
-  return { projects, option, expandable, onSelectOption, onSetExpandable };
+  return {
+    tabs,
+    projects,
+    option,
+    expandable,
+    onSelectOption,
+    onSetExpandable,
+  };
 }

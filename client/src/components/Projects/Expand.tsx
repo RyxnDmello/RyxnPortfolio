@@ -1,9 +1,9 @@
-export default function Expand({ onExpand }: IExpand) {
-  const className = "projects-expand-button";
+import styles from "./Expand.module.scss";
 
+export default function Expand({ onExpand }: IExpand) {
   return (
-    <div className={`${className} scroll`} onClick={onExpand}>
-      <p className={`${className}-text`}>View More</p>
+    <div className={`${styles.expand} scroll`} onClick={onExpand}>
+      <p>View More</p>
     </div>
   );
 }

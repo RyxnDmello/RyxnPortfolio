@@ -1,0 +1,30 @@
+.expand {
+  transition: border-color 350ms;
+  border: 2px solid #fff;
+  justify-content: center;
+  grid-auto-flow: column;
+  padding: 0.25rem 2rem;
+  align-items: center;
+  width: fit-content;
+  position: relative;
+  overflow: hidden;
+  margin: 0 auto;
+  display: grid;
+
+  p {
+    font-family: "Poppins", sans-serif;
+    transition: color 350ms;
+    letter-spacing: 0.25px;
+    font-size: 1.2rem;
+    font-weight: 300;
+    color: #fff;
+  }
+
+  &:hover {
+    border-color: #ff0033;
+  }
+
+  &:hover p {
+    color: #ff0033;
+  }
+}

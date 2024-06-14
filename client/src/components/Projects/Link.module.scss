@@ -1,0 +1,70 @@
+.link {
+  justify-content: center;
+  grid-auto-flow: column;
+  align-items: center;
+  display: grid;
+  gap: 0.5rem;
+}
+
+.source {
+  background-color: #050505;
+  padding: 0.45rem 1rem;
+  border-radius: 2.5px;
+
+  p {
+    font-family: "Poppins", sans-serif;
+    letter-spacing: 0.25px;
+    font-weight: 300;
+    font-size: 1rem;
+    color: #fff;
+  }
+
+  img {
+    width: 18px;
+  }
+}
+
+.website {
+  transition: background-color 300ms;
+  border: 2px solid #fff;
+  border-radius: 40px;
+  padding: 0.25rem;
+
+  img {
+    transition: filter 300ms;
+    width: 22.5px;
+  }
+
+  &:hover {
+    background-color: #fff;
+  }
+
+  &:hover img {
+    filter: invert(1);
+  }
+}
+
+
+@mixin platform {
+  transition: scale 250ms;
+  border-radius: 40px;
+  padding: 0.5rem;
+
+  img {
+    width: 16px;
+  }
+
+  &:hover {
+    scale: 1.15;
+  }
+}
+
+.desktop {
+  @include platform();
+  border: 2px solid #fa5c5c;
+}
+
+.mobile {
+  @include platform();
+  border: 2px solid #34a853;
+}

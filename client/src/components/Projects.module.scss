@@ -1,0 +1,32 @@
+.projects {
+  grid-template-columns: auto;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  padding: 4rem 2rem;
+  display: grid;
+  gap: 4rem;
+}
+
+.header {
+  justify-content: space-between;
+  grid-auto-flow: column;
+  align-items: center;
+  display: grid;
+  gap: 8rem;
+
+  > div {
+    justify-content: center;
+    grid-auto-flow: column;
+    align-items: center;
+    display: grid;
+  }
+}
+
+.catalogue {
+  grid-template-columns: repeat(3, auto);
+  justify-content: center;
+  align-items: stretch;
+  display: grid;
+  gap: 2rem;
+}
