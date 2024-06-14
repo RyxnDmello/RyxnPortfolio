@@ -1,4 +1,4 @@
-import { IDomain } from "../interfaces/Skill";
+import { IField } from "../interfaces/Skill";
 
 import FrontendDev from "../images/skills/domains/web.png";
 import BackendDev from "../images/skills/domains/back.png";
@@ -45,7 +45,7 @@ import Behance from "../images/skills/behance.svg";
 import Unsplash from "../images/skills/unsplash.svg";
 import Pixels from "../images/skills/pixels.svg";
 
-export const domains: IDomain[] = [
+export const fields: IField[] = [
   {
     title: "Frontend Development",
     image: FrontendDev,

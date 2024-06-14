@@ -1,18 +1,20 @@
-import { domains } from "../models/Skills";
+import { fields } from "../models/Skills";
 
 import Dashes from "./Decorations/Dashes";
 
 import Title from "./Common/Title";
-import Domain from "./Skills/Domain";
+import Field from "./Skills/Field";
+
+import styles from "./Skills.module.scss";
 
 export default function Skills() {
   return (
-    <section id="skills">
+    <section id="skills" className={styles.skills}>
       <Title primary="Technical" secondary="Skills" />
 
-      <div className="skills-domains">
-        {domains.map((domain, i) => (
-          <Domain key={i} {...domain} />
+      <div className={styles.catalogue}>
+        {fields.map((field, i) => (
+          <Field key={i} {...field} />
         ))}
       </div>
 

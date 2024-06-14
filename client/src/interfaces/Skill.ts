@@ -1,4 +1,4 @@
-export interface IDomain {
+export interface IField {
   title: string;
   image: string;
   skills: ISkill[];

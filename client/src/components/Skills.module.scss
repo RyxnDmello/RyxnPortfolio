@@ -1,0 +1,47 @@
+@mixin stripe($offset) {
+  background-image: linear-gradient(
+    to bottom,
+    #800033 0%,
+    #5700a2 50%,
+    #004475 100%
+  );
+  box-shadow: 0 0 20px #000000a0;
+  background-color: #ff3cac;
+  transform: skew(40deg);
+  position: absolute;
+  right: $offset;
+  height: 100%;
+  width: 100px;
+  z-index: -1;
+  content: "";
+}
+
+.skills {
+  box-shadow: 0 0 20px #000000a0;
+  padding: 2rem 4rem 3rem 4rem;
+  grid-template-columns: auto;
+  background-color: #000025;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  display: grid;
+  gap: 1.5rem;
+  z-index: 0;
+
+  &::before {
+    @include stripe(14rem);
+  }
+
+  &::after {
+    @include stripe(22rem);
+  }
+}
+
+.catalogue {
+  grid-template-columns: repeat(4, auto);
+  justify-content: center;
+  align-items: stretch;
+  display: grid;
+  gap: 1.25rem;
+}
