@@ -1,0 +1,23 @@
+.top {
+  transition: background-color 300ms;
+  border: 2px solid #fff;
+  border-radius: 100%;
+  position: absolute;
+  padding: 0.35rem;
+  display: flex;
+  right: 2.5rem;
+  bottom: 6rem;
+
+  > img {
+    transition: filter 300ms;
+    width: 30px;
+  }
+
+  &:hover {
+    background-color: #fff;
+
+    > img {
+      filter: invert(1);
+    }
+  }
+}

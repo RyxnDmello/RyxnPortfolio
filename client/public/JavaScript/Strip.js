@@ -1,4 +1,4 @@
-const strips = document.querySelectorAll(".strip");
+const strips = document.querySelectorAll("#strip");
 
 export default function Strip() {
   Controller();

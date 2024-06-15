@@ -1,5 +1,6 @@
 import useProjectsCatalogue from "../hooks/useProjectsCatalogue";
 
+import Dashes from "./Decorations/Dashes";
 import Title from "./Common/Title";
 import Tab from "./Projects/Tab";
 import Project from "./Projects/Project";
@@ -46,6 +47,9 @@ export default function Projects() {
       {!expandable && projects.length > 9 && (
         <Expand onExpand={onSetExpandable} />
       )}
+
+      <Dashes />
+      <Dashes />
     </section>
   );
 }

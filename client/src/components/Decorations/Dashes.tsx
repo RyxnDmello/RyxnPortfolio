@@ -2,7 +2,7 @@ import styles from "./Dashes.module.scss";
 
 export default function Dashes({ count = 10, direction = "column" }: IDashes) {
   return (
-    <div className={`${styles.dashes} ${styles[direction]}`}>
+    <div className={`${styles.dashes} ${styles[direction]} dashes scroll`}>
       {Array.from({ length: count }, (_, i) => (
         <div key={i}></div>
       ))}

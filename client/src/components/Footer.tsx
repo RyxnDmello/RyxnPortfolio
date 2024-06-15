@@ -6,13 +6,14 @@ import GitHub from "../images/buttons/github.svg";
 
 import Logo from "./Common/Logo";
 import Top from "./Common/Top";
-
 import Link from "./Footer/Link";
 import Social from "./Footer/Social";
 
 import styles from "./Footer.module.scss";
 
 export default function Footer() {
+  const _year = new Date().getFullYear();
+
   return (
     <footer id="footer" className={styles.footer}>
       <div className={styles.top}>
@@ -60,7 +61,7 @@ export default function Footer() {
       <div className={styles.bottom}>
         <div>
           <img src={Copyright} />
-          <p>2024 • Ryan Nolasco D Mello</p>
+          <p>{_year} • Ryan Nolasco D Mello</p>
         </div>
 
         <a href="https://github.com//RyxnDmello" target="_blank">

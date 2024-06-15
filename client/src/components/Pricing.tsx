@@ -1,5 +1,6 @@
 import { cards } from "../models/Pricing";
 
+import Dashes from "./Decorations/Dashes.tsx";
 import Title from "./Common/Title";
 import Card from "./Pricing/Card";
 
@@ -15,6 +16,8 @@ export default function Pricing() {
           <Card key={i} {...card} />
         ))}
       </div>
+
+      <Dashes />
     </section>
   );
 }

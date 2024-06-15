@@ -31,7 +31,7 @@ const sections = [
   },
 ];
 
-export default function Reveal() {
+export default function Scroll() {
   Controller();
 }
 
@@ -57,7 +57,7 @@ const observer = (section, threshold, delay) => {
 
 const Effect = (section, delay, observer) => {
   const children = document.querySelectorAll(
-    `#${section} .scroll, #${section} .decoration`
+    `#${section} .scroll, #${section}`
   );
 
   let duration = 0;

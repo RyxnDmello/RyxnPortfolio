@@ -1,5 +1,6 @@
 import { fields } from "../models/Skills";
 
+import Dashes from "./Decorations/Dashes";
 import Title from "./Common/Title";
 import Field from "./Skills/Field";
 
@@ -15,6 +16,8 @@ export default function Skills() {
           <Field key={i} {...field} />
         ))}
       </div>
+
+      <Dashes />
     </section>
   );
 }

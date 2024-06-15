@@ -1,11 +1,11 @@
 import Icon from "../../images/buttons/top.svg";
 
-export default function Top() {
-  const className = "top";
+import styles from "./Top.module.scss";
 
+export default function Top() {
   return (
-    <a id={className} href="#">
-      <img className={`${className}-icon`} src={Icon} />
+    <a className={styles.top} href="#">
+      <img src={Icon} />
     </a>
   );
 }
