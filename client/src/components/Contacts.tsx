@@ -9,9 +9,11 @@ import Title from "./Common/Title.tsx";
 import Option from "./Contacts/Option.tsx";
 import Input from "./Contacts/Input";
 import Button from "./Contacts/Button.tsx";
-import Toaster from "./Contacts/Toaster.tsx";
+import Toast from "./Contacts/Toast.tsx";
 
 import ResetIcon from "../images/inputs/reset.png";
+
+import styles from "./Contacts.module.scss";
 
 export default function Contacts() {
   const [type, setType] = useState<ContactType>(ContactType.Comment);
@@ -27,23 +29,23 @@ export default function Contacts() {
   } = useContactForm(type);
 
   return (
-    <section id="contacts">
+    <section id="contacts" className={styles.contacts}>
       <Title primary="Contact" secondary="Me" />
 
-      <div className="contacts-information">
-        <div className="contacts-options scroll">
+      <div>
+        <div className={`${styles.options} scroll`}>
           {options.map((option, i) => (
             <Option
               key={i}
               {...option}
-              isSelected={option.type === type}
+              active={option.type === type}
               onSelect={() => setType(option.type)}
             />
           ))}
         </div>
 
         <form
-          className="contacts-form scroll"
+          className={`${styles.form} scroll`}
           onSubmit={handleSubmit}
           onReset={handleReset}
         >
@@ -62,20 +64,20 @@ export default function Contacts() {
             );
           })}
 
-          <div className="form-buttons">
+          <div>
             <Button type="submit" onClick={showToaster} />
             <Button icon={ResetIcon} type="reset" />
           </div>
         </form>
 
         {type === ContactType.Comment ? (
-          <Toaster
+          <Toast
             ref={toasterRef}
             title="Thank You"
             description="for lending your voice"
           />
         ) : (
-          <Toaster
+          <Toast
             ref={toasterRef}
             title="Service Request!"
             description="We will get back to you soon"

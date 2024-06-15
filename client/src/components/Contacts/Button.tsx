@@ -1,15 +1,14 @@
-export default function Button({ icon, type, onClick }: IButton) {
-  const className = "form-button";
+import styles from "./Button.module.scss";
 
+export default function Button({ icon, type, onClick }: ButtonProps) {
   return (
-    <button className={className} type={type} onClick={onClick}>
-      {!icon && <p className={`${className}-text`}>Send Request</p>}
-      {icon && <img className={`${className}-icon`} src={icon} />}
+    <button className={styles.button} type={type} onClick={onClick}>
+      {icon ? <img src={icon} /> : <p>Send Request</p>}
     </button>
   );
 }
 
-interface IButton {
+interface ButtonProps {
   icon?: string;
   type: "submit" | "reset";
   onClick?: () => void;

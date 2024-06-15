@@ -2,6 +2,8 @@ import { IInput } from "../../interfaces/Contact";
 
 import Required from "../../images/inputs/required.png";
 
+import styles from "./Input.module.scss";
+
 export default function Input({
   label,
   icon,
@@ -12,20 +14,18 @@ export default function Input({
   required,
   onChange,
 }: IInput) {
-  const className = "form-input";
-
   return (
-    <div className={`${className} ${error && "error"}`}>
-      <div className={`${className}-label ${value!.length > 0 && "hidden"}`}>
-        <img className={`${className}-label-icon`} src={icon} />
-        <p className={`${className}-label-text`}>{label}</p>
+    <div className={`${styles.input} ${error && styles.error}`}>
+      <div className={`${styles.label} ${value!.length > 0 && styles.hidden}`}>
+        <img src={icon} />
+        <p>{label}</p>
       </div>
 
-      {required && <img className={`${className}-required`} src={Required} />}
+      {required && <img src={Required} />}
 
       {type === "textarea" ? (
         <textarea
-          className={`${className}-field`}
+          className={styles.field}
           onChange={onChange}
           value={value}
           name={name}
@@ -34,7 +34,7 @@ export default function Input({
         ></textarea>
       ) : (
         <input
-          className={`${className}-field`}
+          className={styles.field}
           onChange={onChange}
           required={required}
           autoComplete="off"

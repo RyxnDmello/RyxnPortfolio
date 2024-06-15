@@ -20,12 +20,6 @@ export interface IOption {
   type: ContactType;
 }
 
-export interface IOptional {
-  name: string;
-  isSelected: boolean;
-  onSelect: () => void;
-}
-
 export interface IInput {
   label: string;
   icon: string;

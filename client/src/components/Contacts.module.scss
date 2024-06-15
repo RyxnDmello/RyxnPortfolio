@@ -1,0 +1,42 @@
+.contacts {
+  grid-template-columns: auto;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  display: grid;
+  padding: 4rem;
+  gap: 2.5rem;
+
+  > div {
+    justify-content: center;
+    grid-auto-flow: column;
+    align-items: start;
+    display: grid;
+    gap: 10rem;
+  }
+}
+
+.options {
+  grid-template-columns: auto;
+  justify-content: stretch;
+  align-items: start;
+  display: grid;
+  gap: 2.5rem;
+}
+
+.form {
+  grid-template-columns: auto;
+  justify-content: stretch;
+  align-items: center;
+  display: grid;
+  width: 400px;
+  gap: 0.5rem;
+
+  > div:last-of-type {
+    justify-content: center;
+    align-items: stretch;
+    margin-top: 0.5rem;
+    display: flex;
+    gap: 0.25rem;
+  }
+}
