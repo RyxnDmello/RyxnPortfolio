@@ -1,0 +1,74 @@
+.link {
+  position: relative;
+
+  &.solid {
+    transition: background-color 300ms;
+    background-color: #b5002a;
+    padding: 0.5rem 2rem;
+    margin-left: 0.5rem;
+
+    > p {
+      letter-spacing: 0.5px;
+      color: #fff;
+    }
+
+    &:hover {
+      background-color: #950023;
+    }
+  }
+
+  &:not(.solid)::before {
+    transition: background-color 300ms, translate 300ms;
+    background-color: #ffffff00;
+    border-radius: 40px;
+    position: absolute;
+    aspect-ratio: 1;
+    content: "";
+  }
+
+  &.row {
+    &::before {
+      translate: -0.5rem 0;
+      margin: auto 0;
+      width: 2.5px;
+      bottom: 0;
+      top: 0;
+    }
+
+    &:hover::before {
+      translate: -1rem 0;
+    }
+  }
+
+  &.column {
+    &::before {
+      margin: 0 auto;
+      width: 5px;
+      bottom: 0;
+      right: 0;
+      left: 0;
+    }
+
+    &:hover::before {
+      translate: 0 0.5rem;
+    }
+  }
+
+  &:hover {
+    &::before {
+      background-color: #fff;
+    }
+
+    > p {
+      color: #fff;
+    }
+  }
+
+  > p {
+    font-family: "Poppins", sans-serif;
+    transition: color 300ms;
+    color: #ffffff50;
+    font-weight: 300;
+    font-size: 1rem;
+  }
+}

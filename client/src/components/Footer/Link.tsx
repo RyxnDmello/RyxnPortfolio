@@ -1,21 +1,21 @@
 import { ILink } from "../../interfaces/Link";
 
-export default function NavLink({
+import styles from "./Link.module.scss";
+
+export default function Link({
   url,
   text,
   solid,
   external,
   direction,
 }: INavLink) {
-  const className = "footer-link";
-
   return (
     <a
-      className={`${className} ${direction} ${solid && "solid"}`}
+      className={`${styles.link} ${styles[direction]} ${solid && styles.solid}`}
       target={external ? "_blank" : "_self"}
       href={url}
     >
-      <p className={`${className}-text`}>{text}</p>
+      <p>{text}</p>
     </a>
   );
 }

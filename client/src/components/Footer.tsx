@@ -7,42 +7,42 @@ import GitHub from "../images/buttons/github.svg";
 import Logo from "./Common/Logo";
 import Top from "./Common/Top";
 
-import Link from "./Footer/NavLink";
+import Link from "./Footer/Link";
 import Social from "./Footer/Social";
 
-export default function Footer() {
-  const className = "footer";
+import styles from "./Footer.module.scss";
 
+export default function Footer() {
   return (
-    <footer>
-      <div className={`${className}-row`}>
+    <footer id="footer" className={styles.footer}>
+      <div className={styles.top}>
         <Logo />
 
-        <div className={`${className}-links`}>
+        <div>
           {links.map((link, i) => (
             <Link key={i} {...link} external={false} direction="column" />
           ))}
         </div>
       </div>
 
-      <hr className={`${className}-divider`} />
+      <hr />
 
-      <div className={`${className}-row`}>
-        <div className={`${className}-column`}>
-          <div className={`${className}-column-feature`}>
-            <p className={`${className}-column-feature-title`}>Inspired</p>
+      <div className={styles.middle}>
+        <div className={styles.features}>
+          <div>
+            <p>Inspired</p>
 
-            <div className={`${className}-column-feature-links`}>
+            <div>
               {inspires.map((inspire, i) => (
                 <Link key={i} {...inspire} external direction="row" />
               ))}
             </div>
           </div>
 
-          <div className={`${className}-column-feature`}>
-            <p className={`${className}-column-feature-title`}>Connect</p>
+          <div>
+            <p>Connect</p>
 
-            <div className={`${className}-column-feature-links`}>
+            <div>
               {socials.map((social, i) => (
                 <Social key={i} {...social} />
               ))}
@@ -50,29 +50,22 @@ export default function Footer() {
           </div>
         </div>
 
-        <p className={`${className}-message`}>
+        <p className={styles.message}>
           Let's <span>Build</span> Together
         </p>
       </div>
 
-      <hr className={`${className}-divider`} />
+      <hr />
 
-      <div className={`${className}-row`}>
-        <div className={`${className}-conclusion`}>
-          <img className={`${className}-conclusion-icon`} src={Copyright} />
-
-          <p className={`${className}-conclusion-text`}>
-            2024 • Ryan Nolasco D Mello
-          </p>
+      <div className={styles.bottom}>
+        <div>
+          <img src={Copyright} />
+          <p>2024 • Ryan Nolasco D Mello</p>
         </div>
 
-        <a
-          className={`${className}-conclusion`}
-          href="https://github.com//RyxnDmello"
-          target="_blank"
-        >
-          <img className={`${className}-conclusion-icon`} src={GitHub} />
-          <p className={`${className}-conclusion-text`}>GitHub</p>
+        <a href="https://github.com//RyxnDmello" target="_blank">
+          <img src={GitHub} />
+          <p>GitHub</p>
         </a>
       </div>
 
