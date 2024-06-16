@@ -29,13 +29,11 @@ export default function Header() {
       <Heading title="Software Developer" />
 
       <div className={styles.details}>
-        <div>
-          <Title />
+        <Title />
 
-          <div className={styles.buttons}>
-            <Button url="#pricing" text="Services" icon={Icon} solid />
-            <Button url="#" text="Download CV" solid={false} />
-          </div>
+        <div>
+          <Button url="#pricing" text="Services" icon={Icon} solid />
+          <Button url="#" text="Download CV" solid={false} />
         </div>
       </div>
     </header>

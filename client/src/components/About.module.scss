@@ -2,19 +2,20 @@
   justify-content: center;
   grid-auto-flow: column;
   align-content: center;
-  padding: 8rem 4rem;
+  padding: 8rem 0rem;
   align-items: start;
   position: relative;
   display: grid;
   gap: 8rem;
 
-  @media all and (width < 1185px) {
-    gap: 2.5rem;
+  @media all and (width < 925px) {
+    gap: 4rem;
   }
 
-  @media all and (width < 945px) {
+  @media all and (width < 850px) {
     grid-template-columns: auto;
     grid-auto-flow: row;
+    gap: 2.5rem;
   }
 }
 
@@ -53,8 +54,32 @@
     }
   }
 
-  @media all and (945px < width < 1185px) {
-    width: 450px;
+  @media all and (width < 1050px) {
+    width: 400px;
+
+    .description {
+      font-size: 0.95rem;
+    }
+  }
+
+  @media all and (width < 850px) {
+    width: 500px;
+
+    .description {
+      font-size: 1rem;
+    }
+  }
+
+  @media all and (width < 600px) {
+    width: 350px;
+
+    .description {
+      font-size: 0.85rem;
+    }
+
+    .link {
+      padding: 0.4rem 1.5rem;
+    }
   }
 }
 

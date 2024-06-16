@@ -1,6 +1,6 @@
 .heading {
   background: -webkit-linear-gradient(45deg, #ff0000, #0000ff);
-  font-size: clamp(3.5rem, 8dvw, 12rem);
+  font-size: clamp(3.5rem, 8dvw, 10rem);
   -webkit-text-fill-color: transparent;
   font-family: "Poppins", sans-serif;
   -webkit-background-clip: text;
@@ -9,4 +9,18 @@
   text-align: center;
   letter-spacing: 0;
   font-weight: 400;
+
+  @media all and (width < 700px) {
+    margin-top: 2.5rem;
+  }
+
+  @media all and (width < 550px) {
+    font-size: 4.5rem;
+    line-height: 1;
+  }
+
+  @media all and (width < 380px) {
+    font-size: 3.65rem;
+    line-height: 1;
+  }
 }

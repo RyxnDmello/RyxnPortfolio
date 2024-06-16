@@ -34,7 +34,7 @@
   height: 65px;
   z-index: 0;
 
-  img {
+  > img {
     position: absolute;
     object-fit: cover;
     opacity: 0.8;
@@ -46,7 +46,7 @@
     top: 0;
   }
 
-  p {
+  > p {
     font-family: "Poppins", sans-serif;
     font-size: 1.25rem;
     font-weight: 400;

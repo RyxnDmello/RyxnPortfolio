@@ -6,6 +6,35 @@
   align-items: center;
   display: grid;
   gap: 0.5rem;
+
+  > p {
+    font-family: "Poppins", sans-serif;
+    font-size: 1.2rem;
+    font-weight: 300;
+    color: #fff;
+  }
+
+  > img {
+    width: 18px;
+  }
+
+  @media all and (width < 1000px) {
+    > p {
+      font-size: 1rem;
+    }
+  }
+
+  @media all and (width < 550px) {
+    padding: 0.25rem 1.5rem;
+  }
+
+  @media all and (width < 380px) {
+    padding: 0.25rem 1rem;
+
+    > p {
+      font-size: 0.85rem;
+    }
+  }
 }
 
 .button {
@@ -23,15 +52,4 @@
     background-color: #ff003c;
     border-color: #ff003c;
   }
-}
-
-.label {
-  font-family: "Poppins", sans-serif;
-  font-size: 1.2rem;
-  font-weight: 300;
-  color: #fff;
-}
-
-.icon {
-  width: 18px;
 }
