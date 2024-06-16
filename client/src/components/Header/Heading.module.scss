@@ -1,5 +1,6 @@
 .heading {
   background: -webkit-linear-gradient(45deg, #ff0000, #0000ff);
+  font-size: clamp(3.5rem, 8dvw, 12rem);
   -webkit-text-fill-color: transparent;
   font-family: "Poppins", sans-serif;
   -webkit-background-clip: text;
@@ -8,5 +9,4 @@
   text-align: center;
   letter-spacing: 0;
   font-weight: 400;
-  font-size: 8rem;
 }

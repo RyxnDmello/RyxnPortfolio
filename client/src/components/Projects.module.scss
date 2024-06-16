@@ -21,6 +21,13 @@
     align-items: center;
     display: grid;
   }
+
+  @media all and (width < 1300px) {
+    justify-content: center;
+    grid-template-columns: auto;
+    grid-auto-flow: row;
+    gap: 1.5rem;
+  }
 }
 
 .catalogue {
@@ -29,4 +36,12 @@
   align-items: stretch;
   display: grid;
   gap: 2rem;
+
+  @media all and (width < 1300px) {
+    grid-template-columns: repeat(2, auto);
+  }
+
+  @media all and (width < 800px) {
+    grid-template-columns: repeat(1, auto);
+  }
 }

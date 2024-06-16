@@ -19,4 +19,20 @@
   span:nth-of-type(3) {
     @include text(1.5rem, 300, #a0a0a0);
   }
+
+  @media all and (width < 1200px) {
+    line-height: 1.1;
+
+    span:nth-of-type(1) {
+      @include text(2rem, 200, #808080);
+    }
+
+    span:nth-of-type(2) {
+      @include text(2.5rem, 400, #fff);
+    }
+
+    span:nth-of-type(3) {
+      @include text(1.25rem, 300, #a0a0a0);
+    }
+  }
 }

@@ -44,4 +44,9 @@
   align-items: center;
   display: grid;
   gap: 2.5rem;
+
+  @media all and (width < 1040px) {
+    grid-template-columns: auto;
+    grid-auto-flow: row;
+  }
 }

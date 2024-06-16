@@ -7,6 +7,15 @@
   position: relative;
   display: grid;
   gap: 8rem;
+
+  @media all and (width < 1185px) {
+    gap: 2.5rem;
+  }
+
+  @media all and (width < 945px) {
+    grid-template-columns: auto;
+    grid-auto-flow: row;
+  }
 }
 
 .details {
@@ -42,6 +51,10 @@
       background-color: #df002a;
       border-color: #df002a;
     }
+  }
+
+  @media all and (945px < width < 1185px) {
+    width: 450px;
   }
 }
 

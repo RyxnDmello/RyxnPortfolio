@@ -29,12 +29,15 @@
   gap: 1.5rem;
   z-index: 0;
 
-  &::before {
-    @include stripes(14rem);
-  }
-
-  &::after {
-    @include stripes(22rem);
+  
+  @media all and (width > 1200px) {
+    &::before {
+      @include stripes(14rem);
+    }
+  
+    &::after {
+      @include stripes(22rem);
+    }
   }
 }
 
@@ -44,4 +47,12 @@
   align-items: stretch;
   display: grid;
   gap: 1.25rem;
+
+  @media all and (width < 1200px) {
+    grid-template-columns: repeat(3, auto);
+  }
+  
+  @media all and (width < 900px) {
+    grid-template-columns: repeat(2, auto);
+  }
 }

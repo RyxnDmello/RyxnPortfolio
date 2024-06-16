@@ -26,13 +26,17 @@
 .header {
   grid-template-columns: auto;
   justify-content: stretch;
-  padding-bottom: 6.5rem;
+  margin-bottom: 6.5rem;
   align-items: center;
   display: grid;
+
+  @media all and (width < 1160px) {
+    margin-bottom: 2.5rem;
+  }  
 }
 
 .details {
-  justify-content: center;
+  justify-content: stretch;
   grid-auto-flow: column;
   align-items: center;
   padding: 4rem 0;
