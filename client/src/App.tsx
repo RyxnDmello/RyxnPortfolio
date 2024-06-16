@@ -3,31 +3,31 @@ import Script from "./components/Common/Script";
 import Cursor from "./components/Common/Cursor";
 
 import Header from "./components/Header";
-import Strip from "./components/Strip";
+// import Strip from "./components/Strip";
 import About from "./components/About";
 import Skills from "./components/Skills";
 import Projects from "./components/Projects";
-import Contacts from "./components/Contacts";
-import Pricing from "./components/Pricing";
-import Footer from "./components/Footer";
+// import Contacts from "./components/Contacts";
+// import Pricing from "./components/Pricing";
+// import Footer from "./components/Footer";
 
 export default function App() {
   return (
     <>
       <Header />
 
-      <Strip />
-      <Strip />
+      {/* <Strip /> */}
+      {/* <Strip /> */}
 
       <main>
         <About />
         <Skills />
         <Projects />
-        <Pricing />
-        <Contacts />
+        {/* <Pricing /> */}
+        {/* <Contacts /> */}
       </main>
 
-      <Footer />
+      {/* <Footer /> */}
 
       <Cursor />
       <Script src="/Home.js" />

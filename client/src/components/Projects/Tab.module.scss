@@ -28,9 +28,23 @@
     color: #fff;
   }
 
-  @media all and (width < 800px) {
+  @media all and (width < 780px) {
+    & {
+      padding: 0.5rem 1rem;
+    }
+  }
+  
+  @media all and (width < 600px) {
     > p {
       font-size: 0.65rem;
+    }
+  }
+  
+  @media all and (width < 505px) {
+    border-radius: 5px;
+
+    > p {
+      font-size: 0.85rem;
     }
   }
 }

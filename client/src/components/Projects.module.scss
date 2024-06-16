@@ -6,6 +6,10 @@
   padding: 4rem 2rem;
   display: grid;
   gap: 4rem;
+
+  @media all and (width < 505px) {
+    gap: 2.5rem;
+  }
 }
 
 .header {
@@ -23,10 +27,21 @@
   }
 
   @media all and (width < 1300px) {
-    justify-content: center;
     grid-template-columns: auto;
+    justify-content: center;
     grid-auto-flow: row;
     gap: 1.5rem;
+  }
+  
+  @media all and (width < 505px) {
+    > div {
+      grid-template-columns: auto;
+      justify-content: stretch;
+      grid-auto-flow: row;
+      margin: 0 auto;
+      gap: 0.5rem;
+      width: 80%;
+    }
   }
 }
 
@@ -37,11 +52,11 @@
   display: grid;
   gap: 2rem;
 
-  @media all and (width < 1300px) {
+  @media all and (width < 1150px) {
     grid-template-columns: repeat(2, auto);
   }
 
-  @media all and (width < 800px) {
-    grid-template-columns: repeat(1, auto);
+  @media all and (width < 780px) {
+    grid-template-columns: auto;
   }
 }
