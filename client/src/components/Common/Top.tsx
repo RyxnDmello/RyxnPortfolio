@@ -4,7 +4,7 @@ import styles from "./Top.module.scss";
 
 export default function Top() {
   return (
-    <a className={styles.top} href="#">
+    <a className={`${styles.top} scroll`} href="#">
       <img src={Icon} />
     </a>
   );

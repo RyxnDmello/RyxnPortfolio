@@ -1,7 +1,7 @@
-import Cursor from "./JavaScript/Cursor.js";
-import Scroll from "./JavaScript/Scroll.js";
-import Strip from "./JavaScript/Strip.js";
+import cursor from "./JavaScript/cursor.js";
+import scroll from "./JavaScript/scroll.js";
+import strips from "./JavaScript/strip.js";
 
-Cursor();
-Scroll();
-Strip();
+cursor();
+scroll();
+strips();

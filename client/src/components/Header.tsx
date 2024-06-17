@@ -14,7 +14,7 @@ export default function Header() {
       <nav className={styles.nav}>
         <Logo />
 
-        <div className={styles.links}>
+        <div className={`${styles.links} scroll`}>
           <div>
             <Link url="#pricing" text="Services" solid={false} />
             <Link url="#skills" text="Skills" solid={false} />

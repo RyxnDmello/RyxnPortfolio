@@ -1,65 +1,71 @@
 const sections = [
   {
-    id: "#header",
-    threshold: 0.5,
-    delay: 100,
+    id: "header",
+    maximum: 0.5,
+    minimum: 0.25,
+    delay: 200,
   },
   {
-    id: "#about",
-    threshold: 0.5,
-    delay: 100,
-  },
-  {
-    id: "#skills",
-    threshold: 0.5,
-    delay: 100,
-  },
-  {
-    id: "#projects",
-    threshold: 0.45,
-    delay: 100,
-  },
-  {
-    id: "#pricing",
-    threshold: 0.5,
+    id: "about",
+    maximum: 0.5,
+    minimum: 0.25,
     delay: 150,
   },
   {
-    id: "#contacts",
-    threshold: 0.5,
+    id: "skills",
+    maximum: 0.5,
+    minimum: 0.25,
+    delay: 150,
+  },
+  {
+    id: "projects",
+    maximum: 0.5,
+    minimum: 0,
+    delay: 150,
+  },
+  {
+    id: "pricing",
+    maximum: 0.5,
+    minimum: 0.25,
+    delay: 150,
+  },
+  {
+    id: "contacts",
+    maximum: 0.5,
+    minimum: 0.25,
     delay: 200,
+  },
+  {
+    id: "footer",
+    maximum: 0.5,
+    minimum: 0.5,
+    delay: 150,
   },
 ];
 
-export default function Scroll() {
-  Controller();
-}
-
-const Controller = () => {
+const scroll = () => {
   sections.forEach((section) =>
-    observer(section.id, section.threshold, section.delay)
+    observer(section.id, section.maximum, section.minimum, section.delay)
   );
 };
 
-const observer = (section, threshold, delay) => {
-  const controller = new IntersectionObserver(
-    (entries, observer) => {
-      entries.forEach((entry) => {
-        if (!entry.isIntersecting) return;
-        Effect(entry.target.id, delay, observer);
-      });
-    },
-    { threshold: threshold }
+const observer = (section, maximum, minimum, delay) => {
+  const intersection = new IntersectionObserver(
+    (elements, observer) => controller(elements, observer, section, delay),
+    { threshold: screen.width > 1500 ? maximum : minimum }
   );
 
-  controller.observe(document.querySelector(section));
+  intersection.observe(document.querySelector(`#${section}`));
 };
 
-const Effect = (section, delay, observer) => {
-  const children = document.querySelectorAll(
-    `#${section} .scroll, #${section}`
-  );
+const controller = (elements, observer, section, delay) => {
+  elements.forEach((element) => {
+    element.isIntersecting && effect(section, delay, observer);
+  });
+};
 
+const effect = (section, delay, observer) => {
+  const children = document.querySelectorAll(`#${section} .scroll`);
   let duration = 0;
 
   children.forEach((child) => {
@@ -71,3 +77,5 @@ const Effect = (section, delay, observer) => {
     duration += delay;
   });
 };
+
+export default scroll;

@@ -1,25 +1,20 @@
 const strips = document.querySelectorAll("#strip");
 
-export default function Strip() {
-  Controller();
-}
-
-const Controller = () => {
-  const controller = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
-        if (!entry.isIntersecting) return;
-        Effect(entry);
-      });
-    },
-    {
-      threshold: 0.5,
-    }
+const strip = () => {
+  const intersection = new IntersectionObserver(
+    (entries) => controller(entries),
+    { threshold: 1 }
   );
 
-  strips.forEach((strip) => controller.observe(strip));
+  strips.forEach((strip) => intersection.observe(strip));
 };
 
-const Effect = (root) => {
-  root.target.style.setProperty("--width", "100%");
+const controller = (elements) => {
+  elements.forEach((element) => {
+    element.isIntersecting && effect(element);
+  });
 };
+
+const effect = (element) => element.target.style.setProperty("--width", "100%");
+
+export default strip;

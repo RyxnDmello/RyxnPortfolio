@@ -1,9 +1,9 @@
-import Script from "./components/Common/Script";
+import Script from "./utils/Script";
 
 import Cursor from "./components/Common/Cursor";
 
 import Header from "./components/Header";
-// import Strip from "./components/Strip";
+import Strip from "./components/Strip";
 import About from "./components/About";
 import Skills from "./components/Skills";
 import Projects from "./components/Projects";
@@ -15,9 +15,8 @@ export default function App() {
   return (
     <>
       <Header />
-
-      {/* <Strip /> */}
-      {/* <Strip /> */}
+      <Strip />
+      <Strip />
 
       <main>
         <About />
@@ -30,7 +29,7 @@ export default function App() {
       <Footer />
 
       <Cursor />
-      <Script src="/Home.js" />
+      <Script src="/home.js" />
     </>
   );
 }

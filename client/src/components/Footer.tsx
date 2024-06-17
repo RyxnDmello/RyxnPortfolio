@@ -19,18 +19,18 @@ export default function Footer() {
       <div className={styles.top}>
         <Logo />
 
-        <div>
+        <div className="scroll">
           {links.map((link, i) => (
             <Link key={i} {...link} external={false} direction="column" />
           ))}
         </div>
       </div>
 
-      <hr />
+      <hr className="scroll" />
 
       <div className={styles.middle}>
         <div className={styles.features}>
-          <div>
+          <div className="scroll">
             <p>Inspired</p>
 
             <div>
@@ -40,7 +40,7 @@ export default function Footer() {
             </div>
           </div>
 
-          <div>
+          <div className="scroll">
             <p>Connect</p>
 
             <div>
@@ -51,14 +51,14 @@ export default function Footer() {
           </div>
         </div>
 
-        <p className={styles.message}>
+        <p className={`${styles.message} scroll`}>
           Let's <span>Build</span> Together
         </p>
       </div>
 
-      <hr />
+      <hr className="scroll" />
 
-      <div className={styles.bottom}>
+      <div className={`${styles.bottom} scroll`}>
         <div>
           <img src={Copyright} />
           <p>{_year} • Ryan Nolasco D Mello</p>

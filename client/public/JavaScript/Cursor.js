@@ -1,6 +1,6 @@
 const mouseCursor = document.getElementById("cursor");
 
-export default function Cursor() {
+const cursor = () => {
   window.addEventListener("mousedown", () => {
     mouseCursor.style.scale = 0.8;
   });
@@ -12,4 +12,6 @@ export default function Cursor() {
   window.addEventListener("mousemove", (event) => {
     mouseCursor.style.translate = `${event.pageX}px ${event.pageY}px`;
   });
-}
+};
+
+export default cursor;
