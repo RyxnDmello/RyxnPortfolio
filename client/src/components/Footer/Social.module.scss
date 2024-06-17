@@ -22,4 +22,10 @@
       opacity: 1;
     }
   }
+
+  @media all and (width < 800px) {
+    > img {
+      width: 12.5px;
+    }
+  }
 }

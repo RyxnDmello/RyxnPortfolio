@@ -20,4 +20,16 @@
       filter: invert(1);
     }
   }
+
+  @media all and (width < 800px) {
+    > img {
+      width: 25px;
+    }
+  }
+  
+  @media all and (width < 470px) {
+    > img {
+      width: 20px;
+    }
+  }
 }
