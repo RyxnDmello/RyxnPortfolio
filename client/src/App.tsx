@@ -7,8 +7,8 @@ import Header from "./components/Header";
 import About from "./components/About";
 import Skills from "./components/Skills";
 import Projects from "./components/Projects";
-// import Contacts from "./components/Contacts";
-// import Pricing from "./components/Pricing";
+import Pricing from "./components/Pricing";
+import Contacts from "./components/Contacts";
 // import Footer from "./components/Footer";
 
 export default function App() {
@@ -23,8 +23,8 @@ export default function App() {
         <About />
         <Skills />
         <Projects />
-        {/* <Pricing /> */}
-        {/* <Contacts /> */}
+        <Pricing />
+        <Contacts />
       </main>
 
       {/* <Footer /> */}

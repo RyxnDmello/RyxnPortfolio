@@ -36,6 +36,16 @@
   &::after {
     @include stripes(22rem);
   }
+
+  @media all and (width < 1200px) {
+    &::before {
+      @include stripes(20rem);
+    }
+
+    &::after {
+      @include stripes(27rem);
+    }
+  }
 }
 
 .cards {
@@ -45,8 +55,9 @@
   display: grid;
   gap: 2.5rem;
 
-  @media all and (width < 1040px) {
-    grid-template-columns: auto;
-    grid-auto-flow: row;
+  @media all and (width < 1200px) {
+    gap: 4rem 2.5rem;
+    flex-wrap: wrap;
+    display: flex;
   }
 }

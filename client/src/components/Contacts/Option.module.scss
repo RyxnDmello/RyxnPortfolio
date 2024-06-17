@@ -61,4 +61,18 @@
       width: 25px;
     }
   }
+
+  @media all and (width < 525px) {
+    margin: 0 auto;
+    width: 300px;
+    
+    > p {
+      font-size: 1.25rem;
+    }
+
+    > div > img {
+      translate: 1px 0;
+      width: 20px;
+    }
+  }
 }
