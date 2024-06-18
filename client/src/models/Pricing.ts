@@ -8,8 +8,12 @@ export const cards: ICard[] = [
     points: [
       "Web Application Design",
       "Front-End Web Application",
+      "Responsive Web Design",
+      "Basic SEO Optimization",
       "Post Production Development",
       "Complete Hosting",
+      "One Revision",
+      "One Month Support",
     ],
   },
   {
@@ -18,9 +22,14 @@ export const cards: ICard[] = [
     about: "Multiple Pages • Dynamic Content",
     points: [
       "Web Application Design",
-      "Front-End Web Application",
+      "Full-Stack Web Application",
+      "Simple Database Integration",
+      "Advanced SEO Optimization",
       "Post Production Development",
       "Complete Hosting",
+      "Basic Security Features",
+      "Three Revisions",
+      "Three Months Support",
     ],
   },
   {
@@ -29,9 +38,17 @@ export const cards: ICard[] = [
     about: "Powerful Features • Large Database",
     points: [
       "Web Application Design",
-      "Front-End Web Application",
+      "Full-Stack Web Application",
+      "Complex Database Integration",
+      "Advanced SEO Optimization",
+      "Payment Gateway Integration",
+      "Analytics and Reporting",
       "Post Production Development",
       "Complete Hosting",
+      "Advanced Security Features",
+      "Performance Optimization",
+      "Unlimited Revisions",
+      "Six Months Support",
     ],
   },
 ];

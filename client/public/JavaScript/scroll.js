@@ -26,7 +26,7 @@ const sections = [
   {
     id: "pricing",
     maximum: 0.5,
-    minimum: 0.25,
+    minimum: 0.2,
     delay: 150,
   },
   {
