@@ -1,11 +1,26 @@
-# React & NodeJs Directories
+# Vercel
+.vercel
+
+# Next.js
+/.next/
+/out/
+
+# React and Node.js
 node_modules
 dist-ssr
 dist
-*.local
-.env
 
-# React & NodeJs Logs
+# TypeScript Dependencies
+*.tsbuildinfo
+next-env.d.ts
+
+# Production
+/build
+
+# Testing
+/coverage
+
+# Logs
 logs
 *.log
 npm-debug.log*
@@ -14,7 +29,24 @@ yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
-# VSCode Directories & Files
+# Local Files
+.env
+.env*.local
+
+# Debug
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Miscellaneous
+.DS_Store
+*.pem
+
+# Package Manager Dependencies
+.pnp.js
+.yarn/install-state.gz
+
+# VSCode Folders and Files
 .vscode/*
 !.vscode/extensions.json
 .idea

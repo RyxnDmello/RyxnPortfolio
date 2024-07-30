@@ -1,0 +1,43 @@
+.skill {
+  justify-content: space-between;
+  grid-auto-flow: column;
+  align-items: center;
+  display: grid;
+  gap: 2rem;
+
+  > p {
+    font-family: "Poppins", sans-serif;
+    color: #ffffffcf;
+    font-weight: 200;
+    font-size: 1rem;
+  }
+
+  @media all and (width < 600px) {
+    > p {
+      font-size: 0.85rem;
+    }
+  }
+}
+
+.ratings {
+  justify-content: center;
+  grid-auto-flow: column;
+  align-items: center;
+  display: grid;
+  gap: 0.85rem;
+}
+
+.bullet {
+  border: 2px solid #ffffff50;
+  aspect-ratio: 1 / 1;
+  border-radius: 40px;
+  width: 12.5px;
+
+  &.solid {
+    background-color: #fff;
+  }
+
+  @media all and (width < 600px) {
+    width: 10px;
+  }
+}
