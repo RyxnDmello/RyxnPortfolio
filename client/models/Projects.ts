@@ -17,6 +17,8 @@ import ItchIO from "@public/images/skills/itch.svg";
 import Android from "@public/images/skills/android.svg";
 import Website from "@public/images/buttons/up.svg";
 
+export const tabs: string[] = ["Latest", "Websites", "Applications", "Games"];
+
 export const web: Project[] = [
   {
     image: CyberVerse,
@@ -188,11 +190,4 @@ export const catalogue: Project[][] = [
   [...web],
   [...mobile],
   [...games],
-];
-
-export const tabs: string[] = [
-  "Explore All",
-  "Web Applications",
-  "Mobile Applications",
-  "Video Games",
 ];

@@ -9,7 +9,7 @@ import Reset from "@public/images/inputs/reset.png";
 
 import useContactForm from "@hooks/useContactForm";
 
-import Title from "./Common/Title";
+import Title from "./Common/OldTitle";
 import Option from "./Contacts/Option";
 import Input from "./Contacts/Input";
 import Button from "./Contacts/Button";

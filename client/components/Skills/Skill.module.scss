@@ -1,27 +1,29 @@
 .skill {
   transition: border-color 400ms;
-  border: 2px solid #ffffff20;
+  border: 2px solid #ffffff10;
+  background-color: #000000;
   justify-content: start;
   grid-auto-flow: column;
   align-items: center;
   border-radius: 5px;
   padding: 0.5rem;
-  flex: 1 1 auto;
   display: grid;
+  flex-grow: 0;
   gap: 0.5rem;
 
   > img {
-    width: 18px;
+    height: auto;
+    width: 20px;
   }
 
   > p {
     font-family: "Poppins", sans-serif;
-    font-size: 0.85rem;
+    color: #ffffffa0;
     font-weight: 300;
-    color: #fff;
+    font-size: 1rem;
   }
 
   &:hover {
-    border-color: #ffffff50;
+    border-color: #ffffff25;
   }
 }

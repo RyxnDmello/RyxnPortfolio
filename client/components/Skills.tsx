@@ -1,23 +1,61 @@
-import { fields } from "../models/Skills";
+"use client";
 
-import Dashes from "./Decorations/Dashes";
+import { useEffect, useRef } from "react";
+import {
+  motion,
+  useInView,
+  useAnimation,
+  Variants,
+  Transition,
+} from "framer-motion";
+
+import { skills } from "../models/Skills";
+
 import Title from "./Common/Title";
-import Field from "./Skills/Field";
+
+import Skill from "./Skills/Skill";
 
 import styles from "./Skills.module.scss";
 
 export default function Skills() {
+  const ref = useRef<HTMLElement>(null);
+  const controls = useAnimation();
+
+  const visible = useInView(ref, {
+    amount: "all",
+    once: true,
+  });
+
+  const variants: Variants = {
+    hidden: { opacity: 0, translateY: -40 },
+    reveal: { opacity: 1, translateY: 0 },
+  };
+
+  const transitions: Transition = {
+    type: "spring",
+    staggerChildren: 0.05,
+  };
+
+  useEffect(() => {
+    if (visible) controls.start("reveal");
+  }, [visible]);
+
   return (
-    <section id="skills" className={styles.skills}>
-      <Title primary="Technical" secondary="Skills" />
+    <motion.section
+      className={styles.skills}
+      transition={transitions}
+      variants={variants}
+      animate={controls}
+      initial="hidden"
+      ref={ref}
+    >
+      <Title title="Skills" />
 
       <div className={styles.catalogue}>
-        {fields.map((field, i) => (
-          <Field key={i} {...field} />
+        {skills.map((skill, i) => (
+          <Skill key={skill.name} {...skill} delay={500 * i} />
         ))}
       </div>
-
-      <Dashes />
-    </section>
+    </motion.section>
   );
 }

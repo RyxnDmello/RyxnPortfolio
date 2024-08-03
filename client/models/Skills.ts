@@ -45,171 +45,129 @@ import Behance from "@public/images/skills/behance.svg";
 import Unsplash from "@public/images/skills/unsplash.svg";
 import Pixels from "@public/images/skills/pixels.svg";
 
-export const fields: Field[] = [
+export const skills = [
   {
-    title: "Frontend Development",
-    image: FrontendDev,
-    skills: [
-      {
-        name: "React",
-        icon: React,
-      },
-      {
-        name: "Typescript",
-        icon: Typescript,
-      },
-      {
-        name: "Javascript",
-        icon: Javascript,
-      },
-      {
-        name: "HTML",
-        icon: HTML,
-      },
-      {
-        name: "CSS",
-        icon: CSS,
-      },
-      {
-        name: "Bootstrap",
-        icon: Bootstrap,
-      },
-    ],
+    name: "React",
+    icon: React,
   },
   {
-    title: "Backend Development",
-    image: BackendDev,
-    skills: [
-      {
-        name: "Node",
-        icon: Node,
-      },
-      {
-        name: "Express",
-        icon: Express,
-      },
-      {
-        name: "Sockets",
-        icon: Sockets,
-      },
-      {
-        name: "Mongoose",
-        icon: Mongoose,
-      },
-      {
-        name: "Nodemon",
-        icon: Nodemon,
-      },
-      {
-        name: "Dotenv",
-        icon: Dotenv,
-      },
-    ],
+    name: "Typescript",
+    icon: Typescript,
   },
   {
-    title: "Mobile Development",
-    image: MobileDev,
-    skills: [
-      {
-        name: "Flutter",
-        icon: Flutter,
-      },
-      {
-        name: "Dart",
-        icon: Dart,
-      },
-      {
-        name: "Firebase",
-        icon: Firebase,
-      },
-      {
-        name: "VS Code",
-        icon: VSCode,
-      },
-      {
-        name: "Android Studio",
-        icon: AndroidStudio,
-      },
-    ],
+    name: "Javascript",
+    icon: Javascript,
   },
   {
-    title: "Game Development",
-    image: GameDev,
-    skills: [
-      {
-        name: "Unity",
-        icon: Unity,
-      },
-      {
-        name: "C#",
-        icon: CSharp,
-      },
-      {
-        name: "PlayStore",
-        icon: PlayStore,
-      },
-      {
-        name: "Itch.io",
-        icon: ItchIO,
-      },
-      {
-        name: "Visual Studio",
-        icon: VS,
-      },
-    ],
+    name: "HTML",
+    icon: HTML,
   },
   {
-    title: "Databases",
-    image: Database,
-    skills: [
-      {
-        name: "MongoDB",
-        icon: MongoDB,
-      },
-      {
-        name: "Firebase",
-        icon: Firebase,
-      },
-    ],
+    name: "CSS",
+    icon: CSS,
   },
   {
-    title: "Deployment",
-    image: Deployment,
-    skills: [
-      {
-        name: "Heroku",
-        icon: Heroku,
-      },
-      {
-        name: "Vercel",
-        icon: Vercel,
-      },
-    ],
+    name: "Bootstrap",
+    icon: Bootstrap,
   },
   {
-    title: "Designing",
-    image: Designing,
-    skills: [
-      {
-        name: "Figma",
-        icon: Figma,
-      },
-      {
-        name: "Dribbble",
-        icon: Dribbble,
-      },
-      {
-        name: "Behance",
-        icon: Behance,
-      },
-      {
-        name: "Pixels",
-        icon: Pixels,
-      },
-      {
-        name: "Unsplash",
-        icon: Unsplash,
-      },
-    ],
+    name: "Node",
+    icon: Node,
+  },
+  {
+    name: "Express",
+    icon: Express,
+  },
+  {
+    name: "Sockets",
+    icon: Sockets,
+  },
+  {
+    name: "Mongoose",
+    icon: Mongoose,
+  },
+  {
+    name: "Nodemon",
+    icon: Nodemon,
+  },
+  {
+    name: "Dotenv",
+    icon: Dotenv,
+  },
+  {
+    name: "Flutter",
+    icon: Flutter,
+  },
+  {
+    name: "Dart",
+    icon: Dart,
+  },
+  {
+    name: "Firebase",
+    icon: Firebase,
+  },
+  {
+    name: "VS Code",
+    icon: VSCode,
+  },
+  {
+    name: "Android Studio",
+    icon: AndroidStudio,
+  },
+  {
+    name: "Unity",
+    icon: Unity,
+  },
+  {
+    name: "C#",
+    icon: CSharp,
+  },
+  {
+    name: "PlayStore",
+    icon: PlayStore,
+  },
+  {
+    name: "Itch.io",
+    icon: ItchIO,
+  },
+  {
+    name: "Visual Studio",
+    icon: VS,
+  },
+  {
+    name: "MongoDB",
+    icon: MongoDB,
+  },
+  {
+    name: "Firebase",
+    icon: Firebase,
+  },
+  {
+    name: "Heroku",
+    icon: Heroku,
+  },
+  {
+    name: "Vercel",
+    icon: Vercel,
+  },
+  {
+    name: "Figma",
+    icon: Figma,
+  },
+  {
+    name: "Dribbble",
+    icon: Dribbble,
+  },
+  {
+    name: "Behance",
+    icon: Behance,
+  },
+  {
+    name: "Pixels",
+    icon: Pixels,
+  },
+  {
+    name: "Unsplash",
+    icon: Unsplash,
   },
 ];

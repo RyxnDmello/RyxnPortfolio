@@ -1,4 +1,13 @@
+import { useEffect, useRef } from "react";
 import Image from "next/image";
+
+import {
+  useInView,
+  motion,
+  Variants,
+  useAnimation,
+  Transition,
+} from "framer-motion";
 
 import { Project as _ } from "@interfaces/Project";
 
@@ -7,10 +16,37 @@ import Link from "./Link";
 import styles from "./Project.module.scss";
 
 export default function Project({ title, about, image, links }: _) {
-  const className = "projects-project";
+  const ref = useRef<HTMLDivElement>(null);
+  const controls = useAnimation();
+
+  const visible = useInView(ref, {
+    margin: "0px 0px -350px 0px",
+    once: true,
+  });
+
+  const variants: Variants = {
+    hidden: { opacity: 0, translateY: -40 },
+    reveal: { opacity: 1, translateY: 0 },
+  };
+
+  const transitions: Transition = {
+    type: "spring",
+    duration: 1,
+  };
+
+  useEffect(() => {
+    if (visible) controls.start("reveal");
+  }, [visible]);
 
   return (
-    <div className={`${styles.project} scroll`}>
+    <motion.div
+      className={`${styles.project} scroll`}
+      transition={transitions}
+      variants={variants}
+      animate={controls}
+      initial="hidden"
+      ref={ref}
+    >
       <div>
         <div className={styles.header}>
           <p>{title}</p>
@@ -24,7 +60,7 @@ export default function Project({ title, about, image, links }: _) {
           <div className={styles.links}>
             <Link {...links[0]} />
 
-            <div className={`${className}-platform-links`}>
+            <div>
               {links.map((link, i) => {
                 return link.platform !== "source" && <Link key={i} {...link} />;
               })}
@@ -32,6 +68,6 @@ export default function Project({ title, about, image, links }: _) {
           </div>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 }

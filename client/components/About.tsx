@@ -1,6 +1,6 @@
 import { skills } from "../models/About";
 
-import Title from "./Common/Title";
+import Title from "./Common/OldTitle";
 import Skill from "./About/Skill";
 
 import styles from "./About.module.scss";

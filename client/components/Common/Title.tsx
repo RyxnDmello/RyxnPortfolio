@@ -1,15 +1,25 @@
 import styles from "./Title.module.scss";
 
 interface TitleProps {
-  primary: string;
-  secondary: string;
+  title: string;
+  bar?: boolean;
+  dot?: boolean;
   position?: "CENTRE" | "RIGHT";
 }
 
-export default function Title({ primary, secondary, position }: TitleProps) {
+export default function Title({
+  title,
+  position,
+  dot = true,
+  bar = true,
+}: TitleProps) {
   return (
-    <h1 className={`${styles.title} ${position?.toLowerCase()} title scroll`}>
-      <span>{primary}</span> {secondary}
-    </h1>
+    <div className={`title ${styles.title} ${position?.toLowerCase()}`}>
+      <h1>
+        {title}
+        {dot && <span>.</span>}
+      </h1>
+      {bar && <div></div>}
+    </div>
   );
 }
