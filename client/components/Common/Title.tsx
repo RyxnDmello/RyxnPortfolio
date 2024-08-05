@@ -4,14 +4,14 @@ interface TitleProps {
   title: string;
   bar?: boolean;
   dot?: boolean;
-  position?: "CENTRE" | "RIGHT";
+  position?: "LEFT" | "CENTRE" | "RIGHT";
 }
 
 export default function Title({
   title,
-  position,
   dot = true,
   bar = true,
+  position = "LEFT",
 }: TitleProps) {
   return (
     <div className={`title ${styles.title} ${position?.toLowerCase()}`}>
