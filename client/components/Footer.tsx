@@ -1,3 +1,13 @@
+"use client";
+
+import {
+  useInView,
+  useAnimation,
+  motion,
+  Variants,
+  Transition,
+} from "framer-motion";
+
 import Image from "next/image";
 
 import { links, inspires } from "@models/Footer";
@@ -12,37 +22,74 @@ import Link from "./Footer/Link";
 import Social from "./Footer/Social";
 
 import styles from "./Footer.module.scss";
+import { useEffect, useRef } from "react";
+
+const YEAR = new Date().getFullYear();
 
 export default function Footer() {
-  const _year = new Date().getFullYear();
+  const ref = useRef<HTMLElement>(null);
+  const controls = useAnimation();
+
+  const visible = useInView(ref, {
+    amount: "all",
+    once: true,
+  });
+
+  const parentVariants: Variants = {
+    hidden: { opacity: 0, translateY: -40 },
+    reveal: { opacity: 1, translateY: 0 },
+  };
+
+  const parentTransitions: Transition = {
+    type: "spring",
+    delayChildren: 0.25,
+    staggerChildren: 0.15,
+  };
+
+  const childrenVariants: Variants = {
+    hidden: { opacity: 0, translateY: -40 },
+    reveal: { opacity: 1, translateY: 0 },
+  };
+
+  useEffect(() => {
+    if (visible) controls.start("reveal");
+  }, [visible]);
 
   return (
-    <footer id="footer" className={styles.footer}>
-      <div className={styles.top}>
+    <motion.footer
+      id="footer"
+      className={styles.footer}
+      transition={parentTransitions}
+      variants={parentVariants}
+      animate={controls}
+      initial="hidden"
+      ref={ref}
+    >
+      <motion.div className={styles.top} variants={childrenVariants}>
         <Logo />
 
-        <div className="scroll">
+        <div>
           {links.map((link, i) => (
             <Link key={i} {...link} external={false} direction="COLUMN" />
           ))}
         </div>
-      </div>
+      </motion.div>
 
-      <hr className="scroll" />
+      <hr />
 
       <div className={styles.middle}>
         <div className={styles.features}>
-          <div className="scroll">
+          <motion.div variants={childrenVariants}>
             <p>Inspired</p>
 
             <div>
               {inspires.map((inspire, i) => (
-                <Link key={i} {...inspire} external direction="ROW" />
+                <Link {...inspire} external direction="ROW" />
               ))}
             </div>
-          </div>
+          </motion.div>
 
-          <div className="scroll">
+          <motion.div variants={childrenVariants}>
             <p>Connect</p>
 
             <div>
@@ -50,29 +97,32 @@ export default function Footer() {
                 <Social key={i} {...social} />
               ))}
             </div>
-          </div>
+          </motion.div>
         </div>
 
-        <p className={`${styles.message} scroll`}>
+        <motion.p
+          className={`${styles.message} scroll`}
+          variants={childrenVariants}
+        >
           Let's <span>Build</span> Together
-        </p>
+        </motion.p>
       </div>
 
-      <hr className="scroll" />
+      <hr />
 
-      <div className={`${styles.bottom} scroll`}>
+      <motion.div className={styles.bottom} variants={childrenVariants}>
         <div>
           <Image src={Copyright} width={0} height={0} alt="" />
-          <p>{_year} • Ryan Nolasco D Mello</p>
+          <p>{YEAR} • Ryan Nolasco D Mello</p>
         </div>
 
         <a href="https://github.com//RyxnDmello" target="_blank">
           <Image src={GitHub} width={0} height={0} alt="" />
           <p>GitHub</p>
         </a>
-      </div>
+      </motion.div>
 
       <Top />
-    </footer>
+    </motion.footer>
   );
 }

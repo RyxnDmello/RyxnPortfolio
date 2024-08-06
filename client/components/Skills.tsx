@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef } from "react";
+
 import {
   motion,
   useInView,
@@ -12,7 +13,6 @@ import {
 import { skills } from "../models/Skills";
 
 import Title from "./Common/Title";
-
 import Skill from "./Skills/Skill";
 
 import styles from "./Skills.module.scss";
