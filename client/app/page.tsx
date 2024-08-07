@@ -8,10 +8,12 @@ import Projects from "@components/Projects";
 import Pricing from "@components/Pricing";
 import Contacts from "@components/Contacts";
 import Footer from "@components/Footer";
+import Progress from "@components/Animations/Progress";
 
 export default function App() {
   return (
     <>
+      <Progress />
       <Header />
       <Strip />
       <Strip />

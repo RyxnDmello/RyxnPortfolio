@@ -1,3 +1,7 @@
+"use client";
+
+import { motion, Transition, Variants } from "framer-motion";
+
 import Icon from "@public/images/buttons/send.png";
 
 import Logo from "./Common/Logo";
@@ -9,12 +13,29 @@ import Button from "./Header/Button";
 import styles from "./Header.module.scss";
 
 export default function Header() {
+  const variants: Variants = {
+    hidden: { opacity: 0, translateY: -40 },
+    reveal: { opacity: 1, translateY: 0 },
+  };
+
+  const transitions: Transition = {
+    type: "spring",
+    staggerChildren: 0.1,
+  };
+
   return (
-    <header id="header" className={styles.header}>
+    <motion.header
+      id="header"
+      className={styles.header}
+      transition={transitions}
+      variants={variants}
+      initial="hidden"
+      animate="reveal"
+    >
       <nav className={styles.nav}>
         <Logo />
 
-        <div className={`${styles.links} scroll`}>
+        <div className={styles.links}>
           <div>
             <Link url="#pricing" text="Services" solid={false} />
             <Link url="#skills" text="Skills" solid={false} />
@@ -36,6 +57,6 @@ export default function Header() {
           <Button url="#" text="Download CV" solid={false} />
         </div>
       </div>
-    </header>
+    </motion.header>
   );
 }
