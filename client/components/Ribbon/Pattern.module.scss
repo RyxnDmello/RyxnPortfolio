@@ -1,0 +1,28 @@
+.pattern {
+  background-color: #0000ff25;
+  justify-content: center;
+  grid-auto-flow: column;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  padding: 0.65rem;
+  display: grid;
+  gap: 0.25rem;
+
+  &.left::before {
+    background: linear-gradient(45deg, #df0000, #0000df);
+  }
+
+  &.right::before {
+    background: linear-gradient(45deg, #0000df, #df0000);
+  }
+
+  &::before {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    content: "";
+    left: 0;
+    top: 0;
+  }
+}

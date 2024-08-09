@@ -84,7 +84,7 @@ export default function Footer() {
 
             <div>
               {inspires.map((inspire, i) => (
-                <Link {...inspire} external direction="ROW" />
+                <Link key={i} {...inspire} external direction="ROW" />
               ))}
             </div>
           </motion.div>

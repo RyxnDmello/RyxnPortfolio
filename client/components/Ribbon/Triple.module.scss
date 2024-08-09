@@ -1,0 +1,22 @@
+.triple {
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  display: flex;
+  gap: 0.25rem;
+
+  > p {
+    font-family: "Poppins", sans-serif;
+    box-shadow: 0 5px 10px #00000050;
+    background-color: #000000df;
+    letter-spacing: 0.5px;
+    padding: 0.5rem 1rem;
+    border-radius: 40px;
+    text-wrap: nowrap;
+    font-size: 1.2rem;
+    font-weight: 400;
+    overflow: hidden;
+    line-height: 1;
+    color: #fff;
+  }
+}
