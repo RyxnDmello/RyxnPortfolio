@@ -32,7 +32,7 @@ export default function Pricing() {
 
   const transitions: Transition = {
     type: "spring",
-    staggerChildren: 0.5,
+    staggerChildren: 0.25,
   };
 
   useEffect(() => {

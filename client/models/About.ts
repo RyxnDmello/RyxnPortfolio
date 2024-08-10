@@ -1,24 +1,27 @@
-import { Skill } from "@interfaces/About";
+interface Skill {
+  title: string;
+  percentage: number;
+}
 
 export const skills: Skill[] = [
   {
     title: "Web Development",
-    rating: 4,
+    percentage: 90,
   },
   {
     title: "Mobile Development",
-    rating: 3,
+    percentage: 70,
   },
   {
     title: "Game Development",
-    rating: 2,
+    percentage: 50,
   },
   {
     title: "Critical Thinking",
-    rating: 4,
+    percentage: 70,
   },
   {
     title: "App Design",
-    rating: 4,
+    percentage: 80,
   },
 ];

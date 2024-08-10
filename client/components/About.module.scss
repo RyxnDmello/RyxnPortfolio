@@ -1,105 +1,32 @@
 .about {
-  justify-content: center;
-  padding: 8rem 0 6rem 0;
-  grid-auto-flow: column;
-  align-content: center;
-  align-items: start;
-  position: relative;
-  display: grid;
-  gap: 8rem;
-
-  @media all and (width < 985px) {
-    padding: 6rem 0;
-  }
-
-  @media all and (width < 925px) {
-    gap: 4rem;
-  }
-
-  @media all and (width < 850px) {
-    grid-template-columns: auto;
-    padding: 4rem 0 6rem 0;
-    grid-auto-flow: row;
-    gap: 2.5rem;
-  }
-
-  @media all and (width < 560px) {
-    padding: 2rem 0 6rem 0;
-  }
-}
-
-.details {
   grid-template-columns: auto;
   justify-content: center;
   align-items: center;
+  padding: 6rem;
   display: grid;
-  width: 500px;
-  gap: 0.5rem;
+  gap: 2rem;
 
-  .description {
-    font-family: "Poppins", sans-serif;
-    color: #ffffffcf;
-    font-weight: 200;
-    font-size: 1rem;
-  }
-
-  .link {
-    transition: background-color 300ms, border-color 300ms;
-    background-color: #b5002a;
-    padding: 0.4rem 2rem;
-    margin-top: 0.75rem;
-    width: fit-content;
-
-    p {
-      font-family: "Poppins", sans-serif;
-      font-weight: 300;
-      font-size: 1rem;
-      color: #fff;
-    }
-
-    &:hover {
-      background-color: #df002a;
-      border-color: #df002a;
-    }
-  }
-
-  @media all and (width < 1050px) {
-    width: 400px;
-  }
-
-  @media all and (width < 850px) {
-    width: 500px;
-  }
-
-  @media all and (width < 600px) {
-    width: 350px;
-
-    .description {
-      font-size: 0.85rem;
-    }
-
-    .link {
-      padding: 0.4rem 1.5rem;
-    }
-  }
-
-  @media all and (width < 425px) {
-    width: 300px;
-  }
-}
-
-.overview {
-  grid-template-columns: auto;
-  justify-content: stretch;
-  align-items: center;
-  display: grid;
-  gap: 0.5rem;
-
-  .skill {
+  > div:not(:first-of-type) {
     grid-template-columns: auto;
     justify-content: stretch;
     align-items: center;
     display: grid;
-    gap: 0.25rem;
   }
+}
+
+.overview {
+  font-family: "Poppins", sans-serif;
+  text-align: center;
+  color: #ffffffcf;
+  font-size: 1.1rem;
+  font-weight: 200;
+  width: 1000px;
+}
+
+.skills {
+  grid-template-columns: auto;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+  display: grid;
 }
