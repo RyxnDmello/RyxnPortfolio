@@ -1,0 +1,14 @@
+.social {
+  border: 2px solid #fff;
+  justify-content: center;
+  align-items: center;
+  border-radius: 40px;
+  padding: 0.5rem;
+  display: flex;
+  opacity: 0.25;
+
+  > img {
+    height: auto;
+    width: 16.5px;
+  }
+}

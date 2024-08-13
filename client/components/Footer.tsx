@@ -93,8 +93,8 @@ export default function Footer() {
             <p>Connect</p>
 
             <div>
-              {socials.map((social, i) => (
-                <Social key={i} {...social} />
+              {socials.map((social) => (
+                <Social key={social.id} {...social} />
               ))}
             </div>
           </motion.div>

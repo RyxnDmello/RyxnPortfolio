@@ -23,41 +23,87 @@
   }
 }
 
+.wrapper {
+  grid-template-columns: auto;
+  justify-content: stretch;
+  align-items: start;
+  height: 100dvh;
+  display: grid;
+}
+
 .header {
   grid-template-columns: auto;
   justify-content: stretch;
-  margin-bottom: 6.5rem;
-  align-items: center;
+  align-items: start;
   display: grid;
 
-  @media all and (width < 1160px) {
-    margin-bottom: 2.5rem;
+  @mixin heading($size, $weight, $position, $gradientStart, $gradientEnd) {
+    background: -webkit-linear-gradient(to right, $gradientStart, $gradientEnd);
+    background: linear-gradient(to right, $gradientStart, $gradientEnd);
+    -webkit-text-fill-color: transparent;
+    font-family: "Poppins", sans-serif;
+    -webkit-background-clip: text;
+    translate: 0 $position;
+    background-clip: text;
+    font-weight: $weight;
+    letter-spacing: -5px;
+    position: relative;
+    font-size: $size;
+    line-height: 1;
+  }
+
+  > div {
+    grid-template-columns: auto;
+    justify-content: center;
+    padding: 5rem 0 0 0;
+    align-items: center;
+    display: grid;
+
+    > h1 {
+      @include heading(5rem, 300, 0, #fff, #ffffff25);
+      background: linear-gradient(45deg, #fff, #ffffff25, #fff);
+      animation: TextGradient 5000ms ease-in-out infinite;
+      background-size: 500% auto;
+      background-clip: text;
+    }
+
+    > div:first-of-type {
+      grid-template-columns: auto;
+      justify-content: center;
+      align-items: center;
+      display: grid;
+
+      > p {
+        @include heading(8.5rem, 300, 0, #ff0000, #0000ff);
+      }
+
+      > p:nth-of-type(2) {
+        @include heading(8.5rem, 300, -35px, #ff000050, #0000ff50);
+        transform: rotateX(180deg);
+      }
+    }
+
+    > div:last-of-type {
+      justify-content: right;
+      align-items: center;
+      translate: 0 -20px;
+      flex-wrap: nowrap;
+      display: flex;
+      gap: 0.5rem;
+    }
   }
 }
 
-.details {
-  grid-template-columns: auto;
-  justify-content: center;
-  align-items: center;
-  padding: 4rem 0;
-  display: grid;
-  gap: 1.25rem;
-
-  > div:last-of-type {
-    justify-content: start;
-    grid-auto-flow: column;
-    align-items: center;
-    margin-top: 1rem;
-    display: grid;
-    gap: 0.65rem;
+@keyframes TextGradient {
+  0% {
+    background-position: 0% 100%;
   }
 
-  @media all and (width < 550px) {
-    gap: 0.65rem;
+  50% {
+    background-position: 50% 100%;
   }
 
-  @media all and (width < 380px) {
-    padding: 2.5rem 0;
-    gap: 0.25rem;
+  100% {
+    background-position: 0% 100%;
   }
 }

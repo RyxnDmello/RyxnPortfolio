@@ -2,13 +2,11 @@
 
 import { motion, Transition, Variants } from "framer-motion";
 
-import Icon from "@public/images/buttons/send.png";
+import { socials } from "@models/Socials";
 
 import Logo from "./Common/Logo";
+import Social from "./Header/Social";
 import Link from "./Header/Link";
-import Heading from "./Header/Heading";
-import Title from "./Header/Title";
-import Button from "./Header/Button";
 
 import styles from "./Header.module.scss";
 
@@ -19,44 +17,54 @@ export default function Header() {
   };
 
   const transitions: Transition = {
-    type: "spring",
-    staggerChildren: 0.1,
+    type: "keyframes",
+    delayChildren: 0.25,
+    staggerChildren: 0.15,
   };
 
   return (
-    <motion.header
-      id="header"
-      className={styles.header}
-      transition={transitions}
-      variants={variants}
-      initial="hidden"
-      animate="reveal"
-    >
-      <nav className={styles.nav}>
-        <Logo />
+    <div className={styles.wrapper}>
+      <motion.header
+        className={styles.header}
+        transition={transitions}
+        variants={variants}
+        initial="hidden"
+        animate="reveal"
+      >
+        <nav className={styles.nav}>
+          <motion.div variants={variants}>
+            <Logo />
+          </motion.div>
 
-        <div className={styles.links}>
-          <div>
-            <Link url="#pricing" text="Services" solid={false} />
-            <Link url="#skills" text="Skills" solid={false} />
-            <Link url="#projects" text="Portfolio" solid={false} />
-            <Link url="#contacts" text="Contacts" solid={false} />
+          <div className={styles.links}>
+            <div>
+              <Link url="#pricing" text="Services" solid={false} />
+              <Link url="#skills" text="Skills" solid={false} />
+              <Link url="#projects" text="Portfolio" solid={false} />
+              <Link url="#contacts" text="Contacts" solid={false} />
+            </div>
+
+            <Link url="#" text="Download CV" solid />
           </div>
-
-          <Link url="#" text="Download CV" solid />
-        </div>
-      </nav>
-
-      <Heading title="Software Developer" />
-
-      <div className={styles.details}>
-        <Title />
+        </nav>
 
         <div>
-          <Button url="#pricing" text="Services" icon={Icon} solid />
-          <Button url="#" text="Download CV" solid={false} />
+          <motion.h1 variants={variants}>
+            <span>I'm</span> Ryan Nolasco D Mello
+          </motion.h1>
+
+          <motion.div variants={variants}>
+            <p>Software Developer</p>
+            <p>Software Developer</p>
+          </motion.div>
+
+          <div>
+            {socials.map((social) => (
+              <Social key={social.id} {...social} />
+            ))}
+          </div>
         </div>
-      </div>
-    </motion.header>
+      </motion.header>
+    </div>
   );
 }

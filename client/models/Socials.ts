@@ -7,18 +7,22 @@ import Whatsapp from "@public/images/socials/whatsapp.png";
 
 export const socials: Link[] = [
   {
+    id: "INSTAGRAM",
     url: "https://www.instagram.com/ryxndmello10/",
     icon: Instagram,
   },
   {
+    id: "TWITTER",
     url: "https://twitter.com/RyxnDmello",
     icon: Twitter,
   },
   {
-    url: " https://wa.me/9145000789",
+    id: "WHATSAPP",
+    url: "https://wa.me/9145000789",
     icon: Whatsapp,
   },
   {
+    id: "LINKEDIN",
     url: "https://www.linkedin.com/in/ryanndmello/",
     icon: Linkedin,
   },
