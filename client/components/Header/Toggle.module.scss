@@ -1,0 +1,30 @@
+.toggle {
+  justify-content: center;
+  align-items: center;
+  margin-right: 4rem;
+  position: relative;
+  display: flex;
+
+  &::before {
+    border: 2px dashed #fff;
+    transition: opacity 300ms, scale 200ms 400ms, rotate 400ms 400ms;
+    border-radius: 40px;
+    position: absolute;
+    aspect-ratio: 1;
+    width: 50px;
+    content: "";
+    scale: 0.65;
+    opacity: 0;
+  }
+
+  &:hover::before {
+    rotate: 45deg;
+    opacity: 1;
+    scale: 1;
+  }
+
+  > img {
+    height: auto;
+    width: 20px;
+  }
+}

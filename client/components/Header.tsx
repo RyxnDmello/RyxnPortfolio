@@ -6,6 +6,7 @@ import { socials } from "@models/Socials";
 
 import Logo from "./Common/Logo";
 import Social from "./Header/Social";
+import Toggle from "./Header/Toggle";
 import Link from "./Header/Link";
 
 import styles from "./Header.module.scss";
@@ -18,8 +19,8 @@ export default function Header() {
 
   const transitions: Transition = {
     type: "keyframes",
-    delayChildren: 0.25,
-    staggerChildren: 0.15,
+    delayChildren: 0.125,
+    staggerChildren: 0.125,
   };
 
   return (
@@ -38,6 +39,7 @@ export default function Header() {
 
           <div className={styles.links}>
             <div>
+              <Toggle />
               <Link url="#pricing" text="Services" solid={false} />
               <Link url="#skills" text="Skills" solid={false} />
               <Link url="#projects" text="Portfolio" solid={false} />

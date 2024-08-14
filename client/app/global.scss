@@ -1,4 +1,5 @@
 @use "../styles/fonts.scss";
+@use "../styles/cursor.scss";
 @use "../styles/title.scss";
 
 * {
@@ -12,9 +13,15 @@ body {
   background-color: #000010;
   overflow-x: hidden;
   position: relative;
+  cursor: none;
   z-index: -1;
+}
+
+button {
+  cursor: none;
 }
 
 a {
   text-decoration: none;
+  cursor: none;
 }
