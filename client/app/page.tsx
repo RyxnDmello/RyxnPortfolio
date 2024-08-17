@@ -14,7 +14,7 @@ export default function App() {
   return (
     <body>
       <Header />
-      <Ribbon />
+      {/* <Ribbon />
 
       <main>
         <About />
@@ -25,7 +25,7 @@ export default function App() {
       </main>
 
       <Footer />
-      <Progress />
+      <Progress /> */}
       <Cursor />
     </body>
   );
