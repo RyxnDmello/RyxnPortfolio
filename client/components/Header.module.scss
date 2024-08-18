@@ -30,7 +30,7 @@
   height: 100dvh;
   display: grid;
 
-  @media all and (width < 550px) {
+  @media all and (width < 800px) {
     height: auto;
   }
 }
@@ -60,15 +60,11 @@
     grid-template-columns: auto;
     justify-content: center;
     align-items: center;
-    padding-top: 5rem;
+    margin-top: 6rem;
     display: grid;
 
-    @media all and (width < 650px) {
-      padding-top: 6rem;
-    }
-
-    @media all and (width < 550px) {
-      padding: 4rem 2rem 2rem 2rem;
+    @media all and (width < 800px) {
+      margin-top: 4rem;
     }
 
     > h1 {
@@ -79,31 +75,37 @@
       background-clip: text;
 
       @media all and (width < 1280px) {
-        font-size: 4rem;
+        font-size: 4.5rem;
       }
 
       @media all and (width < 1125px) {
-        letter-spacing: -2.5px;
-        font-size: 3rem;
+        font-size: 3.9rem;
       }
 
-      @media all and (width < 650px) {
-        margin-bottom: 0.5rem;
-        font-size: 2.5rem;
+      @media all and (width < 960px) {
+        letter-spacing: -3.5px;
+        font-size: 3.35rem;
+      }
+
+      @media all and (width < 800px) {
+        letter-spacing: -3px;
+        font-size: 2.55rem;
       }
 
       @media all and (width < 550px) {
-        margin-bottom: 0.35rem;
-        font-size: 2rem;
+        letter-spacing: -2px;
+        font-size: 2.05rem;
       }
 
-      @media all and (width < 425px) {
-        margin-bottom: 0.25rem;
-        font-size: 1.8rem;
+      @media all and (width < 460px) {
+        letter-spacing: -2px;
+        font-size: 1.75rem;
       }
 
-      @media all and (width < 385px) {
-        font-size: 1.5rem;
+      @media all and (width < 380px) {
+        margin-bottom: 0.15rem;
+        letter-spacing: -1.5px;
+        font-size: 1.55rem;
       }
     }
 
@@ -113,7 +115,7 @@
       align-items: center;
       display: grid;
 
-      > p {
+      > p:nth-of-type(1) {
         @include heading(8.5rem, 300, 0, #ff0000, #0000ff);
 
         @media all and (width < 1280px) {
@@ -141,16 +143,12 @@
           font-size: 2.95rem;
         }
 
-        @media all and (width < 500px) {
+        @media all and (width < 460px) {
           font-size: 2.5rem;
         }
 
-        @media all and (width < 425px) {
+        @media all and (width < 380px) {
           font-size: 2.25rem;
-        }
-
-        @media all and (width < 385px) {
-          font-size: 2rem;
         }
       }
 
@@ -189,17 +187,12 @@
           translate: 0 -8px;
         }
 
-        @media all and (width < 500px) {
+        @media all and (width < 460px) {
           font-size: 2.5rem;
         }
 
-        @media all and (width < 425px) {
+        @media all and (width < 380px) {
           font-size: 2.25rem;
-          translate: 0 -5px;
-        }
-
-        @media all and (width < 385px) {
-          font-size: 2rem;
         }
       }
     }
@@ -212,16 +205,8 @@
       display: flex;
       gap: 0.5rem;
 
-      @media all and (width < 960px) {
-        translate: 0 -10px;
-      }
-      
       @media all and (width < 800px) {
-        translate: 0 -5px;
-      }
-      
-      @media all and (width < 550px) {
-        translate: 0 5px;
+        translate: 0 0;
       }
     }
   }

@@ -27,4 +27,12 @@
     height: auto;
     width: 20px;
   }
+
+  @media all and (width < 800px) {
+    margin-right: 1rem;
+  }
+
+  @media all and (width < 700px) {
+    margin-right: auto;
+  }
 }
