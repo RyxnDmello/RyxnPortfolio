@@ -10,6 +10,14 @@
   display: grid;
   z-index: 0;
   gap: 5rem;
+
+  @media all and (width < 1150px) {
+    gap: 3rem;
+  }
+  
+  @media all and (width < 520px) {
+    gap: 2rem;
+  }
 }
 
 .cards {

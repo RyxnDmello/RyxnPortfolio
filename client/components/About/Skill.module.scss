@@ -4,12 +4,21 @@
   align-items: center;
   display: grid;
   gap: 4rem;
+  
+  @media all and (width < 780px) {
+    grid-template-columns: 150px auto;
+    gap: 2rem;
+  }
 
   > p {
     font-family: "Poppins", sans-serif;
     color: #ffffffcf;
     font-weight: 200;
     font-size: 1rem;
+
+    @media all and (width < 780px) {
+      font-size: 0.8rem;
+    }
   }
 
   > div {
@@ -27,6 +36,11 @@
       height: 100%;
       content: "";
       left: 0;
+
+      @media all and (width < 780px) {
+        height: 80%;
+        top: 10%;
+      }
     }
   }
 }

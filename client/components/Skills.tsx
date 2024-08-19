@@ -42,6 +42,7 @@ export default function Skills() {
 
   return (
     <motion.section
+      id="skills"
       className={styles.skills}
       transition={transitions}
       variants={variants}

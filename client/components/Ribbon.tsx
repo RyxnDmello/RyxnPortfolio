@@ -1,6 +1,6 @@
-import styles from "./Ribbon.module.scss";
-
 import Pattern from "./Ribbon/Pattern";
+
+import styles from "./Ribbon.module.scss";
 
 export default function Ribbon() {
   return (

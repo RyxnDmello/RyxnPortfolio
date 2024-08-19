@@ -64,7 +64,11 @@
     display: grid;
 
     @media all and (width < 800px) {
-      margin-top: 4rem;
+      margin: 4rem 0 6rem 0;
+    }
+
+    @media all and (width < 550px) {
+      margin: 4rem 0 5rem 0;
     }
 
     > h1 {

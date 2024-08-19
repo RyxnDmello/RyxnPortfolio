@@ -1,6 +1,6 @@
 "use client";
 
-import { cards } from "../models/Pricing";
+import { useEffect, useRef } from "react";
 
 import {
   motion,
@@ -10,11 +10,12 @@ import {
   useAnimation,
 } from "framer-motion";
 
+import { cards } from "../models/Pricing";
+
 import Title from "./Common/Title";
 import Card from "./Pricing/Card";
 
 import styles from "./Pricing.module.scss";
-import { useEffect, useRef } from "react";
 
 export default function Pricing() {
   const ref = useRef<HTMLDivElement>(null);

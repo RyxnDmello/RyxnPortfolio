@@ -18,5 +18,17 @@
     overflow: hidden;
     line-height: 1;
     color: #fff;
+
+    @media all and (width < 800px) {
+      font-size: 1rem;
+    }
+
+    @media all and (width < 650px) {
+      font-size: 0.8rem;
+    }
+
+    @media all and (width < 460px) {
+      font-size: 0.7rem;
+    }
   }
 }

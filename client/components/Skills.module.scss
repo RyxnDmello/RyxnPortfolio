@@ -10,13 +10,6 @@
   display: grid;
   gap: 1.5rem;
   z-index: 0;
-
-  @media all and (width < 580px) {
-    &::before,
-    &::after {
-      content: none;
-    }
-  }
 }
 
 .catalogue {
@@ -27,15 +20,7 @@
   display: flex;
   gap: 0.25rem;
 
-  @media all and (width < 1150px) {
-    grid-template-columns: repeat(3, auto);
-  }
-
-  @media all and (width < 850px) {
-    grid-template-columns: repeat(2, auto);
-  }
-
-  @media all and (width < 580px) {
-    grid-template-columns: auto;
+  @media all and (width < 1300px) {
+    width: auto;
   }
 }

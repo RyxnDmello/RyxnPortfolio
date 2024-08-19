@@ -2,7 +2,7 @@
   grid-template-columns: auto;
   justify-content: center;
   align-items: center;
-  padding: 6rem;
+  padding: 6rem 0;
   display: grid;
   gap: 2rem;
 
@@ -11,6 +11,21 @@
     justify-content: stretch;
     align-items: center;
     display: grid;
+  }
+
+  @media all and (width < 780px) {
+    padding: 5rem 0;
+    gap: 1.5rem;
+  }
+
+  @media all and (width < 680px) {
+    padding: 5rem 0;
+    gap: 1rem;
+  }
+
+  @media all and (width < 500px) {
+    padding: 4rem 0;
+    gap: 1rem;
   }
 }
 
@@ -21,6 +36,38 @@
   font-size: 1.1rem;
   font-weight: 200;
   width: 1000px;
+
+  @media all and (width < 1080px) {
+    width: 800px;
+  }
+
+  @media all and (width < 880px) {
+    width: 700px;
+  }
+
+  @media all and (width < 780px) {
+    letter-spacing: 0.25px;
+    font-size: 0.85rem;
+    width: 600px;
+  }
+
+  @media all and (width < 680px) {
+    text-wrap: pretty;
+    width: 500px;
+  }
+
+  @media all and (width < 580px) {
+    width: 450px;
+  }
+
+  @media all and (width < 500px) {
+    width: 400px;
+  }
+
+  @media all and (width < 450px) {
+    margin: 0 auto;
+    width: 350px;
+  }
 }
 
 .skills {

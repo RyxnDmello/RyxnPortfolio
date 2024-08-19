@@ -47,6 +47,10 @@
     font-size: 1.5rem;
     font-weight: 300;
     color: #fff;
+
+    @media all and (width < 960px) {
+      font-size: 1.3rem;
+    }
   }
 
   > div {
@@ -60,20 +64,14 @@
       translate: 1px 0;
       height: auto;
       width: 25px;
+
+      @media all and (width < 960px) {
+        width: 22.5px;
+      }
     }
   }
 
-  @media all and (width < 525px) {
-    margin: 0 auto;
+  @media all and (width < 960px) {
     width: 300px;
-    
-    > p {
-      font-size: 1.25rem;
-    }
-
-    > div > img {
-      translate: 1px 0;
-      width: 20px;
-    }
   }
 }

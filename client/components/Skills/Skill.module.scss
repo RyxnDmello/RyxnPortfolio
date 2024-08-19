@@ -14,6 +14,11 @@
   > img {
     height: auto;
     width: 20px;
+
+    @media all and (width < 780px) {
+      height: auto;
+      width: 18px;
+    }
   }
 
   > p {
@@ -21,6 +26,14 @@
     color: #ffffffa0;
     font-weight: 300;
     font-size: 1rem;
+
+    @media all and (width < 780px) {
+      font-size: 0.85rem;
+    }
+
+    @media all and (width < 580px) {
+      font-size: 0.75rem;
+    }
   }
 
   &:hover {
