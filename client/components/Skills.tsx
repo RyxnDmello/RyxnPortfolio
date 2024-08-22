@@ -22,7 +22,7 @@ export default function Skills() {
   const controls = useAnimation();
 
   const visible = useInView(ref, {
-    amount: "all",
+    amount: 0.75,
     once: true,
   });
 

@@ -22,7 +22,7 @@ export default function About() {
   const controller = useAnimation();
 
   const visible = useInView(ref, {
-    margin: "0px 0px -300px 0px",
+    amount: 0.75,
     once: true,
   });
 

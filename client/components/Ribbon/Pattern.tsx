@@ -24,7 +24,8 @@ export default function Pattern({ triples, direction }: RibbonProps) {
   const controller = useAnimation();
 
   const visible = useInView(ref, {
-    amount: "all",
+    margin: "0px 0px -60px 0px",
+    amount: 1,
     once: true,
   });
 

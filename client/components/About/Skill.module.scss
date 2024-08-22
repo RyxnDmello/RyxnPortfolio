@@ -4,10 +4,15 @@
   align-items: center;
   display: grid;
   gap: 4rem;
-  
+
   @media all and (width < 780px) {
     grid-template-columns: 150px auto;
     gap: 2rem;
+  }
+
+  @media all and (width < 400px) {
+    margin-left: 1rem;
+    gap: 1rem;
   }
 
   > p {

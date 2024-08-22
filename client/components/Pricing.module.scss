@@ -14,8 +14,9 @@
   @media all and (width < 1150px) {
     gap: 3rem;
   }
-  
+
   @media all and (width < 520px) {
+    padding: 2.5rem 4rem;
     gap: 2rem;
   }
 }

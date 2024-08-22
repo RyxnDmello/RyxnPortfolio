@@ -20,7 +20,8 @@ export default function Project({ title, about, image, links }: _) {
   const controls = useAnimation();
 
   const visible = useInView(ref, {
-    margin: "0px 0px -350px 0px",
+    margin: "0px 0px -70px 0px",
+    amount: 1,
     once: true,
   });
 
