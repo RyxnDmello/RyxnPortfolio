@@ -3,9 +3,9 @@ import Express, { Application } from "express";
 import { urlencoded, json } from "body-parser";
 import cors from "cors";
 
-import { connectDatabase } from "./database/DatabaseManager";
+import connectMongoDB from "./services/mongoService";
 
-import contactsRouter from "./routes/Contacts";
+import serviceRouter from "./routes/serviceRouter";
 
 dotenv.config();
 
@@ -17,14 +17,12 @@ app.use(json());
 app.use(
   cors({
     origin: process.env.CORS,
-    methods: ["GET", "POST"],
+    methods: ["POST"],
   })
 );
 
-connectDatabase();
+connectMongoDB();
 
-app.use("/api/contacts", contactsRouter);
+app.use("/api/service", serviceRouter);
 
-app.listen(process.env.PORT || process.env.DEVELOPMENT_PORT, () => {
-  console.log(`ACTIVE | ${process.env.PORT || process.env.DEVELOPMENT_PORT}`);
-});
+export default app;
