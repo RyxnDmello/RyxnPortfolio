@@ -1,23 +1,26 @@
-#about .title > h1 {
-  @media all and (width < 1080px) {
-    font-size: 5.5rem;
+#about .title {
+  > h1 {
+    @media all and (width < 1080px) {
+      font-size: 5.5rem;
+    }
+
+    @media all and (width < 880px) {
+      font-size: 4.5rem;
+    }
+
+    @media all and (width < 580px) {
+      font-size: 3.5rem;
+    }
+
+    @media all and (width < 500px) {
+      font-size: 3rem;
+    }
   }
 
-  @media all and (width < 880px) {
-    font-size: 4rem;
-  }
-
-  @media all and (width < 580px) {
-    letter-spacing: 0.65px;
-    font-size: 3.5rem;
-  }
-
-  @media all and (width < 500px) {
-    font-size: 3rem;
-  }
-
-  @media all and (width < 450px) {
-    font-size: 2.5rem;
+  > div {
+    @media all and (width < 425px) {
+      max-width: 165px;
+    }
   }
 }
 
@@ -80,7 +83,7 @@
     @media all and (width < 960px) {
       font-size: 4rem;
     }
-    
+
     @media all and (width < 740px) {
       font-size: 4.25rem;
     }

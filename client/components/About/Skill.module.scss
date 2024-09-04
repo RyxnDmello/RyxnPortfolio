@@ -6,13 +6,16 @@
   gap: 4rem;
 
   @media all and (width < 780px) {
-    grid-template-columns: 150px auto;
-    gap: 2rem;
+    gap: 1rem;
   }
 
-  @media all and (width < 400px) {
+  @media all and (width < 580px) {
+    grid-template-columns: 150px auto;
     margin-left: 1rem;
-    gap: 1rem;
+  }
+
+  @media all and (width < 500px) {
+    gap: 0;
   }
 
   > p {
@@ -21,8 +24,8 @@
     font-weight: 200;
     font-size: 1rem;
 
-    @media all and (width < 780px) {
-      font-size: 0.8rem;
+    @media all and (width < 580px) {
+      font-size: 0.85rem;
     }
   }
 
@@ -42,7 +45,7 @@
       content: "";
       left: 0;
 
-      @media all and (width < 780px) {
+      @media all and (width < 580px) {
         height: 80%;
         top: 10%;
       }

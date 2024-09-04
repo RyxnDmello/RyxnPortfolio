@@ -10,15 +10,25 @@ export interface Service {
   type: SERVICE;
   name: string;
   email: string;
-  mobile: number;
-  designation: string;
+  mobile?: number;
+  designation?: string;
   description: string;
 }
 
 const serviceSchema = new Schema<Service>({
-  email: {
+  type: {
     type: Schema.Types.String,
     required: true,
+    enum: {
+      values: [
+        "Comment",
+        "Web Application",
+        "Mobile Application",
+        "UI • UX App Design",
+      ],
+      message: "Invalid Service Type",
+    },
+    default: "Comment",
   },
   name: {
     type: Schema.Types.String,
@@ -26,24 +36,25 @@ const serviceSchema = new Schema<Service>({
     minlength: [4, "Name Must Be A Minimum of 4 Characters"],
     maxlength: [50, "Name Must Be A Maximum of 50 Characters"],
   },
+  email: {
+    type: Schema.Types.String,
+    required: true,
+  },
   mobile: {
     type: Schema.Types.Number,
     required: false,
-    min: [
-      6000000000,
-      "Mobile Number Must Be 10 Digits and Starts With 6, 7, 8, or 9",
-    ],
     max: [
       9999999999,
       "Mobile Number Must Be 10 Digits and Starts With 6, 7, 8, or 9",
     ],
+    default: 0,
   },
   designation: {
     type: Schema.Types.String,
     required: false,
     minlength: [4, "Designation Must Be A Minimum of 4 Characters"],
     maxlength: [50, "Designation Must Be A Maximum of 50 Characters"],
-    default: "",
+    default: "Not Provided",
   },
   description: {
     type: Schema.Types.String,

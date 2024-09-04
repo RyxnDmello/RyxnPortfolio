@@ -5,7 +5,7 @@ import transporter from "./Transporter";
 
 import { Service } from "../models/ServiceModel";
 
-const sendService = async (service: Service) => {
+const postService = async (service: Service) => {
   const file = join(__dirname, "..", "..", "emails", "service.ejs");
   const render = await renderFile(file, { ...service });
 
@@ -17,4 +17,4 @@ const sendService = async (service: Service) => {
   });
 };
 
-export default sendService;
+export default postService;

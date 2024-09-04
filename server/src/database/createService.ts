@@ -5,6 +5,12 @@ import ServiceModel, { Service } from "../models/ServiceModel";
 const createService = async (service: Service) => {
   const newService = new ServiceModel(service);
 
+  if (service.mobile && service.mobile < 6000000000) {
+    throw new Error(
+      "Mobile Number Must Be 10 Digits and Starts With 6, 7, 8, or 9"
+    );
+  }
+
   try {
     const createdService = await newService.save();
 
@@ -25,7 +31,9 @@ const createService = async (service: Service) => {
     }
 
     throw new Error(
-      `Failed To Send ${service.type === "Comment" ? "Comment" : "Service"}`
+      `Failed To ${
+        service.type === "Comment" ? "Send Comment" : "Request Service"
+      }`
     );
   }
 };

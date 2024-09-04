@@ -13,19 +13,22 @@
     display: grid;
   }
 
-  @media all and (width < 780px) {
-    padding: 5rem 0;
-    gap: 1.5rem;
+  @media all and (width < 1080px) {
+    padding: 6rem 4rem;
   }
 
-  @media all and (width < 680px) {
-    padding: 5rem 0;
+  @media all and (width < 800px) {
+    padding: 5rem 4rem 6rem 4rem;
+  }
+
+  @media all and (width < 580px) {
+    padding: 4rem 4rem 5rem 4rem;
     gap: 1rem;
   }
 
-  @media all and (width < 500px) {
-    padding: 4rem 0;
-    gap: 1rem;
+  @media all and (width < 425px) {
+    padding: 3rem 4rem 4rem 4rem;
+    gap: 0.65rem;
   }
 }
 
@@ -34,39 +37,16 @@
   text-align: center;
   color: #ffffffcf;
   font-size: 1.1rem;
+  max-width: 1000px;
   font-weight: 200;
-  width: 1000px;
-
-  @media all and (width < 1080px) {
-    width: 800px;
-  }
-
-  @media all and (width < 880px) {
-    width: 700px;
-  }
-
-  @media all and (width < 780px) {
-    letter-spacing: 0.25px;
-    font-size: 0.85rem;
-    width: 600px;
-  }
-
-  @media all and (width < 680px) {
-    text-wrap: pretty;
-    width: 500px;
-  }
 
   @media all and (width < 580px) {
-    width: 450px;
+    font-size: 0.95rem;
+    margin-top: 1rem;
   }
 
-  @media all and (width < 500px) {
-    width: 400px;
-  }
-
-  @media all and (width < 450px) {
-    margin: 0 auto;
-    width: 350px;
+  @media all and (width < 425px) {
+    font-size: 0.85rem;
   }
 }
 
