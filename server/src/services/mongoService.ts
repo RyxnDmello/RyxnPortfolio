@@ -6,7 +6,7 @@ dotenv.config();
 const connectMongoDB = async () => {
   try {
     await connect(`${process.env.MONGODB_URI}/${process.env.MONGODB_DB}`, {
-      appName: "Portfolio",
+      appName: process.env.MONGODB_APP,
       retryWrites: true,
       retryReads: true,
     });
