@@ -1,34 +1,20 @@
-require("dotenv").config();
-const brevo = require("@getbrevo/brevo");
+import dotenv from "dotenv";
+import configuration from "./Configuration";
 
-const API_CLIENT = brevo.ApiClient.instance;
+dotenv.config();
 
-const API_KEY = API_CLIENT.authentications["api-key"];
-API_KEY.apiKey = `xkeysib-${process.env.BREVO_API}`;
-
-const API_INSTANCE = new brevo.TransactionalEmailsApi();
-
-const postAppreciationEmail = async (email: string, name: string) => {
+const postAppreciationEmail = (name: string, email: string) => {
   const template = {
     sender: {
       email: process.env.BREVO_EMAIL_ADDRESS as string,
       name: process.env.BREVO_EMAIL_NAME as string,
     },
-    to: [{ email, name }],
-    params: { name },
-    templateId: 2,
+    templateId: parseInt(process.env.BREVO_APPRECIATION_TEMPLATE as string),
+    params: { NAME: name },
+    to: [{ name, email }],
   };
 
-  API_INSTANCE.sendTransacEmail(template).then(
-    function (data: any) {
-      console.log(
-        "API called successfully. Returned data: " + JSON.stringify(data)
-      );
-    },
-    function (error: any) {
-      console.error(error);
-    }
-  );
+  configuration(template);
 };
 
 export default postAppreciationEmail;
