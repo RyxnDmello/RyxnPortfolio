@@ -1,49 +1,49 @@
 import { Field } from "../interfaces/Skill";
 
-import FrontendDev from "@public/images/skills/domains/web.png";
-import BackendDev from "@public/images/skills/domains/back.png";
-import MobileDev from "@public/images/skills/domains/mobile.png";
-import GameDev from "@public/images/skills/domains/game.png";
-import Database from "@public/images/skills/domains/database.png";
-import Deployment from "@public/images/skills/domains/deployment.png";
-import Designing from "@public/images/skills/domains/design.png";
+import FrontendDev from "@public/skills/domains/web.png";
+import BackendDev from "@public/skills/domains/back.png";
+import MobileDev from "@public/skills/domains/mobile.png";
+import GameDev from "@public/skills/domains/game.png";
+import Database from "@public/skills/domains/database.png";
+import Deployment from "@public/skills/domains/deployment.png";
+import Designing from "@public/skills/domains/design.png";
 
-import React from "@public/images/skills/react.svg";
-import Typescript from "@public/images/skills/typescript.svg";
-import Javascript from "@public/images/skills/javascript.svg";
-import Bootstrap from "@public/images/skills/bootstrap.svg";
-import HTML from "@public/images/skills/html.svg";
-import CSS from "@public/images/skills/css.svg";
+import React from "@public/skills/react.svg";
+import Typescript from "@public/skills/typescript.svg";
+import Javascript from "@public/skills/javascript.svg";
+import Bootstrap from "@public/skills/bootstrap.svg";
+import HTML from "@public/skills/html.svg";
+import CSS from "@public/skills/css.svg";
 
-import Node from "@public/images/skills/node.svg";
-import Express from "@public/images/skills/express.svg";
-import Sockets from "@public/images/skills/sockets.svg";
-import Mongoose from "@public/images/skills/mongoose.svg";
-import Nodemon from "@public/images/skills/nodemon.svg";
-import Dotenv from "@public/images/skills/dotenv.svg";
+import Node from "@public/skills/node.svg";
+import Express from "@public/skills/express.svg";
+import Sockets from "@public/skills/sockets.svg";
+import Mongoose from "@public/skills/mongoose.svg";
+import Nodemon from "@public/skills/nodemon.svg";
+import Dotenv from "@public/skills/dotenv.svg";
 
-import Flutter from "@public/images/skills/flutter.svg";
-import Dart from "@public/images/skills/dart.svg";
+import Flutter from "@public/skills/flutter.svg";
+import Dart from "@public/skills/dart.svg";
 
-import Unity from "@public/images/skills/unity.svg";
-import CSharp from "@public/images/skills/csharp.svg";
-import PlayStore from "@public/images/skills/playstore.svg";
-import ItchIO from "@public/images/skills/itch.svg";
-import VS from "@public/images/skills/vs.svg";
+import Unity from "@public/skills/unity.svg";
+import CSharp from "@public/skills/csharp.svg";
+import PlayStore from "@public/skills/playstore.svg";
+import ItchIO from "@public/skills/itch.svg";
+import VS from "@public/skills/vs.svg";
 
-import MongoDB from "@public/images/skills/mongodb.svg";
-import Firebase from "@public/images/skills/firebase.svg";
-import VSCode from "@public/images/skills/vsc.svg";
-import AndroidStudio from "@public/images/skills/astudio.svg";
+import MongoDB from "@public/skills/mongodb.svg";
+import Firebase from "@public/skills/firebase.svg";
+import VSCode from "@public/skills/vsc.svg";
+import AndroidStudio from "@public/skills/astudio.svg";
 
-import Heroku from "@public/images/skills/heroku.svg";
-import Vercel from "@public/images/skills/vercel.svg";
+import Heroku from "@public/skills/heroku.svg";
+import Vercel from "@public/skills/vercel.svg";
 
-import Figma from "@public/images/skills/figma.svg";
-import Dribbble from "@public/images/skills/dribbble.svg";
-import Behance from "@public/images/skills/behance.svg";
-import Unsplash from "@public/images/skills/unsplash.svg";
-import Pixels from "@public/images/skills/pixels.svg";
+import Figma from "@public/skills/figma.svg";
+import Dribbble from "@public/skills/dribbble.svg";
+import Behance from "@public/skills/behance.svg";
+import Unsplash from "@public/skills/unsplash.svg";
+import Pixels from "@public/skills/pixels.svg";
 
 export const skills = [
   {

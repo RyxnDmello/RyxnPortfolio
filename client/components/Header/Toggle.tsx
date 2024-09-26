@@ -3,8 +3,8 @@ import { motion, Variants } from "framer-motion";
 
 import Image, { StaticImageData } from "next/image";
 
-import Reveal from "@public/images/cursor/reveal.svg";
-import Hidden from "@public/images/cursor/hidden.svg";
+import Reveal from "@public/cursor/reveal.svg";
+import Hidden from "@public/cursor/hidden.svg";
 
 import styles from "./Toggle.module.scss";
 

@@ -13,7 +13,7 @@ import {
 import { CONTACT } from "@interfaces/Contact";
 import { inputs, options } from "@models/Contact";
 
-import Reset from "@public/images/inputs/reset.png";
+import Reset from "@public/inputs/reset.png";
 
 import useContactForm from "@hooks/useContactForm";
 

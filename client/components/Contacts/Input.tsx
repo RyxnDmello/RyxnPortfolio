@@ -2,7 +2,7 @@ import Image from "next/image";
 
 import { Input as _ } from "../../interfaces/Contact";
 
-import Required from "@public/images/inputs/required.png";
+import Required from "@public/inputs/required.png";
 
 import styles from "./Input.module.scss";
 

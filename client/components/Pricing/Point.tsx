@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-import Icon from "@public/images/pricing/tick.svg";
+import Icon from "@public/pricing/tick.svg";
 
 import styles from "./Point.module.scss";
 

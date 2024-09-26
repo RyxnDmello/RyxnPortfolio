@@ -1,10 +1,10 @@
 import { Option, Input } from "@interfaces/Contact";
 
-import Name from "@public/images/inputs/username.png";
-import Email from "@public/images/inputs/email.png";
-import Designation from "@public/images/inputs/designation.png";
-import Number from "@public/images/inputs/number.png";
-import Description from "@public/images/inputs/description.png";
+import Name from "@public/inputs/username.png";
+import Email from "@public/inputs/email.png";
+import Designation from "@public/inputs/designation.png";
+import Number from "@public/inputs/number.png";
+import Description from "@public/inputs/description.png";
 
 export const options: Option[] = [
   {

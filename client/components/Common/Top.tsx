@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-import Icon from "@public/images/buttons/top.svg";
+import Icon from "@public/buttons/top.svg";
 
 import styles from "./Top.module.scss";
 

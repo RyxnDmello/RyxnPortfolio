@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { forwardRef } from "react";
 
-import Icon from "@public/images/contact/toaster.svg";
+import Icon from "@public/contact/toaster.svg";
 
 import { Toaster } from "@interfaces/Contact";
 

@@ -2,7 +2,7 @@ import Image from "next/image";
 
 import { motion, Variants, Transition } from "framer-motion";
 
-import Icon from "@public/images/buttons/right.svg";
+import Icon from "@public/buttons/right.svg";
 
 import styles from "./Option.module.scss";
 

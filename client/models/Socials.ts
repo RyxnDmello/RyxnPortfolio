@@ -1,9 +1,9 @@
 import { Link } from "../interfaces/Social";
 
-import Instagram from "@public/images/socials/instagram.png";
-import Twitter from "@public/images/socials/twitter.png";
-import Linkedin from "@public/images/socials/linkedin.png";
-import Whatsapp from "@public/images/socials/whatsapp.png";
+import Instagram from "@public/socials/instagram.png";
+import Twitter from "@public/socials/twitter.png";
+import Linkedin from "@public/socials/linkedin.png";
+import Whatsapp from "@public/socials/whatsapp.png";
 
 export const socials: Link[] = [
   {

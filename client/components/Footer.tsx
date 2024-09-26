@@ -13,8 +13,8 @@ import Image from "next/image";
 import { links, inspires } from "@models/Footer";
 import { socials } from "@models/Socials";
 
-import Copyright from "@public/images/buttons/copyright.svg";
-import GitHub from "@public/images/buttons/github.svg";
+import Copyright from "@public/buttons/copyright.svg";
+import GitHub from "@public/buttons/github.svg";
 
 import Logo from "./Common/Logo";
 import Top from "./Common/Top";
