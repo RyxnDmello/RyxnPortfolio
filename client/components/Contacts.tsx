@@ -15,7 +15,7 @@ import { inputs, options } from "@models/Contact";
 
 import Reset from "@public/inputs/reset.png";
 
-import useContactForm from "@hooks/useContactForm";
+import useContact from "@hooks/useContact";
 
 import Title from "./Common/Title";
 import Option from "./Contacts/Option";
@@ -36,8 +36,17 @@ export default function Contacts() {
     once: true,
   });
 
-  const { values, errors, toastRef, handleChange, handleSubmit, handleReset } =
-    useContactForm(type);
+  const {
+    type: _,
+    toast,
+    values,
+    errors,
+    message,
+    handleChange,
+    handleSubmit,
+    handleReset,
+    handleToggleToast,
+  } = useContact(type);
 
   const variants: Variants = {
     hidden: { opacity: 0, translateY: -40 },
@@ -98,20 +107,12 @@ export default function Contacts() {
           })}
 
           <div>
-            <Button type="submit" />
+            <Button type="submit" onClick={handleToggleToast} />
             <Button icon={Reset} type="reset" />
           </div>
         </form>
 
-        <Toast
-          ref={toastRef}
-          title={type === "Comment" ? "Thank You" : "Service Request"}
-          description={
-            type === "Comment"
-              ? "Your Comments Help Me Grow"
-              : "Will Get Back To You Soon"
-          }
-        />
+        <Toast ref={toast} type={_} message={message} />
       </div>
     </motion.section>
   );

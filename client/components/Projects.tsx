@@ -10,7 +10,7 @@ import {
   Transition,
 } from "framer-motion";
 
-import useProjectsCatalogue from "@hooks/useProjectsCatalogue";
+import useProjects from "@hooks/useProjects";
 
 import Title from "./Common/Title";
 import Tab from "./Projects/Tab";
@@ -35,7 +35,7 @@ export default function Projects() {
     expandable,
     onSelectOption,
     onSetExpandable,
-  } = useProjectsCatalogue();
+  } = useProjects();
 
   const variants: Variants = {
     hidden: { opacity: 0, translateY: -40 },

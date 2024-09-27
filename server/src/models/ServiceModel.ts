@@ -27,7 +27,7 @@ const serviceSchema = new Schema<Service>(
           "Mobile Application",
           "UI • UX App Design",
         ],
-        message: "Invalid Service Type",
+        message: "Invalid Contact Type",
       },
       default: "Comment",
     },

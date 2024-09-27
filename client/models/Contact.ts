@@ -50,7 +50,7 @@ export const inputs: Input[] = [
   {
     icon: Number,
     label: "Number",
-    name: "number",
+    name: "mobile",
     type: "number",
     required: false,
   },

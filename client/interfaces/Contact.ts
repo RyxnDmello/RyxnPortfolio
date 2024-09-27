@@ -10,7 +10,7 @@ export type CONTACT =
 export interface Contact {
   name: string;
   email: string;
-  number: string;
+  mobile: string;
   designation: string;
   description: string;
 }
@@ -29,9 +29,4 @@ export interface Input {
   required: boolean;
   type: HTMLInputTypeAttribute;
   onChange?: (event: ChangeEvent) => void;
-}
-
-export interface Toaster {
-  title: string;
-  description: string;
 }
