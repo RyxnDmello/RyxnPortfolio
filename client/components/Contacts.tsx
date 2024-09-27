@@ -27,6 +27,7 @@ import styles from "./Contacts.module.scss";
 
 export default function Contacts() {
   const [type, setType] = useState<CONTACT>("Comment");
+
   const ref = useRef<HTMLElement>(null);
   const controls = useAnimation();
 
@@ -35,15 +36,8 @@ export default function Contacts() {
     once: true,
   });
 
-  const {
-    values,
-    errors,
-    toasterRef,
-    handleChange,
-    handleSubmit,
-    handleReset,
-    showToaster,
-  } = useContactForm(type);
+  const { values, errors, toastRef, handleChange, handleSubmit, handleReset } =
+    useContactForm(type);
 
   const variants: Variants = {
     hidden: { opacity: 0, translateY: -40 },
@@ -73,9 +67,9 @@ export default function Contacts() {
 
       <div>
         <div className={`${styles.options} scroll`}>
-          {options.map((option, i) => (
+          {options.map((option) => (
             <Option
-              key={i}
+              key={option.name}
               {...option}
               active={option.type === type}
               onSelect={() => setType(option.type)}
@@ -88,13 +82,13 @@ export default function Contacts() {
           onSubmit={handleSubmit}
           onReset={handleReset}
         >
-          {inputs.map((input, i) => {
+          {inputs.map((input) => {
             const value = values[`${input.name as keyof typeof values}`];
             const error = errors[`${input.name as keyof typeof errors}`];
 
             return (
               <Input
-                key={i}
+                key={input.name}
                 {...input}
                 error={!!error}
                 onChange={handleChange}
@@ -104,13 +98,13 @@ export default function Contacts() {
           })}
 
           <div>
-            <Button type="submit" onClick={showToaster} />
+            <Button type="submit" />
             <Button icon={Reset} type="reset" />
           </div>
         </form>
 
         <Toast
-          ref={toasterRef}
+          ref={toastRef}
           title={type === "Comment" ? "Thank You" : "Service Request"}
           description={
             type === "Comment"

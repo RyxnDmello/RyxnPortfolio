@@ -1,5 +1,7 @@
 "use client";
 
+import { useEffect, useRef } from "react";
+
 import {
   useInView,
   useAnimation,
@@ -22,7 +24,6 @@ import Link from "./Footer/Link";
 import Social from "./Footer/Social";
 
 import styles from "./Footer.module.scss";
-import { useEffect, useRef } from "react";
 
 const YEAR = new Date().getFullYear();
 
@@ -69,8 +70,13 @@ export default function Footer() {
         <Logo />
 
         <div>
-          {links.map((link, i) => (
-            <Link key={i} {...link} external={false} direction="COLUMN" />
+          {links.map((link) => (
+            <Link
+              key={link.url}
+              {...link}
+              external={false}
+              direction="COLUMN"
+            />
           ))}
         </div>
       </motion.div>
@@ -83,8 +89,8 @@ export default function Footer() {
             <p>Inspired</p>
 
             <div>
-              {inspires.map((inspire, i) => (
-                <Link key={i} {...inspire} external direction="ROW" />
+              {inspires.map((inspire) => (
+                <Link key={inspire.url} {...inspire} external direction="ROW" />
               ))}
             </div>
           </motion.div>
@@ -94,7 +100,7 @@ export default function Footer() {
 
             <div>
               {socials.map((social) => (
-                <Social key={social.id} {...social} />
+                <Social key={social.url} {...social} />
               ))}
             </div>
           </motion.div>

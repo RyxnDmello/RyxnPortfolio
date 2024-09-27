@@ -1,3 +1,5 @@
+import { StaticImageData } from "next/image";
+
 export interface Link {
   url: string;
   text: string;
@@ -5,5 +7,5 @@ export interface Link {
 }
 
 export interface Button extends Link {
-  icon?: string;
+  icon?: string | StaticImageData;
 }

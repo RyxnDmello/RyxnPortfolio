@@ -62,7 +62,7 @@ export default function Header() {
 
           <div>
             {socials.map((social) => (
-              <Social key={social.id} {...social} />
+              <Social key={social.url} {...social!} />
             ))}
           </div>
         </div>

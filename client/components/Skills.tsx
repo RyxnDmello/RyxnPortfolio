@@ -54,7 +54,7 @@ export default function Skills() {
 
       <div className={styles.catalogue}>
         {skills.map((skill, i) => (
-          <Skill key={i} {...skill} delay={500 * i} />
+          <Skill key={skill.name} {...skill} delay={500 * i} />
         ))}
       </div>
     </motion.section>

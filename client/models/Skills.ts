@@ -1,13 +1,3 @@
-import { Field } from "../interfaces/Skill";
-
-import FrontendDev from "@public/skills/domains/web.png";
-import BackendDev from "@public/skills/domains/back.png";
-import MobileDev from "@public/skills/domains/mobile.png";
-import GameDev from "@public/skills/domains/game.png";
-import Database from "@public/skills/domains/database.png";
-import Deployment from "@public/skills/domains/deployment.png";
-import Designing from "@public/skills/domains/design.png";
-
 import React from "@public/skills/react.svg";
 import Typescript from "@public/skills/typescript.svg";
 import Javascript from "@public/skills/javascript.svg";
@@ -34,7 +24,7 @@ import VS from "@public/skills/vs.svg";
 import MongoDB from "@public/skills/mongodb.svg";
 import Firebase from "@public/skills/firebase.svg";
 import VSCode from "@public/skills/vsc.svg";
-import AndroidStudio from "@public/skills/astudio.svg";
+import AndroidStudio from "@public/skills/studio.svg";
 
 import Heroku from "@public/skills/heroku.svg";
 import Vercel from "@public/skills/vercel.svg";
@@ -101,10 +91,6 @@ export const skills = [
   {
     name: "Dart",
     icon: Dart,
-  },
-  {
-    name: "Firebase",
-    icon: Firebase,
   },
   {
     name: "VS Code",

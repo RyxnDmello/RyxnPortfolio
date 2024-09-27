@@ -1,29 +1,33 @@
-import { Link } from "../interfaces/Social";
+import { Button } from "../interfaces/Link";
 
 import Instagram from "@public/socials/instagram.png";
 import Twitter from "@public/socials/twitter.png";
 import Linkedin from "@public/socials/linkedin.png";
 import Whatsapp from "@public/socials/whatsapp.png";
 
-export const socials: Link[] = [
+export const socials: Button[] = [
   {
-    id: "INSTAGRAM",
     url: "https://www.instagram.com/ryxndmello10/",
     icon: Instagram,
+    solid: false,
+    text: "",
   },
   {
-    id: "TWITTER",
     url: "https://twitter.com/RyxnDmello",
     icon: Twitter,
+    solid: false,
+    text: "",
   },
   {
-    id: "WHATSAPP",
     url: "https://wa.me/9145000789",
     icon: Whatsapp,
+    solid: false,
+    text: "",
   },
   {
-    id: "LINKEDIN",
     url: "https://www.linkedin.com/in/ryanndmello/",
     icon: Linkedin,
+    solid: false,
+    text: "",
   },
 ];

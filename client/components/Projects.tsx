@@ -79,8 +79,8 @@ export default function Projects() {
 
       <div className={styles.catalogue}>
         {projects.map((project, i) => {
-          if (expandable) return <Project key={i} {...project} />;
-          return i < 9 && <Project key={i} {...project} />;
+          if (expandable) return <Project key={project.title} {...project} />;
+          return i < 9 && <Project key={project.title} {...project} />;
         })}
       </div>
 

@@ -53,8 +53,8 @@ export default function Pricing() {
       <Title title="Pricing" />
 
       <div className={styles.cards}>
-        {cards.map((card, i) => (
-          <Card key={i} {...card} />
+        {cards.map((card) => (
+          <Card key={card.plan} {...card} />
         ))}
       </div>
     </motion.section>
