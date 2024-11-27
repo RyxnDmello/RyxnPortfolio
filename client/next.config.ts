@@ -1,9 +1,9 @@
-/** @type {import('next').NextConfig} */
+import type { NextConfig } from "next";
 
-const SERVER_API = process.env.NEXT_PUBLIC_SERVER_API;
+const SERVER_API = process.env.NEXT_PUBLIC_SERVER_API!;
 
-const nextConfig = {
-  async rewrites() {
+const nextConfig: NextConfig = {
+  rewrites: async () => {
     return [
       {
         source: "/api/:path*",
